@@ -1,0 +1,262 @@
+#main{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+#backHome{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300vw;
+  height: 100vh;
+
+  -webkit-transition: left 0.5s ease-out;
+  -moz-transition: left 0.5s ease-out;
+  -ms-transition: left 0.5s ease-out;
+  -o-transition: left 0.5s ease-out;
+  transition: left 0.5s ease-out;
+}
+#backHome>li{
+  width: 100vw;
+  height: 100vh;
+  float: left;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.producto{
+  position: absolute;
+  width: 80vw;
+  left: 10vw;
+  height: calc(100vh - 110px);
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column-reverse;
+  -webkit-flex-direction:column-reverse;
+
+  -webkit-transition: opacity 1s ease-out;
+  -moz-transition: opacity 1s ease-out;
+  -ms-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+.producto>div{
+  position: relative;
+  width: 100%;
+}
+.producto>div:first-child{
+  height: 60%;
+}
+.producto>div:nth-child(2){
+  height: 40%;
+  text-align: center;
+}
+.mockup{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.infoproducto{
+  position: absolute;
+  width: 80%;
+  height: 80px;
+  margin-top: 10px;
+  left: 10%;
+  color: #fff;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.prox{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.hashtag{
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+#tlayolis{
+  text-align: center;
+  height: 80vh;
+  top: 110px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#mocktla{
+  background-image: url('../img/producto-tlaMob.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#pregunta{
+  font-size: 1.2rem;
+  font-family: 'Caecilia B', serif;
+}
+#interface{
+  position: absolute;
+  height: 60vh;
+  top: 20vh;
+  left: 2.5vw;
+  width: 95vw;
+}
+#interface>a{
+  display: none;
+}
+footer{
+  position: absolute;
+  top: 100vh;
+  color: #fff;
+  font-size: 0.7rem;
+
+  width: 100vw;
+  height: 5vh;
+
+  background: #490e0e;
+  z-index: 2000;
+}
+footer>div{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 15vh;
+  background: #490e0e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content:space-around;
+  align-items: center;
+  -webkit-align-items: center;
+}
+footer>div>ul>li{
+  display: inline-block;
+  margin-left: 5px;
+
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+footer>div>ul>li:hover{
+  opacity: 0.5;
+}
+
+/* DESKTOP */
+@media screen and (min-width:800px){
+  #interface{
+    height: 60px;
+    top: calc(50% - 30px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-direction:row;
+    justify-content:space-between;
+    -webkit-justify-content:space-between;
+    align-items: center;
+    -webkit-align-items: center;
+  }
+  .producto{
+    flex-direction: row;
+    -webkit-flex-direction:row;
+  }
+  .producto>div{
+    width: 50vw;
+    height: 100%;
+  }
+  .producto>div:first-child, .producto>div:nth-child(2){
+    height: 100%;
+  }
+  .producto>div:nth-child(2){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction:column;
+    justify-content:center;
+    -webkit-justify-content:center;
+    align-items: center;
+    -webkit-align-items: center;
+  }
+  .producto>div:nth-child(2)>div{
+    width: 100%;
+    height: 45%;
+  }
+  .logotipoProducto{
+    width: 250px;
+  }
+  #tlayolis{
+    height: 70vh;
+    top: 200px;
+  }
+  #mocktla{
+    background-image: url('../img/producto-tla.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  #interface>a{
+    display: block;
+    height: 40px;
+  }
+  .reflect{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  footer{
+    bottom: 0;
+  }
+  footer>div{
+    height: 5vh;
+    flex-direction: row;
+    -webkit-flex-direction:row;
+  }
+}
+
+
+/* Fix Height Mobile */
+@media screen and (max-height:600px) {
+  .logotipoProducto{
+    width: 100px;
+  }
+}
+@media screen and (max-height:480px) {
+  .logotipoProducto{
+    width: 70px;
+  }
+}

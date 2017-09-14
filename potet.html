@@ -1,0 +1,279 @@
+<!--
+Yot Mx
+v1
+5 de Septiembre
+[FLUO]
+info@fluo.com.mx
+fluo.com.mx
+-->
+<html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="cache-control" content="no-cache"/>
+	<meta http-equiv="pragma" content="no-cache"/>
+	<meta name="google" content="notranslate"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0000, minimum-scale=1.0000, maximum-scale=1.0000, user-scalable=yes">
+  <title>Yot Mx</title> <!-- REVISAR -->
+  <link rel="canonical" href=" " /> <!-- FALTA -->
+  <meta name="description" content=""/> <!-- FALTA -->
+  <meta name="keywords" content=" "/> <!-- FALTA -->
+  <meta name="author" content="www.fluo.com.mx">
+  <meta property="og:title" content="Yot Mx"> <!-- REVISAR -->
+	<meta property="og:site_name" content="Yot Mx"> <!-- REVISAR -->
+	<meta property="og:url" content=" "> <!-- FALTA -->
+	<meta property="og:type" content="website"> <!-- FALTA -->
+	<meta property="og:image" content="img/media.jpg"> <!-- FALTA -->
+  <meta property="og:description" content=" "> <!-- FALTA -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:creator" content="@fluomx">
+	<meta name="twitter:title" content="Yot Mx"> <!-- REVISAR -->
+	<meta name="twitter:description" content=" "> <!-- FALTA -->
+	<meta name="twitter:image" content="img/media.jpg"> <!-- FALTA -->
+  <link rel="apple-touch-icon" sizes="180x180" href="css/fav/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="css/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="css/fav/favicon-16x16.png">
+  <link rel="manifest" href="css/fav/manifest.json">
+  <link rel="mask-icon" href="css/fav/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" type="text/css" href="css/master.css" media="all">
+  <link rel="stylesheet" type="text/css" href="css/productosPotet.css" media="all">
+</head>
+<body>
+  <p id="size"></p>
+  <div id="loading">
+    <p id="percentage">1%</p>
+  </div>
+  <!-- Ocultar nav hideDisplay  -->
+  <nav class="productNav">
+    <ul id="outer">
+      <li id="logotipo">
+        <a href="index.html">
+          <img src="img/logotipo-yot.svg" alt="Logotipo Yot Mx" width="70">
+        </a>
+      </li>
+      <li class="menuDesk">
+        <a href="nosotros.html" onmouseover="menuItem('on', this, 1)" onmouseout="menuItem('out', this, 1)" onclick="gravedad()">
+          <img src="img/icons/menuOut-1.svg" alt="" width="150px">
+          <p class="hideOpacity">Nostros</p>
+        </a>
+      </li>
+      <li class="menuDesk">
+        <a href="sot.html" onmouseover="menuItem('on', this, 2)" onmouseout="menuItem('out', this, 2)">
+          <img src="img/icons/menuOut-2.svg" alt="" width="90">
+          <p class="hideOpacity">Sot</p>
+        </a>
+      </li>
+      <li class="menuDesk">
+        <a href="potet.html" onmouseover="menuItem('on', this, 3)" onmouseout="menuItem('out', this, 3)">
+          <img src="img/icons/menuOut-3.svg" alt="" width="90">
+          <p class="hideOpacity">Potet</p>
+        </a>
+      </li>
+      <li class="menuDesk">
+        <a href="tlayolis.html" onmouseover="menuItem('on', this, 4)" onmouseout="menuItem('out', this, 4)">
+          <img src="img/icons/menuOut-4.svg" alt="" width="90">
+          <p class="hideOpacity">Tlayolis</p>
+        </a>
+      </li>
+      <li class="menuDesk">
+        <a href="contacto.html" onmouseover="menuItem('on', this, 5)" onmouseout="menuItem('out', this, 5)">
+          <img src="img/icons/menuOut-5.svg" alt="" width="90">
+          <p class="hideOpacity">Contacto</p>
+        </a>
+      </li>
+      <li id="menuMob">
+        <a role="button" onmouseover="menuItem('onM', this, 0)" onmouseout="menuItem('outM', this, 0)" onclick="menuMobile('open')">
+          <img src="img/icons/menuOut-0m.svg" alt="Background menu" width="120">
+        </a>
+      </li>
+    </ul>
+    <ul id="innerMobile" class="">
+      <a role="button" onclick="menuMobile('close')">
+        <img src="img/icons/regresar.svg" alt="Cerrar menú" width="120">
+      </a>
+      <div>
+        <li><a href="nosotros.html"><img src="img/icons/menuOut-1.svg" width="100"></a></li>
+        <li><a href="sot.html"><img src="img/icons/menuOut-2.svg" width="100"></a></li>
+        <li><a href="potet.html"><img src="img/icons/menuOut-3.svg" width="100"></a></li>
+        <li><a href="tlayolis.html"><img src="img/icons/menuOut-4.svg" width="100"></a></li>
+        <li><a href="contacto.html"><img src="img/icons/menuOut-5.svg" width="100"></a></li>
+      </div>
+    </ul>
+  </nav>
+  <!-- Ocultar #main hideDisplay  -->
+  <div id="main" class="">
+    <section class="portada slide showDisplay">
+      <div>
+        <div>
+          <img src="img/logotipo-potet.svg" alt="" width="300">
+          <br><br>
+          <p style="color:#000">
+            Potet es una deliciosa botana
+            de harina de maíz adicionada con
+            harina de papa con el tamaño y
+            la cantidad ideal para compartir
+            con tus amigos.
+          </p>
+          <br><br>
+          <h3 style="color:#000">
+            Una vez que las pruebes, <br>
+            ¡Serán parte de todas tus reuniones!
+          </h3>
+        </div>
+      </div>
+    </section>
+    <section class="salmarPotet slide hideDisplay">
+        <ul>
+          <li>
+            <div class="infoMock">
+              <h2 class="elemLeft">Sal de Mar</h2>
+              <br>
+              <p class="elemLeft">
+                El perfecto empujón para cambiar <br>
+                las perspectivas cotidianas.
+              </p>
+              <br><br>
+              <img class="elemLeft" src="img/tabla-tla.png" alt="" width="250">
+            </div>
+          </li>
+          <li>
+            <div class="mockProd elemRight wiggleOut" style="background-image:url('../img/pot-salmar.png')" onmouseover="wiggleChange(this, 'over')" onmouseout="wiggleChange(this, 'out')"></div>
+          </li>
+        </ul>
+    </section>
+    <section class="habaneroPotet slide hideDisplay">
+      <ul>
+        <li>
+          <div class="infoMock">
+            <h2 class="elemLeft">Habanero</h2>
+            <br>
+            <p class="elemLeft">
+              El mood ideal para salir de fiesta y<br>
+              conocer nuevos lugares, personas <br>
+              y experiencias.
+            </p>
+            <br><br>
+            <img class="elemLeft" src="img/tabla-tla.png" alt="" width="250">
+          </div>
+        </li>
+        <li>
+          <div class="mockProd elemRight wiggleOut" style="background-image:url('../img/pot-habanero.png')" onmouseover="wiggleChange(this, 'over')" onmouseout="wiggleChange(this, 'out')"></div>
+        </li>
+      </ul>
+    </section>
+    <section class="chilearbolPotet slide hideDisplay">
+      <ul>
+        <li>
+          <div class="infoMock">
+            <h2 class="elemLeft">Chile de árbol</h2>
+            <br>
+            <p class="elemLeft">
+              Ideal para disfrutar una comida <br>
+              con amigos y personas cercanas.
+            </p>
+            <br><br>
+            <img class="elemLeft" src="img/tabla-tla.png" alt="" width="250">
+          </div>
+        </li>
+        <li>
+          <div class="mockProd elemRight wiggleOut" style="background-image:url('../img/pot-chilearbol.png')" onmouseover="wiggleChange(this, 'over')" onmouseout="wiggleChange(this, 'out')"></div>
+        </li>
+      </ul>
+    </section>
+    <section class="footslider slide hideDisplay"></section>
+  </div>
+  <div id="bulletsW">
+    <ul>
+      <li>
+        <a role="button">
+          <img class="bulletProduct current" src="img/bulletOver-0.svg" width="20" onmouseover="bulletChange(this, 0, 'over')" onmouseout="bulletChange(this, 0, 'out')" onclick="sliderT(0)">
+        </a>
+      </li>
+      <li>
+        <a role="button">
+          <img class="bulletProduct" src="img/bulletOut.svg" width="20" onmouseover="bulletChange(this, 1, 'over')" onmouseout="bulletChange(this, 1, 'out')" onclick="sliderT(1)">
+        </a>
+      </li>
+      <li>
+        <a role="button">
+          <img class="bulletProduct" src="img/bulletOut.svg" width="20" onmouseover="bulletChange(this, 2, 'over')" onmouseout="bulletChange(this, 2, 'out')" onclick="sliderT(2)">
+        </a>
+      </li>
+      <li>
+        <a role="button">
+          <img class="bulletProduct" src="img/bulletOut.svg" width="20" onmouseover="bulletChange(this, 3, 'over')" onmouseout="bulletChange(this, 3, 'out')" onclick="sliderT(3)">
+        </a>
+      </li>
+      <li>
+        <a role="button">
+          <img class="bulletProduct" src="img/bulletOut.svg" width="20" onmouseover="bulletChange(this, 4, 'over')" onmouseout="bulletChange(this, 4, 'out')" onclick="sliderT(4)">
+        </a>
+      </li>
+    </ul>
+  </div>
+  <footer>
+  <a role="button"></a>
+      <div>
+        <p>Derechos reservados Grupo Yot Mx© 2017</p>
+        <ul>
+          <li><a href="#"><img src="img/icons/facebook.svg" alt="" width="25"></a></li>
+          <li><a href="#"><img src="img/icons/instagram.svg" alt="" width="25"></a></li>
+          <li><a href="#"><img src="img/icons/mail.svg" alt="" width="25"></a></li>
+        </ul>
+        <p>info@yot.com.mx</p>
+        <p>Coded by Fluo MX</p>
+      </div>
+  </footer>
+  <div id="transition" class="hideDisplay">
+    <svg id="svgTr" viewBox="0 0 1920 1080">
+      <polygon id="polyTr" fill="#098442" points="0,535 1920,535 1920,540 0,540 "/>
+    </svg>
+  </div>
+  <script src="js/bowser.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var checkMobileIndex = false;
+    window.console.log("%cCoded by Mn - http://fluo.com.mx", "color:pink;  font-size: 10px; background:#000; padding:2px;");
+    function _(el){return document.querySelector(el); }
+    function __(el){return document.getElementsByClassName(el); }
+    if(bowser.mobile || bowser.tablet || /SymbianOS/.test(window.navigator.userAgent)) checkMobileIndex = true;
+
+    window.addEventListener("orientationchange", function() {
+      if(window.orientation == 90 || window.orientation == -90){
+        mockProd[0].style.width = "200px";
+        mockProd[0].style.height = "220px";
+      } else {
+        mockProd[0].style.width = "300px";
+        mockProd[0].style.height = "220px";
+      }
+    });
+    var preventOnTransition = false;
+    document.onkeydown = checkKey;
+    function checkKey(e) {
+      if(preventOnTransition){
+        e = e || window.event;
+        if (e.keyCode == '37') {
+
+        }
+        else if (e.keyCode == '39') {
+
+        }
+      } else {
+        e = e || window.event;
+        if (e.keyCode == '37') {
+          countTla('prev')
+        }
+        else if (e.keyCode == '39') {
+          countTla('next')
+        }
+      }
+
+    }
+  </script>
+  <script src="js/anime.min.js"></script>
+  <script src="js/productosPotet.js" charset="utf-8"></script>
+</body>
+</html>

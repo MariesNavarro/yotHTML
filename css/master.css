@@ -1,0 +1,210 @@
+/*
+Theme: yot mx
+Version: 1
+5 de Septiembre
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike,
+sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } article, aside, details, figcaption, figure, footer, header, hgroup, menu,
+nav, section {display: block; } body {line-height: 1; } ol, ul {list-style: none; } blockquote, q {quotes: none; } blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none; }
+table {border-collapse: collapse; border-spacing: 0; }
+#size{
+  position: fixed;
+ 	left: 20px;
+ 	top: 20px;
+ 	color: #000;
+ 	z-index: 5000;
+  display: none;
+}
+@font-face {
+  font-family: 'Caecilia B';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/cae.woff') format('woff'),
+       url('fonts/cae.woff2') format('woff2'),
+       url('fonts/cae.ttf') format('truetype'),
+       url('fonts/cae.eot') format('embedded-opentype')
+}
+@font-face {
+  font-family: 'Gotham B';
+  font-style: bold;
+  font-weight: 700;
+  src: url('fonts/gb.woff') format('woff'),
+       url('fonts/gb.woff2') format('woff2'),
+       url('fonts/gb.ttf') format('truetype'),
+       url('fonts/gb.eot') format('embedded-opentype')
+}
+.mainColors {
+	--color-naranja: #bc7129;
+	--color-vino: #490e0e;
+	--color-terracota: #9f3030;
+	--color-magenta: #bf1d70;
+	--color-amarillo: #ffc521;
+	--color-crema: #d9c3a5;
+	--color-verde: #098442;
+}
+* { margin:0; padding:0; }
+* a{ text-decoration: none; color: #000;  cursor: pointer}
+h2{ font-size: 1.3rem; }
+h3{ font-size: 1.1rem; }
+h1, h2, h3, h4, h5, h6, b { font-family: 'Caecilia B', sans-serif;}
+body{
+  font-family: 'Gotham B', 'Proxima Nova', 'Proxima Sans', sans-serif;
+  font-size: 16px;
+  color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+}
+.hideDisplay{
+  display: none
+}
+.showDisplay{
+  display: block
+}
+.showDisplayFlex{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.showOpacity{
+  opacity: 1;
+}
+.hideOpacity{
+  opacity: 0;
+}
+#loading{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 9000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+  display: none;
+}
+#percentage{
+  color: #fff;
+}
+#main{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+}
+.menuDesk{
+  display: none;
+}
+nav{
+  position: fixed;
+  top: 30px;
+  left: 5vw;
+  width: 90vw;
+  height: 80px;
+  z-index: 8900;
+}
+#outer{
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#menuMob{
+  display: block;
+}
+#innerMobile{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #490e0e;
+  display: none;
+  opacity: 0;
+
+  -webkit-transition: opacity 0.7s ease-out;
+  -moz-transition: opacity 0.7s ease-out;
+  -ms-transition: opacity 0.7s ease-out;
+  -o-transition: opacity 0.7s ease-out;
+  transition: opacity 0.7s ease-out;
+}
+#innerMobile>a{
+  display: block;
+  width: 90vw;
+  margin-top: 4vh;
+  margin-left: 4vw;
+}
+#innerMobile>a:hover{
+  opacity: 0.5;
+}
+#innerMobile>div{
+  position: absolute;
+  left: 5vw;
+  top: 15vw;
+  width: 90vw;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content:space-around;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#innerMobile>div>li:hover{
+  opacity: 0.5;
+}
+/* DESKTOP */
+@media screen and (min-width:800px){
+  body{
+    height: 105vh;
+  }
+  #innerMobile{
+    display: none;
+  }
+  #menuMob{
+    display: none;
+  }
+  .menuDesk{
+    display: block;
+    color: #fff;
+  }
+  .menuDesk>a{
+    position: relative;
+    width: 150px;
+    height: 50px;
+  }
+  .menuDesk>a>img{
+    width: 90px;
+  }
+  .menuDesk>a>p{
+    /*position: absolute;*/
+    color: #490e0e;
+  }
+  nav{
+    left:15vw;
+    width: 70vw;
+  }
+}

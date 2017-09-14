@@ -1,0 +1,333 @@
+.nosotrosNav{
+  opacity: 0;
+  /*-webkit-transition: opacity 1s ease-out;
+  -moz-transition: opacity 1s ease-out;
+  -ms-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;*/
+  -webkit-animation: fadeIn 3s ease-out;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation: fadeIn 3s ease-out;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation: fadeIn 3s ease-out;
+  -ms-animation-fill-mode: forwards;
+  -o-animation: fadeIn 3s ease-out;
+  -o-animation-fill-mode: forwards;
+  animation: fadeIn 3s ease-out;
+  animation-fill-mode: forwards;
+}
+@media screen and (max-width:520px){
+  .liImg>img{
+    width: 170px;
+  }
+}
+body{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../img/back-tla.jpg');
+}
+#main{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: auto;
+}
+#coverN{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../img/back-tla.jpg');
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content:center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#coverN>div{
+  width: 300px;
+  display: block;
+  opacity: 0;
+  /*-webkit-transition: opacity 1s ease-out;
+  -moz-transition: opacity 1s ease-out;
+  -ms-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;*/
+  -webkit-animation: fadeIn 3s ease-out;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation: fadeIn 3s ease-out;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation: fadeIn 3s ease-out;
+  -ms-animation-fill-mode: forwards;
+  -o-animation: fadeIn 3s ease-out;
+  -o-animation-fill-mode: forwards;
+  animation: fadeIn 3s ease-out;
+  animation-fill-mode: forwards;
+}
+#coverN>div>p{
+  font-family: 'Caecilia B', sans-serif;
+  line-height: 1.2;
+  font-size: 1.15rem;
+  display: block;
+  margin-top: 30px;
+}
+#nuestroN{
+  position: relative;
+  width: 100vw;
+  height: 150vh;
+}
+#nuestroN>header{
+  position: relative;
+  width: 100vw;
+  height: 30vh;
+  background: #4c0d12;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content:center;
+  -webkit-justify-content:center;
+}
+#nuestroN>header>h2{
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: #fff;
+  display: block;
+  margin-left: 5vw;
+  line-height: 1.2;
+}
+#nuestroN>ul{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+#nuestroN>ul>li{
+  float: left;
+  width: 50%;
+  height: 390px;
+}
+.liImg, .liTexto{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content:center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#nuestroN>ul>li>a{
+  display: block;
+  color:#666666;
+  font-family: 'Caecilia B', sans-serif !important;
+  line-height: 1.2;
+  font-size: 1.3rem;
+}
+#nuestroN>ul>li>a:hover{
+  opacity: 0.5;
+}
+#misionvision{
+  position: relative;
+  width: 100vw;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content:center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+#misionvision>li{
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content:center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#misionvision>li>div{
+  width: 280px;
+}
+#misionvision>li>div>h3, #misionvision>li>div>p{
+  line-height: 1.2;
+  color: #fff;
+}
+#misionvision>li>div>h3{
+  font-family: 'Gotham B', 'Proxima Nova', 'Proxima Sans', sans-serif;
+}
+#misionvision>li>div>p{
+  font-family: 'Caecilia B', sans-serif;
+}
+
+
+#misionvision>li:first-child{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../img/nosotros-mision.jpg');
+}
+#misionvision>li:nth-child(2){
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../img/nosotros-vision.jpg');
+}
+footer{
+  position: relative;
+  display: none;
+  color: #fff;
+  font-size: 0.7rem;
+
+  width: 100vw;
+  height: 5vh;
+
+  background: #490e0e;
+  z-index: 2000;
+}
+footer>div{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 15vh;
+  background: #490e0e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content:space-around;
+  align-items: center;
+  -webkit-align-items: center;
+}
+footer>div>ul>li{
+  display: inline-block;
+  margin-left: 5px;
+
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+footer>div>ul>li:hover{
+  opacity: 0.5;
+}
+
+/* DESKTOP */
+@media screen and (min-width:800px){
+  #coverN>div{
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-direction:row;
+    justify-content:space-between;
+    -webkit-justify-content:space-between;
+    align-items: center;
+    -webkit-align-items: center;
+  }
+  #coverN>div>p{
+    width: 280px;
+  }
+  /* PRODUCTOS DESPLEGABLES */
+  #nuestroN{
+    height: 150vh;
+  }
+  #nuestroN>ul>li{
+    float: left;
+    width: 33.32%;
+    /*height: 30vh;*/
+  }
+  #misionvision{
+    height: 300px;
+    flex-direction: row;
+    -webkit-flex-direction:row;
+  }
+  #misionvision>li{
+    width: 50%;
+    height: 100%;
+  }
+  /*footer{
+    bottom: 0;
+  }*/
+  footer>div{
+    height: 5vh;
+    flex-direction: row;
+    -webkit-flex-direction:row;
+  }
+}
+/* DESKTOP BIG SCREEN */
+@media screen and (min-width:1000px){
+  #coverN>div{
+    width: 60vw;
+  }
+}
+
+@media screen and (min-width:1400px){
+  #coverN>div{
+    width: 45vw;
+  }
+  #coverN>div>img{
+    width: 280px;
+  }
+}
+
+@media screen and (min-width:1600px){
+  #coverN>div{
+    width: 35vw;
+  }
+}
+
+@media screen and (min-width:1920px){
+  #coverN>div{
+    width: 30vw;
+  }
+}
+
+
+@-webkit-keyframes fadeIn{
+  0%{ opacity: 0}
+  100%{ opacity: 1}
+}
+@-moz-keyframes fadeIn{
+  0%{ opacity: 0}
+  100%{ opacity: 1}
+}
+@-ms-keyframes fadeIn{
+  0%{ opacity: 0}
+  100%{ opacity: 1}
+}
+@-o-keyframes fadeIn{
+  0%{ opacity: 0}
+  100%{ opacity: 1}
+}
+@keyframes fadeIn{
+  0%{ opacity: 0}
+  100%{ opacity: 1}
+}
