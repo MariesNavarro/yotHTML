@@ -170,7 +170,14 @@
   transform: translate(0,-2%);
   transform: matrix(0.996,0.04,-0.06,0.996,2,10);
 }
-
+.slide>div.foodBack{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
 .salmarPotet{
   background: #ffc521; /* Old browsers */
 background: -moz-linear-gradient(top, #ffc521 0%, #ffb600 100%); /* FF3.6-15 */
@@ -198,7 +205,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d33640', end
   background: -moz-linear-gradient(top, #d33640 1%, #d10c16 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #d33640 1%,#d10c16 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #d33640 1%,#d10c16 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d33640', endColorstr='#d10c16',GradientType=0 ); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d33640', endColorstr='#d10c16',GradientType=0 );
 }
 #transition{
   position: fixed;

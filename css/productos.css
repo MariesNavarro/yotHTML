@@ -170,7 +170,14 @@
   transform: translate(0,-2%);
   transform: matrix(0.996,0.04,-0.06,0.996,2,10);
 }
-
+.slide>div.foodBack{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
 .jalapeno{
   background: #098442; /* Old browsers */
   background: -moz-linear-gradient(top, #098442 0%, #1b3e2a 100%); /* FF3.6-15 */
