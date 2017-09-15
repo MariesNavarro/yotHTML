@@ -560,11 +560,11 @@ function sliderIndividualCount(c){
   }
 }
 
-var src1 = ['img/sliderI/t1.png','img/sliderI/t2.png','img/sliderI/t3.png','img/sliderI/t4.png','img/sliderI/t5.png'];
-var src2 = ['img/sliderI/t5.png','img/sliderI/t1.png','img/sliderI/t2.png','img/sliderI/t3.png','img/sliderI/t4.png'];
-var src3 = ['img/sliderI/t4.png','img/sliderI/t5.png','img/sliderI/t1.png','img/sliderI/t2.png','img/sliderI/t3.png'];
-var src4 = ['img/sliderI/t3.png','img/sliderI/t4.png','img/sliderI/t5.png','img/sliderI/t1.png','img/sliderI/t2.png'];
-var src5 = ['img/sliderI/t2.png','img/sliderI/t3.png','img/sliderI/t4.png','img/sliderI/t5.png','img/sliderI/t1.png'];
+var src1 = ['img/sliderI/s1.png','img/sliderI/s2.png','img/sliderI/s3.png','img/sliderI/s4.png','img/sliderI/s5.png'];
+var src2 = ['img/sliderI/s5.png','img/sliderI/s1.png','img/sliderI/s2.png','img/sliderI/s3.png','img/sliderI/s4.png'];
+var src3 = ['img/sliderI/s4.png','img/sliderI/s5.png','img/sliderI/s1.png','img/sliderI/s2.png','img/sliderI/s3.png'];
+var src4 = ['img/sliderI/s3.png','img/sliderI/s4.png','img/sliderI/s5.png','img/sliderI/s1.png','img/sliderI/s2.png'];
+var src5 = ['img/sliderI/s2.png','img/sliderI/s3.png','img/sliderI/s4.png','img/sliderI/s5.png','img/sliderI/s1.png'];
 
 sliderIndividual(0);
 
@@ -578,14 +578,14 @@ function sliderIndividual(c){
   setTimeout(function(){
     switch (c) {
       case 0:
-      captionSliderInd.innerHTML="Texto 1: Tlayolis Jalapeños";
+      captionSliderInd.innerHTML="Texto 1: Sot Yuca";
         for (var i = 0; i < imgSliderInd.length; i++) {
           imgSliderInd[i].setAttribute('src', src1[i]);
         }
         middle.setAttribute('current', src1[2]);
       break;
       case 1:
-        captionSliderInd.innerHTML="Texto 2: Tlayolis Habaneros";
+        captionSliderInd.innerHTML="Texto 2: Sot Camote";
         console.log("slider 2");
         for (var i = 0; i < imgSliderInd.length; i++) {
           imgSliderInd[i].setAttribute('src', src2[i]);
@@ -593,7 +593,7 @@ function sliderIndividual(c){
         middle.setAttribute('current', src2[2]);
       break;
       case 2:
-        captionSliderInd.innerHTML="Texto 3: Tlayolis BBQ";
+        captionSliderInd.innerHTML="Texto 3: Chile de Árbol ";
         console.log("slider 3");
         for (var i = 0; i < imgSliderInd.length; i++) {
           imgSliderInd[i].setAttribute('src', src3[i]);
@@ -602,7 +602,7 @@ function sliderIndividual(c){
       break;
       case 3:
         console.log("slider 4");
-        captionSliderInd.innerHTML="Texto 4: Tlayolis Jalapeños";
+        captionSliderInd.innerHTML="Texto 4: Chile de Árbol ";
         for (var i = 0; i < imgSliderInd.length; i++) {
           imgSliderInd[i].setAttribute('src', src4[i]);
         }
@@ -610,7 +610,7 @@ function sliderIndividual(c){
       break;
       case 4:
         console.log("slider 5");
-        captionSliderInd.innerHTML="Texto 5: Tlayolis BBQ";
+        captionSliderInd.innerHTML="Texto 5: Camote";
         for (var i = 0; i < imgSliderInd.length; i++) {
           imgSliderInd[i].setAttribute('src', src5[i]);
         }

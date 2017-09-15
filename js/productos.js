@@ -565,3 +565,136 @@ function fadeOutProducts(){
       ]
   });
 }
+
+var arrowOverSliderInd = __('arrowOverSliderInd');
+
+function sliderIndOver(c,i){
+  switch (c) {
+    case 'over':
+      arrowOverSliderInd[i].setAttribute('src', 'img/icons/slider-arrowOver.svg')
+    break;
+    case 'out':
+      arrowOverSliderInd[i].setAttribute('src', 'img/icons/slider-arrowOut.svg')
+    break;
+  }
+}
+
+
+var countSliderIndividual = 0;
+var middle = _('#middle');
+var imgSliderInd = __('imgSliderInd');
+var captionSliderInd = _('#captionSliderInd');
+function sliderIndividualCount(c){
+  switch (c) {
+    case 'prev':
+      countSliderIndividual--;
+      if(countSliderIndividual<0) countSliderIndividual = 4;
+      sliderIndividual(countSliderIndividual);
+    break;
+    case 'next':
+      countSliderIndividual++;
+      if(countSliderIndividual>4) countSliderIndividual = 0;
+      sliderIndividual(countSliderIndividual);
+    break;
+  }
+}
+
+var src1 = ['img/sliderI/t1.png','img/sliderI/t2.png','img/sliderI/t3.png','img/sliderI/t4.png','img/sliderI/t5.png'];
+var src2 = ['img/sliderI/t5.png','img/sliderI/t1.png','img/sliderI/t2.png','img/sliderI/t3.png','img/sliderI/t4.png'];
+var src3 = ['img/sliderI/t4.png','img/sliderI/t5.png','img/sliderI/t1.png','img/sliderI/t2.png','img/sliderI/t3.png'];
+var src4 = ['img/sliderI/t3.png','img/sliderI/t4.png','img/sliderI/t5.png','img/sliderI/t1.png','img/sliderI/t2.png'];
+var src5 = ['img/sliderI/t2.png','img/sliderI/t3.png','img/sliderI/t4.png','img/sliderI/t5.png','img/sliderI/t1.png'];
+
+sliderIndividual(0);
+
+function sliderIndividual(c){
+  middle.style.width = "25%";
+  for (var i = 0; i < imgSliderInd.length; i++) {
+    captionSliderInd.style.opacity = "0";
+    imgSliderInd[i].style.opacity = "0.1";
+    imgSliderInd[i].setAttribute('src', 'img/sliderI/blank.png');
+  }
+  setTimeout(function(){
+    switch (c) {
+      case 0:
+      captionSliderInd.innerHTML="Texto 1: Tlayolis Jalapeños";
+        for (var i = 0; i < imgSliderInd.length; i++) {
+          imgSliderInd[i].setAttribute('src', src1[i]);
+        }
+        middle.setAttribute('current', src1[2]);
+      break;
+      case 1:
+        captionSliderInd.innerHTML="Texto 2: Tlayolis Habaneros";
+        console.log("slider 2");
+        for (var i = 0; i < imgSliderInd.length; i++) {
+          imgSliderInd[i].setAttribute('src', src2[i]);
+        }
+        middle.setAttribute('current', src2[2]);
+      break;
+      case 2:
+        captionSliderInd.innerHTML="Texto 3: Tlayolis BBQ";
+        console.log("slider 3");
+        for (var i = 0; i < imgSliderInd.length; i++) {
+          imgSliderInd[i].setAttribute('src', src3[i]);
+        }
+        middle.setAttribute('current', src3[2]);
+      break;
+      case 3:
+        console.log("slider 4");
+        captionSliderInd.innerHTML="Texto 4: Tlayolis Jalapeños";
+        for (var i = 0; i < imgSliderInd.length; i++) {
+          imgSliderInd[i].setAttribute('src', src4[i]);
+        }
+        middle.setAttribute('current', src4[2]);
+      break;
+      case 4:
+        console.log("slider 5");
+        captionSliderInd.innerHTML="Texto 5: Tlayolis BBQ";
+        for (var i = 0; i < imgSliderInd.length; i++) {
+          imgSliderInd[i].setAttribute('src', src5[i]);
+        }
+        middle.setAttribute('current', src5[2]);
+      break;
+    }
+  },500);
+  setTimeout(function(){
+    captionSliderInd.style.opacity = "1";
+    middle.style.width = "50%";
+    for (var i = 0; i < imgSliderInd.length; i++) {
+      imgSliderInd[i].style.opacity = "1";
+    }
+  },1000)
+}
+
+function zoom(c){
+  var current = middle.getAttribute('current');
+  switch (c) {
+    case 'over':
+      imgSliderInd[2].setAttribute('src', 'img/sliderI/zoom.png');
+    break;
+    case 'out':
+      imgSliderInd[2].setAttribute('src', current);
+    break;
+  }
+}
+
+var zoomWraper = _('#zoomWraper');
+var zoomImg = _('#zoomImg');
+function zoomImgS(c){
+  var current = middle.getAttribute('current');
+  switch (c) {
+  case 'open':
+    zoomImg.style.backgroundImage = 'url(' + current + ')';
+    zoomWraper.style.display = "block";
+    setTimeout(function(){
+      zoomWraper.style.opacity = "1";
+    },500);
+  break;
+  case 'close':
+    zoomWraper.style.opacity = "0";
+  setTimeout(function(){
+    zoomWraper.style.display = "none";
+  },500);
+  break;
+  }
+}

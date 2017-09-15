@@ -334,6 +334,9 @@ align-items: center;
 }
 
 #captionSliderInd{
+  text-align: center;
+  line-height: 1.5;
+  width: 80%;
   margin-top: 30px;
   color: #fff;
   transition: all 0.5s ease-out;
