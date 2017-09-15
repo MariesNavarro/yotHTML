@@ -187,7 +187,40 @@ fluo.com.mx
         </li>
       </ul>
     </section>
-    <section class="footslider slide hideDisplay"></section>
+    <section class="footslider slide hideDisplay">
+      <div>
+        <a role="button" onmouseover="sliderIndOver('over',0)" onmouseout="sliderIndOver('out',0)" onclick="sliderIndividualCount('prev')">
+          <img class="arrowOverSliderInd" src="img/icons/slider-arrowOut.svg" alt="" width="40">
+        </a>
+        <ul id="sliderIndividualWrap">
+          <li style="width:25%;">
+            <img  class="imgSliderInd" src="img/sliderI/t1.png" alt="">
+          </li>
+          <li style="width:25%;">
+            <img  class="imgSliderInd" src="img/sliderI/t2.png" alt="">
+          </li>
+          <li id="middle" style="width:50%;" onmouseover="zoom('over')" onmouseout="zoom('out')" onclick="zoomImgS('open')">
+            <img  class="imgSliderInd" src="img/sliderI/t3.png" alt="">
+              <p id="captionSliderInd">Texto 1: Tlayolis Jalapeños</p>
+          </li>
+          <li style="width:25%;">
+            <img  class="imgSliderInd" src="img/sliderI/t4.png" alt="">
+          </li>
+          <li style="width:25%;">
+            <img  class="imgSliderInd" src="img/sliderI/t5.png" alt="">
+          </li>
+        </ul>
+        <a class="reflect"  role="button" onmouseover="sliderIndOver('over',1)" onmouseout="sliderIndOver('out',1)" onclick="sliderIndividualCount('next')">
+          <img class="arrowOverSliderInd" src="img/icons/slider-arrowOut.svg" alt="" width="40">
+        </a>
+      </div>
+        <div id="zoomWraper">
+          <a role="button" onclick="zoomImgS('close')">
+            <img src="img/icons/cerrarMovil.svg" alt="">
+          </a>
+          <div id="zoomImg"></div>
+        </div>
+    </section>
   </div>
   <div id="bulletsW">
     <ul>
