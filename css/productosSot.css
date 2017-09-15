@@ -172,17 +172,33 @@
 }
 
 .salmar{
-  background: #ab8b3c;
+  background: #bc9537; /* Old browsers */
+  background: -moz-linear-gradient(top, #bc9537 0%, #7f6426 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #bc9537 0%,#7f6426 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #bc9537 0%,#7f6426 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc9537', endColorstr='#7f6426',GradientType=0 ); /* IE6-9 */
 }
 
 .yuca{
-  background: #9f3039;
+background: #9f3039; /* Old browsers */
+background: -moz-linear-gradient(top, #9f3039 0%, #701828 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #9f3039 0%,#701828 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #9f3039 0%,#701828 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f3039', endColorstr='#701828',GradientType=0 ); /* IE6-9 */
 }
 .chilearbol{
-  background: #c21e71;
+background: #c21e72; /* Old browsers */
+background: -moz-linear-gradient(top, #c21e72 0%, #a0105e 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #c21e72 0%,#a0105e 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #c21e72 0%,#a0105e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c21e72', endColorstr='#a0105e',GradientType=0 ); /* IE6-9 */
 }
 .footslider{
-  background: #c21e71;
+background: #c21e72; /* Old browsers */
+background: -moz-linear-gradient(top, #c21e72 0%, #a0105e 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #c21e72 0%,#a0105e 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #c21e72 0%,#a0105e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c21e72', endColorstr='#a0105e',GradientType=0 ); /* IE6-9 */
 }
 #transition{
   position: fixed;

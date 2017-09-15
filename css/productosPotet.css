@@ -173,16 +173,32 @@
 
 .salmarPotet{
   background: #ffc521; /* Old browsers */
+background: -moz-linear-gradient(top, #ffc521 0%, #ffb600 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #ffc521 0%,#ffb600 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #ffc521 0%,#ffb600 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc521', endColorstr='#ffb600',GradientType=0 );
 }
 
 .habaneroPotet{
-  background: #bc7129; /* Old browsers */
+background: #f78f30; /* Old browsers */
+background: -moz-linear-gradient(top, #f78f30 1%, #f47a0e 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #f78f30 1%,#f47a0e 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #f78f30 1%,#f47a0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f78f30', endColorstr='#f47a0e',GradientType=0 ); /* IE6-9 */
 }
 .chilearbolPotet{
-  background: #d33640; /* Old browsers */
+background: #d33640; /* Old browsers */
+background: -moz-linear-gradient(top, #d33640 1%, #d10c16 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #d33640 1%,#d10c16 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #d33640 1%,#d10c16 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d33640', endColorstr='#d10c16',GradientType=0 );
 }
 .footslider{
   background: #d33640; /* Old browsers */
+  background: -moz-linear-gradient(top, #d33640 1%, #d10c16 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #d33640 1%,#d10c16 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #d33640 1%,#d10c16 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d33640', endColorstr='#d10c16',GradientType=0 ); 
 }
 #transition{
   position: fixed;

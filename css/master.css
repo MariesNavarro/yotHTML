@@ -250,3 +250,21 @@ nav{
     width: 70vw;
   }
 }
+
+
+#transitionScrollUnoBottom{
+  position: fixed;
+  bottom: -600px;
+  left: 0;
+  width: 100vw;
+  height: 167px;
+  opacity: 0;
+}
+#transitionScrollUnoTop{
+  position: fixed;
+  top: -600px;
+  left: 0;
+  width: 100vw;
+  height: 167px;
+  opacity: 0;
+}

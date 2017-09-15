@@ -4,6 +4,8 @@ var imgElem,
     polyDom = _('#polyTr'),
     trWrap = _('#transition'),
     bodyDom = _('body'),
+    transitionScrollUnoBottom = _('#transitionScrollUnoBottom'),
+    transitionScrollUnoTop = _('#transitionScrollUnoTop'),
     bulletProduct = __('bulletProduct');
 var srcE = [];
 var startPosY;
@@ -49,62 +51,84 @@ window.onresize = function(){
 }
 
 
-// var lastScrollTop = window.pageYOffset;
-// var flagOnScroll = false;
-// document.addEventListener("scroll", function(){
-//   console.log(window.pageXOffset + window.pageYOffset);
-//
-//   if(bodyDom.getAttribute('trigger')){
-//     return;
-//   }
-//   bodyDom.setAttribute('trigger', '');
-//    var st = window.pageYOffset || document.documentElement.scrollTop;
-//    if (st > lastScrollTop){
-//       setTimeout(function(){
-//         countTla('prev');
-// var debounceScrollNext, debounceScrollPrev;
-// window.addEventListener("wheel", function(e){
-//    if (e.deltaY > 0) {
-//       clearTimeout(debounceScrollNext);
-//       debounceScrollNext = setTimeout(function(){
-//           console.log("Next");
-//            countTla('next');
-//       },500);
-//    }
-//    if (e.deltaY < 0) {
-//       clearTimeout(debounceScrollPrev);
-//       debounceScrollPrev = setTimeout(function(){
-//         console.log("Preview");
-//       },1000)
-//    } else {
-//      setTimeout(function(){
-//        countTla('next');
-//        console.log("Next");
-//      },1000);
-//         countTla('prev');
-//       },500);
-//    }
-//    lastScrollTop = st;
-// }, false);
+function transitionScollUno(){
+  transitionScrollUnoBottom.classList.remove('hideDisplay');
+  transitionScrollUnoBottom.classList.add('showDisplay');
+  anime({
+  	targets: transitionScrollUnoBottom,
+    duration: 800,
+  	easing: 'easeOutQuad',
+    opacity : 1,
+    bottom: '-60px'
+  });
+  setTimeout(function(){
+    anime({
+    	targets: transitionScrollUnoBottom,
+      duration: 800,
+    	easing: 'easeOutQuad',
+      opacity : 0,
+      bottom: '-600px'
+    });
+    setTimeout(function(){
+      transitionScrollUnoBottom.classList.remove('showDisplay');
+      transitionScrollUnoBottom.classList.add('hideDisplay');
+    },100);
+  },1100);
+}
+
+
+
+function transitionScollDos(){
+  transitionScrollUnoTop.classList.remove('hideDisplay');
+  transitionScrollUnoTop.classList.add('showDisplay');
+  anime({
+  	targets: transitionScrollUnoTop,
+    duration: 800,
+  	easing: 'easeOutQuad',
+    opacity : 1,
+    top: '0'
+  });
+  setTimeout(function(){
+    anime({
+    	targets: transitionScrollUnoTop,
+      duration: 800,
+    	easing: 'easeOutQuad',
+      opacity : 0,
+      top: '-600px'
+    });
+    setTimeout(function(){
+      transitionScrollUnoBottom.classList.remove('showDisplay');
+      transitionScrollUnoBottom.classList.add('hideDisplay');
+    },100);
+  },1100);
+}
 
 
 var debounceScrollNext, debounceScrollPrev;
 window.addEventListener("wheel", function(e){
+  console.log("Hola");
    if (e.deltaY > 0) {
       clearTimeout(debounceScrollNext);
       debounceScrollNext = setTimeout(function(){
-          console.log("Next");
-           countTla('next');
-      },500);
+          transitionScollUno();
+          setTimeout(function(){
+            console.log("Next");
+            countTla('next');
+          },1000);
+      },50);
    }
    if (e.deltaY < 0) {
       clearTimeout(debounceScrollPrev);
       debounceScrollPrev = setTimeout(function(){
-        console.log("Preview");
-        countTla('prev');
-      },500);
+        transitionScollDos();
+        setTimeout(function(){
+          console.log("Preview");
+          countTla('prev');
+        },1000);
+      },50);
    }
 }, false);
+
 
 
 // function getDimensionTransition(){
