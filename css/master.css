@@ -80,7 +80,7 @@ body{
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: #000;
+  background: #fff;
   z-index: 9000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,10 +92,52 @@ body{
   -webkit-justify-content:center;
   align-items: center;
   -webkit-align-items: center;
-  display: none;
+  /*display: none;*/
+}
+#salsaWrap{
+  position: relative;
+  width: 40px;
+  height: 140px;
+  margin-top: -200px;
+}
+#salsaWrap>img{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#salsaLiquid{
+  width: 40px;
+  height: 136px;
+  background-image: url('../img/salsa.png');
+  -webkit-animation: play 3.8s steps(73) infinite;
+  -moz-animation: play 3.8s steps(73) infinite;
+  -ms-animation: play 3.8s steps(73) infinite;
+  -o-animation: play 3.8s steps(73) infinite;
+  animation: play 3.8s steps(73) infinite;
+}
+@-webkit-keyframes play {
+    0% { background-position: 0,0; }
+    100% { background-position: -2920px,0; }
+}
+@-moz-keyframes play {
+    0% { background-position: 0,0; }
+    100% { background-position: -2920px,0; }
+}
+@-ms-keyframes play {
+    0% { background-position: 0,0; }
+    100% { background-position: -2920px,0; }
+}
+@-o-keyframes play {
+    0% { background-position: 0,0; }
+    100% { background-position: -2920px,0; }
+}
+@keyframes play {
+    0% { background-position: 0,0; }
+    100% { background-position: -2920px,0; }
 }
 #percentage{
-  color: #fff;
+  font-family: 'Caecilia B', sans-serif;
+  color: #000;
 }
 #main{
   position: absolute;

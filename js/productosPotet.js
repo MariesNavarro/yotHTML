@@ -9,7 +9,6 @@ var srcE = [];
 var startPosY;
 var elems;
 
-
 function menuItem (c, e, i){
   var img = e.childNodes[1],
       overPath = "img/icons/menu-",
@@ -47,46 +46,6 @@ window.onresize = function(){
   getDimensionTransition();
   resizeElem();
 }
-
-
-// var lastScrollTop = window.pageYOffset;
-// var flagOnScroll = false;
-// document.addEventListener("scroll", function(){
-//   console.log(window.pageXOffset + window.pageYOffset);
-//
-//   if(bodyDom.getAttribute('trigger')){
-//     return;
-//   }
-//   bodyDom.setAttribute('trigger', '');
-//    var st = window.pageYOffset || document.documentElement.scrollTop;
-//    if (st > lastScrollTop){
-//       setTimeout(function(){
-//         countTla('prev');
-// var debounceScrollNext, debounceScrollPrev;
-// window.addEventListener("wheel", function(e){
-//    if (e.deltaY > 0) {
-//       clearTimeout(debounceScrollNext);
-//       debounceScrollNext = setTimeout(function(){
-//           console.log("Next");
-//            countTla('next');
-//       },500);
-//    }
-//    if (e.deltaY < 0) {
-//       clearTimeout(debounceScrollPrev);
-//       debounceScrollPrev = setTimeout(function(){
-//         console.log("Preview");
-//       },1000)
-//    } else {
-//      setTimeout(function(){
-//        countTla('next');
-//        console.log("Next");
-//      },1000);
-//         countTla('prev');
-//       },500);
-//    }
-//    lastScrollTop = st;
-// }, false);
-
 
 var debounceScrollNext, debounceScrollPrev;
 window.addEventListener("wheel", function(e){
