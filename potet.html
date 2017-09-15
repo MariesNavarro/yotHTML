@@ -233,12 +233,13 @@ fluo.com.mx
   </footer>
   <div id="transition" class="hideDisplay">
     <svg id="svgTr" viewBox="0 0 1920 1080">
-      <polygon id="polyTr" fill="#098442" points="0,535 1920,535 1920,540 0,540 "/>
+      <path id="pathPotet" fill="#d33640" d="M4004,1417.5V2550H2025.5c0,0-283.5-895,130.5-1278C2672,794.6,4004,1417.5,4004,1417.5z"/>
     </svg>
   </div>
   <script src="js/bowser.min.js" charset="utf-8"></script>
   <script type="text/javascript">
     var checkMobileIndex = false;
+
     window.console.log("%cCoded by Mn - http://fluo.com.mx", "color:pink;  font-size: 10px; background:#000; padding:2px;");
     function _(el){return document.querySelector(el); }
     function __(el){return document.getElementsByClassName(el); }
@@ -253,6 +254,8 @@ fluo.com.mx
         mockProd[0].style.height = "220px";
       }
     });
+
+    var pathPotet = _('#pathPotet');
     var preventOnTransition = false;
     document.onkeydown = checkKey;
     function checkKey(e) {
@@ -273,7 +276,6 @@ fluo.com.mx
           countTla('next')
         }
       }
-
     }
   </script>
   <script src="js/anime.min.js"></script>

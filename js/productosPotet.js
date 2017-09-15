@@ -1,7 +1,7 @@
 var countSlider = 0;
 var imgElem,
     svgDom = _('#svgTr'),
-    polyDom = _('#polyTr'),
+    pathPotet = _('#pathPotet'),
     trWrap = _('#transition'),
     bodyDom = _('body'),
     bulletProduct = __('bulletProduct');
@@ -31,7 +31,7 @@ function menuItem (c, e, i){
 }
 
 window.onload = function (){
-  getDimensionTransition();
+  // getDimensionTransition();
   if(window.orientation == 90 || window.orientation == -90){
     mockProd[0].style.width = "200px";
     mockProd[0].style.height = "220px";
@@ -43,7 +43,7 @@ window.onload = function (){
 
 window.onresize = function(){
   var size = _('#size').innerHTML = "Width: " + window.innerWidth + "px Height: " + window.innerHeight + "px";
-  getDimensionTransition();
+  // getDimensionTransition();
   resizeElem();
 }
 
@@ -147,20 +147,19 @@ function sliderT(n){
 
   switch (n) {
     case 0:
-      polyDom.style.fill = "#d33640";
-
+      pathPotet.style.fill = "#d33640";
     break;
     case 1:
-      polyDom.style.fill = "#f1b935";
+      pathPotet.style.fill = "#f1b935";
     break;
     case 2:
-      polyDom.style.fill = "#bc7129";
+      pathPotet.style.fill = "#bc7129";
     break;
     case 3:
-      polyDom.style.fill = "#f78f30";
+      pathPotet.style.fill = "#d33640";
     break;
     case 4:
-      polyDom.style.fill = "#d33640";
+      pathPotet.style.fill = "#d33640";
     break;
   }
 
@@ -212,10 +211,10 @@ function transition(){
   	opacity: 1
   });
   anime({
-  	targets: polyDom,
+  	targets: pathPotet,
   	duration: 800,
   	easing: 'easeOutQuad',
-  	points: polyDom.getAttribute('pointsIn')
+  	d: 'M1944-18.5V1114H-34.5c0,0-283.5-895,130.5-1278C612-641.4,1944-18.5,1944-18.5z'
   });
   setTimeout(function(){
     anime({
@@ -226,10 +225,10 @@ function transition(){
       delay: 100
     });
     anime({
-    	targets: polyDom,
+    	targets: pathPotet,
     	duration: 500,
     	easing: 'easeOutQuad',
-    	points: polyDom.getAttribute('pointsOut')
+    	d: 'M4004,1417.5V2550H2025.5c0,0-283.5-895,130.5-1278C2672,794.6,4004,1417.5,4004,1417.5z'
     });
     setTimeout(function(){
       trWrap.classList.remove('showDisplay');

@@ -179,18 +179,19 @@
   background: #bc7129; /* Old browsers */
 }
 .chilearbolPotet{
-  background: #f78f30; /* Old browsers */
+  background: #d33640; /* Old browsers */
 }
 .footslider{
-  background: #f78f30; /* Old browsers */
+  background: #d33640; /* Old browsers */
 }
 #transition{
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   z-index: 9000;
 }
 #transition>svg{
+  height: 100%;
   opacity: 0;
 }
 #transition>img{
