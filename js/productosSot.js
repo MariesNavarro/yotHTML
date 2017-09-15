@@ -32,7 +32,7 @@ function menuItem (c, e, i){
 }
 
 window.onload = function (){
-  getDimensionTransition();
+  //getDimensionTransition();
   if(window.orientation == 90 || window.orientation == -90){
     mockProd[0].style.width = "200px";
     mockProd[0].style.height = "220px";
@@ -44,7 +44,7 @@ window.onload = function (){
 
 window.onresize = function(){
   var size = _('#size').innerHTML = "Width: " + window.innerWidth + "px Height: " + window.innerHeight + "px";
-  getDimensionTransition();
+  //getDimensionTransition();
   resizeElem();
 }
 
@@ -107,17 +107,17 @@ window.addEventListener("wheel", function(e){
 }, false);
 
 
-function getDimensionTransition(){
-  var w = window.innerWidth;
-  var h = window.innerHeight;
-  var middleH = h/2;
-  var offset = middleH + 1;
-  var margin = 560;
-  svgDom.setAttribute('viewBox', '0 0 ' + w + ' ' +h);
-  polyTr.setAttribute('points', '0,' + middleH + ' ' + w + ',' + middleH + ' ' + w + ',' + offset + ' 0,' + offset);
-  polyTr.setAttribute('pointsOut', '0,' + middleH + ' ' + w + ',' + middleH + ' ' + w + ',' + offset + ' 0,' + offset);
-  polyTr.setAttribute('pointsIn', '0,0 ' + w + ',' + -margin + ' ' + w + ',' + h + ' 0,' + (margin + h));
-}
+// function getDimensionTransition(){
+//   var w = window.innerWidth;
+//   var h = window.innerHeight;
+//   var middleH = h/2;
+//   var offset = middleH + 1;
+//   var margin = 560;
+//   svgDom.setAttribute('viewBox', '0 0 ' + w + ' ' +h);
+//   polyTr.setAttribute('points', '0,' + middleH + ' ' + w + ',' + middleH + ' ' + w + ',' + offset + ' 0,' + offset);
+//   polyTr.setAttribute('pointsOut', '0,' + middleH + ' ' + w + ',' + middleH + ' ' + w + ',' + offset + ' 0,' + offset);
+//   polyTr.setAttribute('pointsIn', '0,0 ' + w + ',' + -margin + ' ' + w + ',' + h + ' 0,' + (margin + h));
+// }
 
 
 
@@ -189,7 +189,6 @@ function sliderT(n){
   switch (n) {
     case 0:
       polyDom.style.fill = "#c21e71";
-
     break;
     case 1:
       polyDom.style.fill = "#ab8b3c";
@@ -256,7 +255,7 @@ function transition(){
   	targets: polyDom,
   	duration: 800,
   	easing: 'easeOutQuad',
-  	points: polyDom.getAttribute('pointsIn')
+  	d: 'M3.2,1055.4h1921.8V-321c0,0-246.4,191.8-416.1,228.4c-289.8,62.6-550.5,104.1-1036-72 C191.2-266.8,0-43.6,0-43.6L3.2,1055.4z'
   });
   setTimeout(function(){
     anime({
@@ -270,7 +269,7 @@ function transition(){
     	targets: polyDom,
     	duration: 500,
     	easing: 'easeOutQuad',
-    	points: polyDom.getAttribute('pointsOut')
+    	d: 'M3.2,2312.4h1921.8V936c0,0-246.4,191.8-416.1,228.4c-289.8,62.6-550.5,104.1-1036-72 c-281.8-102.2-473,121-473,121L3.2,2312.4z'
     });
     setTimeout(function(){
       trWrap.classList.remove('showDisplay');
