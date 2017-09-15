@@ -113,9 +113,60 @@ body{
 }
 #nuestroN>ul>li{
   float: left;
+  position: relative;
   width: 50%;
   height: 390px;
+  cursor: pointer;
 }
+.overInfo{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content:center;
+  -webkit-justify-content:center;
+}
+.overInfo>h2{font-size: 1.8rem;}
+.overInfo>p{font-size: 1.2rem;}
+.overInfo>h2, .overInfo>p, .overInfo>img{
+  font-family: 'Caecilia B', sans-serif;
+  color: #fff;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.iconMore{
+  transition: all 0.8s ease-out;
+}
+.rotateIcon{
+  transform: rotate(180deg);
+}
+.unrotateIcon{
+  transform: rotate(0deg);
+}
+
+.imgProductoNos{
+  transition: all 0.8s ease-out;
+}
+
+
+
+.rotateImage{
+  transform:  matrix(1,-0.1,0,1,0,0);
+}
+.unrotateImage{
+  transform:  matrix(1,0,0,1,0,0);
+}
+
 .liImg, .liTexto{
   display: -webkit-box;
   display: -ms-flexbox;
