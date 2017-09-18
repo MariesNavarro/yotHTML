@@ -1,5 +1,9 @@
-window.onload = function (){
+var loading = _('#loading');
 
+window.onload = function (){
+  setTimeout(function(){
+    loading.style.display = "none";
+  },5000);
 }
 
 window.onresize = function(){

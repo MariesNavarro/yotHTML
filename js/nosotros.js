@@ -2,8 +2,12 @@ var overInfo = __('overInfo'),
     iconMore = __('iconMore'),
     imgProductoNos = __('imgProductoNos');
 
-window.onload = function (){
+var loading = _('#loading');
 
+window.onload = function (){
+  setTimeout(function(){
+    loading.style.display = "none";
+  },5000);
 }
 
 window.onresize = function(){

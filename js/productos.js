@@ -12,6 +12,9 @@ var startPosY;
 var elems;
 
 
+var loading = _('#loading');
+
+
 function menuItem (c, e, i){
   var img = e.childNodes[1],
       overPath = "img/icons/menu-",
@@ -34,6 +37,9 @@ function menuItem (c, e, i){
 }
 
 window.onload = function (){
+  setTimeout(function(){
+    loading.style.display = "none";
+  },5000);
   getDimensionTransition();
   if(window.orientation == 90 || window.orientation == -90){
     mockProd[0].style.width = "200px";
