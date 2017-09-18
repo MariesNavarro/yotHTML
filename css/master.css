@@ -220,9 +220,6 @@ nav{
 }
 /* DESKTOP */
 @media screen and (min-width:800px){
-  body{
-    height: 105vh;
-  }
   #innerMobile{
     display: none;
   }
@@ -273,16 +270,16 @@ nav{
 .footslider>div{
   height: 100%;
   width: 100%;
-display: -webkit-box;
-display: -ms-flexbox;
-display: -webkit-flex;
-display: flex;
-flex-direction: row;
--webkit-flex-direction:row;
-justify-content:center;
--webkit-justify-content:center;
-align-items: center;
--webkit-align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction:row;
+  justify-content:center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
 }
 .footslider>div>a{
   width: 60px;

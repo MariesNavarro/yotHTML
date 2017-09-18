@@ -160,12 +160,6 @@ body{
 
 
 
-.rotateImage{
-  transform:  matrix(1,-0.1,0,1,0,0);
-}
-.unrotateImage{
-  transform:  matrix(1,0,0,1,0,0);
-}
 
 .liImg, .liTexto{
   display: -webkit-box;

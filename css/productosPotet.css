@@ -235,14 +235,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d33640', end
 }
 footer{
   position: absolute;
-  top: 100vh;
+  top: 95vh;
   color: #fff;
   font-size: 0.7rem;
 
   width: 100vw;
   height: 5vh;
 
-  background: #490e0e;
+  background: rgba(0,0,0,0);
   z-index: 2000;
 }
 footer>div{
@@ -250,7 +250,7 @@ footer>div{
   top: 0;
   width: 100vw;
   height: 15vh;
-  background: #490e0e;
+  background: rgba(0,0,0,0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;

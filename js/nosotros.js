@@ -55,15 +55,11 @@ function overNosotros(c, i){
   switch (c) {
     case 'over':
       overInfo[i].style.opacity = "0.8";
-      imgProductoNos[i].classList.remove('unrotateImage');
-      imgProductoNos[i].classList.add('rotateImage');
       iconMore[i].classList.remove('unrotateIcon');
       iconMore[i].classList.add('rotateIcon');
     break;
     case 'out':
       overInfo[i].style.opacity = "0";
-      imgProductoNos[i].classList.remove('rotateImage');
-      imgProductoNos[i].classList.add('unrotateImage');
       iconMore[i].classList.remove('rotateIcon');
       iconMore[i].classList.add('unrotateIcon');
     break;
