@@ -343,7 +343,7 @@ function shuffleSrcElem(prod){
   startPosY = -200;
   srcE = [];
   for (var i = 0; i < 6; i++) {
-    srcE.push('img/tla/'+prod+'-'+ i +'.svg');
+    srcE.push('img/tla/'+prod+'-'+ i +'.png');
   }
   var newScr = shuffle(srcE);
   for (var i = 0; i < 6; i++) {
@@ -358,7 +358,7 @@ function resizeElem(){
       widthRange = window.innerWidth - 250;
   if(checkMobileIndex || window.innerWidth < 800){
     for (var i = 0; i < elems.length; i++) {
-      elems[i].setAttribute('width', '90');
+      elems[i].setAttribute('width', '140');
       //left
       leftElem =  Math.round(Math.random(widthRange) * widthRange);
       if(leftElem > widthRange){
@@ -371,7 +371,7 @@ function resizeElem(){
     }
   } else {
     for (var i = 0; i < elems.length; i++) {
-      elems[i].setAttribute('width', '130');
+      elems[i].setAttribute('width', '190');
       //Left
       leftElem =  Math.round(Math.random(widthRange) * widthRange);
       if(leftElem > widthRange){
@@ -388,53 +388,56 @@ function resizeElem(){
 function gravedad(){
   startPosY = window.innerHeight + 200;
   var posRange = ['50', '550', '200', '500', '0', '300','150'];
+  var rotRange = ['25deg','-150deg','60deg','120deg','90deg'];
+  var speed = 3200;
   for (var i = 0; i < 6; i++) {
     var posY = shuffle(posRange);
+    var rotR = shuffle(rotRange);
   }
   anime({
 			targets: elems[0],
-      translateX: [
-        {value:[-20],duration: 2000,easing: 'easeInQuad'}
-			],
+      // translateX: [
+      //   {value:[-20],duration: 2000,easing: 'easeInQuad'}
+			// ],
       top: [
 				// {value:[posY[0]],duration: 900,easing: 'easeInQuad'},
-        // {value:[posY[0]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 3000,easing: 'easeOutQuad'}
+        // {value:[posY[0]],duration: 400,easing: 'easeInQuad'},
+				{value:[startPosY],duration: speed,easing: 'easeOutQuad'}
 			],
-      // rotate: [
-      //   {value:['0'],duration: 500,easing: 'easeInQuad'},
-      //   {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
-      // ]
+      rotate: [
+        // {value:['0'],duration: 500,easing: 'easeInQuad'},
+        {value:[rotR[0]],duration: speed,easing: 'easeOutQuad'},
+      ]
 	});
   anime({
 			targets: elems[1],
       // translateX: [
       //   {value:[-300],duration: 2000,easing: 'easeInQuad'}
-			// ],
+      // ],
       top: [
 				// {value:[posY[1]],duration: 900,easing: 'easeInQuad'},
-        // {value:[posY[1]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 3000,easing: 'easeOutQuad'}
+        // {value:[posY[1]],duration: 400,easing: 'easeInQuad'},
+				{value:[startPosY],duration: speed,easing: 'easeOutQuad'}
 			],
-      // rotate: [
-      //   {value:['0'],duration: 500,easing: 'easeInQuad'},
-      //   {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
-      // ]
+      rotate: [
+        // {value:['0'],duration: 500,easing: 'easeInQuad'},
+        {value:[rotR[1]],duration: speed,easing: 'easeOutQuad'},
+      ]
 	});
   anime({
 			targets: elems[2],
       // translateX: [
       //   {value:[-100],duration: 2000,easing: 'easeInQuad'}
-			// ],
+	 		// ],
       top: [
 				// {value:[posY[2]],duration: 900,easing: 'easeInQuad'},
-        // {value:[posY[2]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 3000,easing: 'easeOutQuad'}
+        // {value:[posY[2]],duration: 400,easing: 'easeInQuad'},
+				{value:[startPosY],duration: speed,easing: 'easeOutQuad'}
 			],
-      // rotate: [
-      //   {value:['0'],duration: 500,easing: 'easeInQuad'},
-      //   {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
-      // ]
+      rotate: [
+        // {value:['0'],duration: 500,easing: 'easeInQuad'},
+        {value:[rotR[2]],duration: speed,easing: 'easeOutQuad'},
+      ]
 	});
   anime({
 			targets: elems[3],
@@ -443,43 +446,43 @@ function gravedad(){
 			// ],
       top: [
 				// {value:[posY[3]],duration: 900,easing: 'easeInQuad'},
-        // {value:[posY[3]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 3000,easing: 'easeOutQuad'}
+        // {value:[posY[3]],duration: 400,easing: 'easeInQuad'},
+				{value:[startPosY],duration: speed,easing: 'easeOutQuad'}
 			],
-      // rotate: [
-      //   {value:['0'],duration: 500,easing: 'easeInQuad'},
-      //   {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
-      // ]
+      rotate: [
+        // {value:['0'],duration: 500,easing: 'easeInQuad'},
+        {value:[rotR[3]],duration: speed,easing: 'easeOutQuad'},
+      ]
 	});
   anime({
 			targets: elems[4],
       // translateX: [
       //   {value:[50],duration: 2000,easing: 'easeInQuad'}
-			// ],
+	 		// ],
       top: [
 				// {value:[posY[4]],duration: 900,easing: 'easeInQuad'},
-        // {value:[posY[4]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 3000,easing: 'easeOutQuad'}
+        // {value:[posY[4]],duration: 400,easing: 'easeInQuad'},
+				{value:[startPosY],duration: speed,easing: 'easeOutQuad'}
 			],
-      // rotate: [
-      //   {value:['0'],duration: 500,easing: 'easeInQuad'},
-      //   {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
-      // ]
+      rotate: [
+        // {value:['0'],duration: 500,easing: 'easeInQuad'},
+        {value:[rotR[4]],duration: speed,easing: 'easeOutQuad'},
+      ]
 	});
   anime({
 			targets: elems[5],
-      // translateX: [
-      //   {value:[-200],duration: 2000,easing: 'easeInQuad'}
-			// ],
+  //     // translateX: [
+  //     //   {value:[-200],duration: 2000,easing: 'easeInQuad'}
+	// 		// ],
       top: [
 				// {value:[posY[5]],duration: 900,easing: 'easeInQuad'},
-        // {value:[posY[5]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 3000,easing: 'easeOutQuad'}
+        // {value:[posY[5]],duration: 400,easing: 'easeInQuad'},
+				{value:[startPosY],duration: speed,easing: 'easeOutQuad'}
 			],
-      // rotate: [
-      //   {value:['0'],duration: 500,easing: 'easeInQuad'},
-      //   {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
-      // ]
+      rotate: [
+        // {value:['0'],duration: 500,easing: 'easeInQuad'},
+        {value:[rotR[5]],duration: speed,easing: 'easeOutQuad'},
+      ]
 	});
 }
 
