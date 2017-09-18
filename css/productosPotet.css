@@ -215,7 +215,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d33640', end
 }
 #transition>svg{
   height: 100%;
-  opacity: 0;
+  /*opacity: 0;*/
+
+  -webkit-transition: background 0.5s ease-out;
+  -moz-transition: background 0.5s ease-out;
+  -ms-transition: background 0.5s ease-out;
+  -o-transition: background 0.5s ease-out;
+  transition: background 0.5s ease-out;
 }
 #transition>img{
   position: absolute;
@@ -265,7 +271,6 @@ footer>div>ul>li{
 footer>div>ul>li:hover{
   opacity: 0.5;
 }
-
 /* DESKTOP */
 @media screen and (min-width:800px){
   .slide>ul{
@@ -376,18 +381,17 @@ footer>div>ul>li:hover{
 }
 
 #prov{
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: cadetblue;
-  transform: scale(1.5,1.5);
+  overflow: hidden;
 }
 #prov>svg{
-
-}
-
-#pathProv{
-
+  position: absolute;
+  top: -5vh;
+  right: -150vw;
+  height: 110%;
+  opacity: 0;
 }

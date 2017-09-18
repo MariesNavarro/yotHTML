@@ -1,17 +1,18 @@
 var countSlider = 0;
 var imgElem,
     svgDom = _('#svgTr'),
-    pathPotet = _('#pathPotet'),
     trWrap = _('#transition'),
     transitionScrollUnoBottom = _('#transitionScrollUnoBottom'),
     transitionScrollUnoTop = _('#transitionScrollUnoTop'),
     bodyDom = _('body'),
+    pathPotetProv = _('#pathPotetProv'),
     bulletProduct = __('bulletProduct');
 var srcE = [];
-var startPosY;
+var startPosX;
 var elems;
 
-var loading = _('#loading');
+var loading = _('#loading'),
+    potetSvg = _('#potetSvg');
 
 function menuItem (c, e, i){
   var img = e.childNodes[1],
@@ -204,6 +205,10 @@ function bulletChange(e,i,c){
   }
 }
 
+
+
+
+
 function sliderT(n){
   preventOnTransition = true;
   shuffleSrcElem('pot');
@@ -215,19 +220,64 @@ function sliderT(n){
 
   switch (n) {
     case 0:
-      pathPotet.style.fill = "#ffc521";
+      svgDom.style.backgroundColor = "rgba(0,0,0,0)";
+      pathPotetProv.style.fill = "#ffc521";
+      setTimeout(function(){
+        anime({
+          targets: svgDom,
+          duration: 50,
+          easing: 'easeOutQuad',
+          backgroundColor: '#ffc521'
+        });
+      },530);
     break;
     case 1:
-      pathPotet.style.fill = "#ffc521";
+      svgDom.style.backgroundColor = "rgba(0,0,0,0)";
+      pathPotetProv.style.fill = "#ffc521";
+      setTimeout(function(){
+        anime({
+          targets: svgDom,
+          duration: 50,
+          easing: 'easeOutQuad',
+          backgroundColor: '#ffc521'
+        });
+      },530);
     break;
     case 2:
-      pathPotet.style.fill = "#f78f30";
+      svgDom.style.backgroundColor = "rgba(0,0,0,0)";
+      pathPotetProv.style.fill = "#f78f30";
+      setTimeout(function(){
+        anime({
+          targets: svgDom,
+          duration: 50,
+          easing: 'easeOutQuad',
+          backgroundColor: '#f78f30'
+        });
+      },530);
     break;
     case 3:
-      pathPotet.style.fill = "#d33640";
+      svgDom.style.backgroundColor = "rgba(0,0,0,0)";
+      pathPotetProv.style.fill = "#d33640";
+      setTimeout(function(){
+        anime({
+          targets: svgDom,
+          duration: 50,
+          easing: 'easeOutQuad',
+          backgroundColor: '#d33640'
+        });
+      },530);
     break;
     case 4:
-      pathPotet.style.fill = "#d33640";
+      svgDom.style.backgroundColor = "rgba(0,0,0,0)";
+      pathPotetProv.style.fill = "#d33640";
+      setTimeout(function(){
+        anime({
+          targets: svgDom,
+          duration: 50,
+          easing: 'easeOutQuad',
+          backgroundColor: '#d33640'
+        });
+      },530);
     break;
   }
 
@@ -279,10 +329,11 @@ function transition(){
   	opacity: 1
   });
   anime({
-  	targets: pathPotet,
-  	duration: 800,
+  	targets: potetSvg,
+    duration: 700,
   	easing: 'easeOutQuad',
-  	d: 'M1944-18.5V1114H-34.5c0,0-283.5-895,130.5-1278C612-641.4,1944-18.5,1944-18.5z'
+  	opacity: 1,
+    right: '0'
   });
   setTimeout(function(){
     anime({
@@ -293,10 +344,11 @@ function transition(){
       delay: 100
     });
     anime({
-    	targets: pathPotet,
-    	duration: 500,
+    	targets: potetSvg,
+      duration: 700,
     	easing: 'easeOutQuad',
-    	d: 'M4004,1417.5V2550H2025.5c0,0-283.5-895,130.5-1278C2672,794.6,4004,1417.5,4004,1417.5z'
+    	opacity: 0,
+      right: '-150%'
     });
     setTimeout(function(){
       trWrap.classList.remove('showDisplay');
@@ -314,9 +366,10 @@ function setElems(){
 }
 
 var elems = __('elem');
-
+var startPosX;
 function shuffleSrcElem(prod){
-  startPosY = window.innerHeight + 200;
+  //ocultar los elementos en X
+  startPosX = window.innerWidth + 200;
   srcE = [];
   for (var i = 0; i < 6; i++) {
     srcE.push('img/tla/'+prod+'-'+ i +'.svg');
@@ -324,58 +377,66 @@ function shuffleSrcElem(prod){
   var newScr = shuffle(srcE);
   for (var i = 0; i < 6; i++) {
     elems[i].setAttribute('src', newScr[i]);
-    elems[i].style.top =  startPosY + "px";
+    elems[i].style.left =  startPosX + "px";
   }
 }
 
 function resizeElem(){
   var offsetLeft,
       leftElem,
-      widthRange = window.innerWidth - 250;
+      heightRange = window.innerHeight - 250;
   if(checkMobileIndex || window.innerWidth < 800){
     for (var i = 0; i < elems.length; i++) {
       elems[i].setAttribute('width', '90');
       //left
-      leftElem =  Math.round(Math.random(widthRange) * widthRange);
-      if(leftElem > widthRange){
+      leftElem =  Math.round(Math.random(heightRange) * heightRange);
+      if(leftElem > heightRange){
         offsetLeft = 0;
-        imgElem.style.left = leftElem + offsetLeft;
+        imgElem.style.top = leftElem + offsetLeft;
       } else {
         offsetLeft = 100;
-        imgElem.style.left = leftElem + offsetLeft;
+        imgElem.style.top = leftElem + offsetLeft;
       }
     }
   } else {
     for (var i = 0; i < elems.length; i++) {
       elems[i].setAttribute('width', '130');
       //Left
-      leftElem =  Math.round(Math.random(widthRange) * widthRange);
-      if(leftElem > widthRange){
+      leftElem =  Math.round(Math.random(heightRange) * heightRange);
+      if(leftElem > heightRange){
         offsetLeft = 0;
-        elems[i].style.left = leftElem + offsetLeft;
+        elems[i].style.top = leftElem + offsetLeft;
       } else {
         offsetLeft = 100;
-        elems[i].style.left = leftElem + offsetLeft;
+        elems[i].style.top = leftElem + offsetLeft;
       }
     }
   }
 }
 
 function gravedad(){
-  startPosY = window.innerHeight + 200;
-  var posRange = ['50', '550', '200', '500', '0', '300','150'];
+  startPosX = window.innerWidth + 200;
+  middleW = window.innerWidth/2;
+  var w = window.innerWidth;
+  var pos1 = middleW - (0.4*w);
+  var pos2 = middleW - (0.03*w);
+  var pos3 = middleW + (0.05*w);
+  var pos4 = middleW - (0.32*w);
+  var pos5 = middleW + (0.3*w);
+  var pos6 = middleW + (0.2*w);
+
+  var posRange = [middleW - 400, '25', '20', '65', '0', '70','100'];
   for (var i = 0; i < 6; i++) {
-    var posY = shuffle(posRange);
+    var posX = shuffle(posRange);
   }
+    console.log("pos1(+100): " + pos1 + "\n" + "pos2(-800): " + pos2 + "\n" + "pos3(+300): " + pos3 + "\n" + "pos4(-300): " + pos4 + "\n" + "pos5(+220): " + pos5 + "\n" + "pos6(-220): " + pos6);
+
   anime({
 			targets: elems[0],
-      translateX: [
-        {value:[-20],duration: 2000,easing: 'easeInQuad'}
-			],
-      top: [
-				{value:[posY[0]],duration: 700,easing: 'easeInQuad'},
-        {value:[posY[0]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 1000,easing: 'easeOutQuad'}
+      left: [
+				{value:[pos1],duration: 700,easing: 'easeInQuad'},
+        {value:[pos1],duration: 300,easing: 'easeInQuad'},
+				{value:[startPosX],duration: 1000,easing: 'easeOutQuad'}
 			],
       rotate: [
         {value:['0'],duration: 500,easing: 'easeInQuad'},
@@ -384,13 +445,10 @@ function gravedad(){
 	});
   anime({
 			targets: elems[1],
-      // translateX: [
-      //   {value:[-300],duration: 2000,easing: 'easeInQuad'}
-			// ],
-      top: [
-				{value:[posY[1]],duration: 700,easing: 'easeInQuad'},
-        {value:[posY[1]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 1000,easing: 'easeOutQuad'}
+      left: [
+				{value:[pos2],duration: 700,easing: 'easeInQuad'},
+        {value:[pos2],duration: 300,easing: 'easeInQuad'},
+				{value:[startPosX],duration: 1000,easing: 'easeOutQuad'}
 			],
       rotate: [
         {value:['0'],duration: 500,easing: 'easeInQuad'},
@@ -399,13 +457,10 @@ function gravedad(){
 	});
   anime({
 			targets: elems[2],
-      // translateX: [
-      //   {value:[-100],duration: 2000,easing: 'easeInQuad'}
-			// ],
-      top: [
-				{value:[posY[2]],duration: 700,easing: 'easeInQuad'},
-        {value:[posY[2]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 1000,easing: 'easeOutQuad'}
+      left: [
+				{value:[pos3],duration: 700,easing: 'easeInQuad'},
+        {value:[pos3],duration: 300,easing: 'easeInQuad'},
+				{value:[startPosX],duration: 1000,easing: 'easeOutQuad'}
 			],
       rotate: [
         {value:['0'],duration: 500,easing: 'easeInQuad'},
@@ -414,13 +469,10 @@ function gravedad(){
 	});
   anime({
 			targets: elems[3],
-      // translateX: [
-      //   {value:[100],duration: 2000,easing: 'easeInQuad'}
-			// ],
-      top: [
-				{value:[posY[3]],duration: 700,easing: 'easeInQuad'},
-        {value:[posY[3]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 1000,easing: 'easeOutQuad'}
+      left: [
+				{value:[pos4],duration: 700,easing: 'easeInQuad'},
+        {value:[pos4],duration: 300,easing: 'easeInQuad'},
+				{value:[startPosX],duration: 1000,easing: 'easeOutQuad'}
 			],
       rotate: [
         {value:['0'],duration: 500,easing: 'easeInQuad'},
@@ -429,13 +481,10 @@ function gravedad(){
 	});
   anime({
 			targets: elems[4],
-      // translateX: [
-      //   {value:[50],duration: 2000,easing: 'easeInQuad'}
-			// ],
-      top: [
-				{value:[posY[4]],duration: 700,easing: 'easeInQuad'},
-        {value:[posY[4]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 1000,easing: 'easeOutQuad'}
+      left: [
+				{value:[pos5],duration: 700,easing: 'easeInQuad'},
+        {value:[pos5],duration: 300,easing: 'easeInQuad'},
+				{value:[startPosX],duration: 1000,easing: 'easeOutQuad'}
 			],
       rotate: [
         {value:['0'],duration: 500,easing: 'easeInQuad'},
@@ -444,13 +493,10 @@ function gravedad(){
 	});
   anime({
 			targets: elems[5],
-      // translateX: [
-      //   {value:[-200],duration: 2000,easing: 'easeInQuad'}
-			// ],
-      top: [
-				{value:[posY[5]],duration: 700,easing: 'easeInQuad'},
-        {value:[posY[5]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 1000,easing: 'easeOutQuad'}
+      left: [
+				{value:[pos6],duration: 700,easing: 'easeInQuad'},
+        {value:[pos6],duration: 300,easing: 'easeInQuad'},
+				{value:[startPosX],duration: 1000,easing: 'easeOutQuad'}
 			],
       rotate: [
         {value:['0'],duration: 500,easing: 'easeInQuad'},
@@ -459,20 +505,20 @@ function gravedad(){
 	});
 }
 
+/* WIGGLE */
 
-
-function wiggleChange(e, c){
-  switch (c) {
-    case 'over':
-      e.classList.remove('wiggleOut');
-      e.classList.add('wiggleOver');
-    break;
-    case 'out':
-      e.classList.remove('wiggleOver');
-      e.classList.add('wiggleOut');
-    break;
-  }
-}
+// function wiggleChange(e, c){
+//   switch (c) {
+//     case 'over':
+//       e.classList.remove('wiggleOut');
+//       e.classList.add('wiggleOver');
+//     break;
+//     case 'out':
+//       e.classList.remove('wiggleOver');
+//       e.classList.add('wiggleOut');
+//     break;
+//   }
+// }
 
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
