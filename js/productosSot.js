@@ -1,8 +1,10 @@
 var countSlider = 0;
 var imgElem,
     svgDom = _('#svgTr'),
-    polyDom = _('#polyTr'),
+    polyDom = _('#pathSotProv'),
+    fillSvg = _('#fillSvg'),
     trWrap = _('#transition'),
+    pathSvgProv = _('#pathSvgProv'),
     bodyDom = _('body'),
     transitionScrollUnoBottom = _('#transitionScrollUnoBottom'),
     transitionScrollUnoTop = _('#transitionScrollUnoTop'),
@@ -11,6 +13,9 @@ var srcE = [];
 var startPosY;
 var elems;
 var loading = _('#loading');
+
+
+ // fillSvg
 
 function menuItem (c, e, i){
   var img = e.childNodes[1],
@@ -216,18 +221,23 @@ function sliderT(n){
   switch (n) {
     case 0:
       polyDom.style.fill = "#c21e71";
+      fillSvg.style.background = "#c21e71";
     break;
     case 1:
       polyDom.style.fill = "#ab8b3c";
+      fillSvg.style.background = "#ab8b3c";
     break;
     case 2:
       polyDom.style.fill = "#9f3039";
+      fillSvg.style.background = "#9f3039";
     break;
     case 3:
       polyDom.style.fill = "#c21e71";
+      fillSvg.style.background = "#c21e71";
     break;
     case 4:
       polyDom.style.fill = "#c21e71";
+      fillSvg.style.background = "#c21e71";
     break;
   }
 
@@ -279,10 +289,17 @@ function transition(){
   	opacity: 1
   });
   anime({
-  	targets: polyDom,
-  	duration: 800,
+  	targets: pathSvgProv,
+    duration: 800,
   	easing: 'easeOutQuad',
-  	d: 'M3.2,1055.4h1921.8V-321c0,0-246.4,191.8-416.1,228.4c-289.8,62.6-550.5,104.1-1036-72 C191.2-266.8,0-43.6,0-43.6L3.2,1055.4z'
+  	top: '20%',
+    opacity: 1
+  });
+  anime({
+  	targets: fillSvg,
+    duration: 800,
+  	easing: 'easeOutQuad',
+  	top: '-30%'
   });
   setTimeout(function(){
     anime({
@@ -293,12 +310,19 @@ function transition(){
       delay: 100
     });
     anime({
-    	targets: polyDom,
-    	duration: 500,
+    	targets: pathSvgProv,
+      duration: 800,
     	easing: 'easeOutQuad',
-    	d: 'M3.2,2312.4h1921.8V936c0,0-246.4,191.8-416.1,228.4c-289.8,62.6-550.5,104.1-1036-72 c-281.8-102.2-473,121-473,121L3.2,2312.4z'
+      opacity: 0
+    });
+    anime({
+    	targets: fillSvg,
+      duration: 700,
+    	easing: 'easeOutQuad',
+    	top: '-100%'
     });
     setTimeout(function(){
+      pathSvgProv.style.top = "-100%";
       trWrap.classList.remove('showDisplay');
       trWrap.classList.add('hideDisplay');
     },500)
@@ -316,7 +340,7 @@ function setElems(){
 var elems = __('elem');
 
 function shuffleSrcElem(prod){
-  startPosY = window.innerHeight + 200;
+  startPosY = -200;
   srcE = [];
   for (var i = 0; i < 6; i++) {
     srcE.push('img/tla/'+prod+'-'+ i +'.svg');
@@ -373,14 +397,14 @@ function gravedad(){
         {value:[-20],duration: 2000,easing: 'easeInQuad'}
 			],
       top: [
-				{value:[posY[0]],duration: 700,easing: 'easeInQuad'},
-        {value:[posY[0]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 1000,easing: 'easeOutQuad'}
+				// {value:[posY[0]],duration: 900,easing: 'easeInQuad'},
+        // {value:[posY[0]],duration: 300,easing: 'easeInQuad'},
+				{value:[startPosY],duration: 3000,easing: 'easeOutQuad'}
 			],
-      rotate: [
-        {value:['0'],duration: 500,easing: 'easeInQuad'},
-        {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
-      ]
+      // rotate: [
+      //   {value:['0'],duration: 500,easing: 'easeInQuad'},
+      //   {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
+      // ]
 	});
   anime({
 			targets: elems[1],
@@ -388,14 +412,14 @@ function gravedad(){
       //   {value:[-300],duration: 2000,easing: 'easeInQuad'}
 			// ],
       top: [
-				{value:[posY[1]],duration: 700,easing: 'easeInQuad'},
-        {value:[posY[1]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 1000,easing: 'easeOutQuad'}
+				// {value:[posY[1]],duration: 900,easing: 'easeInQuad'},
+        // {value:[posY[1]],duration: 300,easing: 'easeInQuad'},
+				{value:[startPosY],duration: 3000,easing: 'easeOutQuad'}
 			],
-      rotate: [
-        {value:['0'],duration: 500,easing: 'easeInQuad'},
-        {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
-      ]
+      // rotate: [
+      //   {value:['0'],duration: 500,easing: 'easeInQuad'},
+      //   {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
+      // ]
 	});
   anime({
 			targets: elems[2],
@@ -403,14 +427,14 @@ function gravedad(){
       //   {value:[-100],duration: 2000,easing: 'easeInQuad'}
 			// ],
       top: [
-				{value:[posY[2]],duration: 700,easing: 'easeInQuad'},
-        {value:[posY[2]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 1000,easing: 'easeOutQuad'}
+				// {value:[posY[2]],duration: 900,easing: 'easeInQuad'},
+        // {value:[posY[2]],duration: 300,easing: 'easeInQuad'},
+				{value:[startPosY],duration: 3000,easing: 'easeOutQuad'}
 			],
-      rotate: [
-        {value:['0'],duration: 500,easing: 'easeInQuad'},
-        {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
-      ]
+      // rotate: [
+      //   {value:['0'],duration: 500,easing: 'easeInQuad'},
+      //   {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
+      // ]
 	});
   anime({
 			targets: elems[3],
@@ -418,14 +442,14 @@ function gravedad(){
       //   {value:[100],duration: 2000,easing: 'easeInQuad'}
 			// ],
       top: [
-				{value:[posY[3]],duration: 700,easing: 'easeInQuad'},
-        {value:[posY[3]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 1000,easing: 'easeOutQuad'}
+				// {value:[posY[3]],duration: 900,easing: 'easeInQuad'},
+        // {value:[posY[3]],duration: 300,easing: 'easeInQuad'},
+				{value:[startPosY],duration: 3000,easing: 'easeOutQuad'}
 			],
-      rotate: [
-        {value:['0'],duration: 500,easing: 'easeInQuad'},
-        {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
-      ]
+      // rotate: [
+      //   {value:['0'],duration: 500,easing: 'easeInQuad'},
+      //   {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
+      // ]
 	});
   anime({
 			targets: elems[4],
@@ -433,14 +457,14 @@ function gravedad(){
       //   {value:[50],duration: 2000,easing: 'easeInQuad'}
 			// ],
       top: [
-				{value:[posY[4]],duration: 700,easing: 'easeInQuad'},
-        {value:[posY[4]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 1000,easing: 'easeOutQuad'}
+				// {value:[posY[4]],duration: 900,easing: 'easeInQuad'},
+        // {value:[posY[4]],duration: 300,easing: 'easeInQuad'},
+				{value:[startPosY],duration: 3000,easing: 'easeOutQuad'}
 			],
-      rotate: [
-        {value:['0'],duration: 500,easing: 'easeInQuad'},
-        {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
-      ]
+      // rotate: [
+      //   {value:['0'],duration: 500,easing: 'easeInQuad'},
+      //   {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
+      // ]
 	});
   anime({
 			targets: elems[5],
@@ -448,14 +472,14 @@ function gravedad(){
       //   {value:[-200],duration: 2000,easing: 'easeInQuad'}
 			// ],
       top: [
-				{value:[posY[5]],duration: 700,easing: 'easeInQuad'},
-        {value:[posY[5]],duration: 300,easing: 'easeInQuad'},
-				{value:[startPosY],duration: 1000,easing: 'easeOutQuad'}
+				// {value:[posY[5]],duration: 900,easing: 'easeInQuad'},
+        // {value:[posY[5]],duration: 300,easing: 'easeInQuad'},
+				{value:[startPosY],duration: 3000,easing: 'easeOutQuad'}
 			],
-      rotate: [
-        {value:['0'],duration: 500,easing: 'easeInQuad'},
-        {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
-      ]
+      // rotate: [
+      //   {value:['0'],duration: 500,easing: 'easeInQuad'},
+      //   {value:['1turn'],duration: 550,easing: 'easeOutQuad'},
+      // ]
 	});
 }
 
