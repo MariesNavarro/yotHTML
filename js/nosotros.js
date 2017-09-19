@@ -1,5 +1,6 @@
 var overInfo = __('overInfo'),
     iconMore = __('iconMore'),
+    moreHover = _('#moreHover'),
     imgProductoNos = __('imgProductoNos');
 
 var loading = _('#loading');
@@ -8,6 +9,11 @@ window.onload = function (){
   setTimeout(function(){
     loading.style.display = "none";
   },5000);
+  if(checkMobileIndex){
+    moreHover.style.display = "block";
+  } else {
+    moreHover.style.display = "none";
+  }
 }
 
 window.onresize = function(){
@@ -54,14 +60,18 @@ function menuMobile(c) {
 function overNosotros(c, i){
   switch (c) {
     case 'over':
-      overInfo[i].style.opacity = "0.8";
-      iconMore[i].classList.remove('unrotateIcon');
-      iconMore[i].classList.add('rotateIcon');
+    overInfo[i].style.opacity = "1";
+    iconMore[i].classList.remove('unrotateIcon');
+    iconMore[i].classList.add('rotateIcon');
+    imgProductoNos[i].classList.remove('zoomOutImg');
+    imgProductoNos[i].classList.add('zoomInImg');
     break;
     case 'out':
-      overInfo[i].style.opacity = "0";
-      iconMore[i].classList.remove('rotateIcon');
-      iconMore[i].classList.add('unrotateIcon');
+    overInfo[i].style.opacity = "0";
+    iconMore[i].classList.remove('rotateIcon');
+    iconMore[i].classList.add('unrotateIcon');
+    imgProductoNos[i].classList.remove('zoomInImg');
+    imgProductoNos[i].classList.add('zoomOutImg');
     break;
   }
 }
