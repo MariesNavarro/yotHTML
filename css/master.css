@@ -324,12 +324,10 @@ align-items: center;
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-
 #middle{
   cursor: pointer;
   transition: all 0.5s ease-out;
 }
-
 #captionSliderInd{
   text-align: center;
   line-height: 1.5;
@@ -338,8 +336,6 @@ align-items: center;
   color: #fff;
   transition: all 0.5s ease-out;
 }
-
-
 #zoomWraper{
   position: absolute;
   top: 0;

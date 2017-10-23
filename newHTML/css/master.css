@@ -1,0 +1,208 @@
+/*
+Theme: yot mx
+Version: 1
+23 de Octubre
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike,
+sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } article, aside, details, figcaption, figure, footer, header, hgroup, menu,
+nav, section {display: block; } body {line-height: 1; } ol, ul {list-style: none; } blockquote, q {quotes: none; } blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none; }
+table {border-collapse: collapse; border-spacing: 0; }
+* { margin:0; padding:0; }
+* a{ text-decoration: none; color: #000;  cursor: pointer}
+h2{ font-size: 1.3rem; }
+h3{ font-size: 1.1rem; }
+h1, h2, h3, h4, h5, h6, b { font-family: 'Caecilia B', sans-serif;}
+#s{
+  position: fixed;
+ 	left: 20px;
+ 	top: 20px;
+ 	color: #000;
+ 	z-index: 5000;
+  display: none;
+}
+@font-face {
+  font-family: 'Caecilia B';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/cae.woff') format('woff'),
+       url('fonts/cae.woff2') format('woff2'),
+       url('fonts/cae.ttf') format('truetype'),
+       url('fonts/cae.eot') format('embedded-opentype')
+}
+@font-face {
+  font-family: 'Gotham B';
+  font-style: bold;
+  font-weight: 700;
+  src: url('fonts/gb.woff') format('woff'),
+       url('fonts/gb.woff2') format('woff2'),
+       url('fonts/gb.ttf') format('truetype'),
+       url('fonts/gb.eot') format('embedded-opentype')
+}
+body{
+  font-family: 'Gotham B', 'Proxima Nova', 'Proxima Sans', sans-serif;
+  font-size: 16px;
+  color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+}
+.hideDisplay{
+  display: none
+}
+.showDisplay{
+  display: block
+}
+.showDisplayFlex{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.showOpacity{
+  opacity: 1;
+}
+.hideOpacity{
+  opacity: 0;
+}
+#loading{
+  position: fixed;
+  width: 100vw;
+  min-width: 300px;
+  height: 100vh;
+  background: #fff;
+  z-index: 9000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+  /*display: none;*/
+}
+#percentage{
+  font-family: 'Caecilia B', sans-serif;
+  color: #000;
+}
+#salsaWrap{
+  position: relative;
+  width: 40px;
+  height: 140px;
+  margin-top: -200px;
+}
+#salsaWrap>img{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#salsaLiquid{
+  width: 40px;
+  height: 136px;
+  background-image: url('../img/salsa.png');
+  -webkit-animation: play 3.8s steps(73) infinite;
+  -moz-animation: play 3.8s steps(73) infinite;
+  -ms-animation: play 3.8s steps(73) infinite;
+  -o-animation: play 3.8s steps(73) infinite;
+  animation: play 3.8s steps(73) infinite;
+}
+nav#main{
+  z-index: 7000;
+  position: fixed;
+  width: 90vw;
+  min-width: 300px;
+  left: 5vw;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction:row;
+  justify-content:space-between;
+  -webkit-justify-content:space-between;
+  align-items: center;
+  -webkit-align-items: center;
+
+}
+nav#main>ul.outerDesktop{ width: 50%; }
+nav#main>ul.outerRedes{ width: 20%; }
+
+
+nav#main>ul.desktop{
+  display: none;
+  margin-right: 5px;
+  height: 60px;
+}
+#mainIndex{
+  position: relative;
+  width: 100vw;
+  height: 500px;
+  background: purple;
+}
+
+
+/* DESKTOP */
+@media screen and (min-width:800px){
+  nav#main{
+    width: 98vw;
+    left: 1vw;
+  }
+  nav#main>ul.desktop{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-direction:row;
+    justify-content:space-between;
+    /*-webkit-justify-content:center;*/
+    align-items: center;
+    -webkit-align-items: center;
+  }
+}
+/* DESKTOP */
+@media screen and (min-width:1500px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ANIMATIONS */
+@-webkit-keyframes play {
+    0% { background-position: 0,0; }
+    100% { background-position: -2920px,0; }
+}
+@-moz-keyframes play {
+    0% { background-position: 0,0; }
+    100% { background-position: -2920px,0; }
+}
+@-ms-keyframes play {
+    0% { background-position: 0,0; }
+    100% { background-position: -2920px,0; }
+}
+@-o-keyframes play {
+    0% { background-position: 0,0; }
+    100% { background-position: -2920px,0; }
+}
+@keyframes play {
+    0% { background-position: 0,0; }
+    100% { background-position: -2920px,0; }
+}
