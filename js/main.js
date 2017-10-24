@@ -140,7 +140,6 @@ function slider(n){
 
     break;
   }
-
 }
 
 
