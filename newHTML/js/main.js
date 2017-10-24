@@ -20,3 +20,8 @@ function countLoading(){
     p.innerHTML = x + "%";
   },200);
 }
+
+
+function changeIcon(t, c){
+  console.log("Hola");
+}

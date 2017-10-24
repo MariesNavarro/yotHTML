@@ -111,6 +111,9 @@ body{
   -o-animation: play 3.8s steps(73) infinite;
   animation: play 3.8s steps(73) infinite;
 }
+nav#main>a.menuMobile{
+  display: block;
+}
 nav#main{
   z-index: 7000;
   position: fixed;
@@ -128,12 +131,9 @@ nav#main{
   -webkit-justify-content:space-between;
   align-items: center;
   -webkit-align-items: center;
-
 }
 nav#main>ul.outerDesktop{ width: 50%; }
 nav#main>ul.outerRedes{ width: 20%; }
-
-
 nav#main>ul.desktop{
   display: none;
   margin-right: 5px;
@@ -142,13 +142,17 @@ nav#main>ul.desktop{
 #mainIndex{
   position: relative;
   width: 100vw;
-  height: 500px;
-  background: purple;
+  height: 100vh;
+  background-image: url('../img/background-index-sot.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 
 /* DESKTOP */
 @media screen and (min-width:800px){
+  a.menuMobile{ display: none !important; }
   nav#main{
     width: 98vw;
     left: 1vw;
