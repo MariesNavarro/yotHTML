@@ -132,6 +132,84 @@ body{
   -o-animation: play 3.8s steps(73) infinite;
   animation: play 3.8s steps(73) infinite;
 }
+/* Pop Phone */
+#telPopW{
+  font-family: 'Caecilia B';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 8500;
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+#telPopW>div{
+  position: absolute;
+  width: 300px;
+  height: 220px;
+  top: calc(50% - 110px);
+  left: calc(50% - 150px);
+  background: #490e0e;
+}
+#telPopW>div>a{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#telPopW>div>a:hover{
+	opacity: 0.5;
+}
+#telPopW>div>p{
+  width: 90%;
+  margin: 60px auto;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+}
+.closeMenu{
+	position: absolute;
+	right: 20px;
+	top: 60px;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+.closeMenu>span{
+	display: block;
+	width: 100%;
+	height: 4px;
+	background: #fff;
+	border-radius: 5px;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+	position: absolute;
+	top: calc(50% - 2px);
+}
+.rotccw {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.rotcw {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 nav.main>a.menuMobile{
   display: block;
 }
@@ -160,11 +238,19 @@ nav.main>ul.desktop{
   margin-right: 5px;
   height: 60px;
 }
-ul#backs{
+#backW{
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+ul#backs{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300vw;
   height: 100vh;
   -webkit-transition: left 0.5s ease-out;
   -moz-transition: left 0.5s ease-out;
@@ -173,7 +259,8 @@ ul#backs{
   transition: left 0.5s ease-out;
 }
 ul#backs>li{
-  position: absolute;
+  display: inline-block;
+  float: left;
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -199,19 +286,28 @@ ul#backs>li{
   align-items: center;
   -webkit-align-items: center;
 }
-#mainIndex>article.normal{
+#mainIndex>article.normal, #mainIndex>article.tlayolis{
   position: absolute;
   top: 60px;
   width: 100vw;
   height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   flex-direction: column;
   -webkit-flex-direction:column;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
 }
-#mainIndex>article.normal>header, #mainIndex>article.normal>div{
+#mainIndex>article.normal>header, #mainIndex>article.normal>div, #mainIndex>article.tlayolis>header, #mainIndex>article.tlayolis>div{
   width: 100%;
   min-width: 300px;
 }
-#mainIndex>article.normal>header{
+#mainIndex>article.normal>header, #mainIndex>article.tlayolis>header{
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -223,8 +319,8 @@ ul#backs>li{
   align-items: center;
   -webkit-align-items: center;
 }
-#mainIndex>article.normal>header>img{ width: 100px; }
-#mainIndex>article.normal>div{
+#mainIndex>article.normal>header>img, #mainIndex>article.tlayolis>header>img{ width: 100px; }
+#mainIndex>article.normal>div, #mainIndex>article.tlayolis>div{
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -236,7 +332,7 @@ ul#backs>li{
   align-items: center;
   -webkit-align-items: center;
 }
-#mainIndex>article.normal>div>div{
+#mainIndex>article.normal>div>div, #mainIndex>article.tlayolis>div>div{
   width: 250px;
   height: 250px;
   background-repeat: no-repeat;
@@ -247,10 +343,10 @@ ul#backs>li{
 #mainIndex>article>header>p.prox{ text-transform: uppercase; }
 nav#interfaz{
   position: absolute;
-  width: 90vw;
+  width: 98vw;
   min-width: 300px;
   top: 0;
-  left: 5vw;
+  left: 1vw;
   height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -360,12 +456,12 @@ footer.main>p>a:hover{ opacity: 0.5; }
     justify-content: center;
     -webkit-justify-content: center;
   }
-  #mainIndex>article.normal>header>img{ width: 200px; }
+  #mainIndex>article.normal>header>img, #mainIndex>article.tlayolis>header>img{ width: 200px; }
   #mainIndex>article.normal>div{
     justify-content: center;
     -webkit-justify-content: center;
   }
-  #mainIndex>article.normal>div>div{
+  #mainIndex>article.normal>div>div, #mainIndex>article.tlayolis>div>div{
     width: 400px;
     height: 400px;
   }
@@ -373,7 +469,6 @@ footer.main>p>a:hover{ opacity: 0.5; }
     height: auto;
     width: 100%;
   }
-
   footer.main{
     justify-content: space-between;
     -webkit-justify-content: space-between;
@@ -384,7 +479,10 @@ footer.main>p>a:hover{ opacity: 0.5; }
 }
 /* desktop max */
 @media screen and (min-width:1500px){
-
+  #mainIndex>article.normal>div>div{
+    width: 600px;
+    height: 600px;
+  }
 }
 
 
