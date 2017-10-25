@@ -22,11 +22,15 @@ function countLoading(){
 }
 
 function setPhone(){
-  var p = _('.phonePop');
+  var p = __('.phonePop');
   if(checkBowser){
-    p.setAttribute('href', 'tel:5567303009');
+    for (var i = 0; i < p.length; i++) {
+      p[i].setAttribute('href', 'tel:5567303009');
+    }
   }else{
-    p.setAttribute('onclick', 'popPhone("open")');
+    for (var i = 0; i < p.length; i++) {
+      p[i].setAttribute('onclick', 'popPhone("open")');
+    }
   }
 }
 
@@ -50,7 +54,21 @@ function popPhone(s){
 
 
 function menuMobile(c){
-  console.log("Hola");
+  var w = _('.outerMobile');
+  switch (c) {
+    case 'open':
+      w.style.display = "block";
+      setTimeout(function(){
+        w.style.opacity = "1";
+      },600);
+    break;
+    case 'close':
+      w.style.opacity = "0";
+      setTimeout(function(){
+        w.style.display = "none";
+      },600);
+    break;
+  }
 }
 
 function overMenuClose(c, t){
@@ -75,16 +93,18 @@ function overMenuClose(c, t){
 function changeIcon(c, el, t){
   var s = _('#hoverSound');
   t.setAttribute('src', 'img/' + el + c + '.svg');
-  if(c === 'over') s.play();
+  if(c === 'over') {s.play();}
 }
 
 function changeLandscape(c){
   var article = _("#mainIndex>article"),
       header = _('#mainIndex>article>header'),
       div = _('#mainIndex>article>div'),
-      img = _('#mainIndex>article>header>img');
+      img = _('#mainIndex>article>header>img'),
+      foot = _('footer');
   switch (c) {
   case 'l':
+    foot.classList.add('hideOpacity');
     article.classList.add("alignArticle");
     header.classList.add("sizeLandscape");
     div.classList.add("sizeLandscape");
@@ -92,6 +112,7 @@ function changeLandscape(c){
     img.classList.add("sizeImg");
   break;
   case 'p':
+    foot.classList.remove('hideOpacity');
     article.classList.remove("alignArticle");
     header.classList.remove("sizeLandscape");
     div.classList.remove("sizeLandscape");
@@ -143,25 +164,25 @@ function slider(c, w, classHide, classShow, index){
   switch (c) {
   case 'prev':
     ct--;
-    if(ct < 0) ct = l;
+    if(ct < 0) {ct = l};
     inner(ct);
-    if(index) index(ct);
+    if(index) {index(ct)};
   break;
   case 'next':
     ct++;
-    if(ct > l) ct = 0;
+    if(ct > l) {ct = 0};
     inner(ct);
-    if(index) index(ct);
+    if(index) {index(ct)};
   break;
   }
   function inner(c){
     var current = c;
     var prev = c-1;
     var next = c+1;
-    if(prev < 0) prev = l;
-    if(prev > l) prev = 0;
-    if(next < 0) next = l;
-    if(next > l) next = 0;
+    if(prev < 0) {prev = l};
+    if(prev > l) {prev = 0};
+    if(next < 0) {next = l};
+    if(next > l) {next = 0};
     sls[prev].classList.remove(classShow);
     sls[prev].classList.add(classHide);
     sls[next].classList.remove(classShow);

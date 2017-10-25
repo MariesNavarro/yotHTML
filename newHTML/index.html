@@ -54,6 +54,7 @@ fluo.com.mx
       <a class="closeMenu" role="button" onclick="popPhone('close')" onmouseover="overMenuClose('over', this)" onmouseout="overMenuClose('out', this)">
         <span class="rotA rotccw"></span>
         <span class="rotB rotcw"></span>
+        <img src="img/icons/circle.svg" width="35">
       </a>
       <p>
         +1 52 5567303009<br>
@@ -67,6 +68,25 @@ fluo.com.mx
     <a html="index.html">
       <img onmouseover="changeIcon('over', 'menu/logotipo-', this)" onmouseout="changeIcon('out', 'menu/logotipo-', this)" src="img/menu/logotipo-out.svg" height="53">
     </a>
+    <ul class="outerMobile">
+      <a id="closeMenu" class="closeMenu" role="button" onclick="menuMobile('close')" onmouseover="overMenuClose('over', this)" onmouseout="overMenuClose('out', this)">
+        <span class="rotA rotccw"></span>
+        <span class="rotB rotcw"></span>
+        <img src="img/icons/circle.svg" width="35">
+      </a>
+      <span>
+        <li><a href="#"> <img onmouseover="changeIcon('over', 'menu/nosotros-', this)" onmouseout="changeIcon('out', 'menu/nosotros-', this)" src="img/menu/nosotros-out.svg" title="Ir a Nosotros" alt="Nosotros" height="30"> </a></li>
+        <li><a href="#"> <img onmouseover="changeIcon('over', 'menu/sot-', this)" onmouseout="changeIcon('out', 'menu/sot-', this)" src="img/menu/sot-out.svg" title="Ir a Sot" alt="Sot" height="30"> </a></li>
+        <li><a href="#"> <img onmouseover="changeIcon('over', 'menu/potet-', this)" onmouseout="changeIcon('out', 'menu/potet-', this)" src="img/menu/potet-out.svg" title="Ir a Potet" alt="Potet" height="30"> </a></li>
+        <li><a href="#"> <img onmouseover="changeIcon('over', 'menu/tlayolis-', this)" onmouseout="changeIcon('out', 'menu/tlayolis-', this)" src="img/menu/tlayolis-out.svg" title="Ir a Tlayolis" alt="Tlayolis" height="30"> </a></li>
+        <li class="last">
+          <a role="button" class="phonePop" > <img onmouseover="changeIcon('over', 'menu/tel-', this)" onmouseout="changeIcon('out', 'menu/tel-', this)" src="img/menu/tel-out.svg" title="5567303009" alt="Teléfono Yot Mx" height="35"> </a>
+          <a href="mailto:info@yot.com.mx"> <img onmouseover="changeIcon('over', 'menu/mail-', this)" onmouseout="changeIcon('out', 'menu/mail-', this)" src="img/menu/mail-out.svg" title="info@yot.com.mx" alt="Correo Yot Mx" height="35"> </a>
+          <a href="#"> <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" title="Ir a Facebook" alt="Facebook" height="35"> </a>
+          <a href="#"> <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" title="Ir a Instagram" alt="Instagram" height="35"> </a>
+        </li>
+      </span>
+    </ul>
     <ul class="outerDesktop desktop">
       <li><a href="#"> <img onmouseover="changeIcon('over', 'menu/nosotros-', this)" onmouseout="changeIcon('out', 'menu/nosotros-', this)" src="img/menu/nosotros-out.svg" title="Ir a Nosotros" alt="Nosotros" height="30"> </a></li>
       <li><a href="#"> <img onmouseover="changeIcon('over', 'menu/sot-', this)" onmouseout="changeIcon('out', 'menu/sot-', this)" src="img/menu/sot-out.svg" title="Ir a Sot" alt="Sot" height="30"> </a></li>
@@ -76,8 +96,8 @@ fluo.com.mx
     <ul class="outerRedes desktop">
       <li><a role="button" class="phonePop" > <img onmouseover="changeIcon('over', 'menu/tel-', this)" onmouseout="changeIcon('out', 'menu/tel-', this)" src="img/menu/tel-out.svg" title="5567303009" alt="Teléfono Yot Mx" height="30"> </a></li>
       <li><a href="mailto:info@yot.com.mx"> <img onmouseover="changeIcon('over', 'menu/mail-', this)" onmouseout="changeIcon('out', 'menu/mail-', this)" src="img/menu/mail-out.svg" title="info@yot.com.mx" alt="Correo Yot Mx" height="30"> </a></li>
-      <li><a href="#"> <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" title="Ir a Facebook" alt="Facebook" height="30"> </a></li>
-      <li><a href="#"> <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" title="Ir a Instagram" alt="Instagram" height="30"> </a></li>
+      <li><a href="#" target="_blank"> <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" title="Ir a Facebook" alt="Facebook" height="30"> </a></li>
+      <li><a href="#" target="_blank"> <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" title="Ir a Instagram" alt="Instagram" height="30"> </a></li>
       <li><a role="button" onclick="toggleAudio()"> <img id="iconMute" onmouseover="changeIcon('over', 'menu/nomuted-', this)" onmouseout="changeIcon('out', 'menu/nomuted-', this)" src="img/menu/nomuted-out.svg" title="Mute" alt="Icono Sonido" height="30"> </a></li>
     </ul>
     <a role="button" class="menuMobile" onclick="menuMobile('open')">
@@ -86,9 +106,9 @@ fluo.com.mx
   </nav>
   <div id="backW">
     <ul id="backs">
-      <li style="background-image:url('img/sot/background.jpg'); left:0;"></li>
-      <li style="background-image:url('img/potet/background.jpg'); left:100%;"></li>
-      <li style="background-image:url('img/tlayolis/background.jpg'); left:200%;"></li>
+        <li style="background-image:url('img/sot/background.jpg'); left:0;"></li>
+        <li style="background-image:url('img/potet/background.jpg'); left:100%;"></li>
+        <li style="background-image:url('img/tlayolis/background.jpg'); left:200%;"></li>
     </ul>
   </div>
   <section id="mainIndex">

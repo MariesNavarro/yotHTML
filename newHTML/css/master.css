@@ -68,14 +68,14 @@ body{
   display: -webkit-flex;
   display: flex;
 }
-.transitionNone{
+.transitionBlock{
   -webkit-transition: opacity 0.5s ease-out;
   -moz-transition: opacity 0.5s ease-out;
   -ms-transition: opacity 0.5s ease-out;
   -o-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
 }
-.transitionBlock{
+.transitionNone{
   -webkit-transition: opacity 0s ease-out;
   -moz-transition: opacity 0s ease-out;
   -ms-transition: opacity 0s ease-out;
@@ -181,10 +181,15 @@ body{
 	height: 25px;
 	cursor: pointer;
 }
+.closeMenu>img{
+  position: absolute;
+  top: -5px;
+  left: -7px;
+}
 .closeMenu>span{
 	display: block;
-	width: 100%;
-	height: 4px;
+	width: 90%;
+	height: 3px;
 	background: #fff;
 	border-radius: 5px;
 	-webkit-transition: all 0.5s ease-out;
@@ -209,7 +214,10 @@ body{
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-
+#closeMenu{
+  position: absolute;
+  top: 20px;
+}
 nav.main>a.menuMobile{
   display: block;
 }
@@ -230,6 +238,52 @@ nav.main{
   -webkit-justify-content:space-between;
   align-items: center;
   -webkit-align-items: center;
+}
+nav.main>ul.outerMobile{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #490e0e;
+  z-index: 3000;
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+nav.main>ul.outerMobile>span{
+  position: absolute;
+  top: 20%;
+  display: block;
+  width: 100%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+nav.main>ul.outerMobile>span>li.last{
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction:row;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
 }
 nav.main>ul.outerDesktop{ width: 50%; }
 nav.main>ul.outerRedes{ width: 20%; }
@@ -484,20 +538,6 @@ footer.main>p>a:hover{ opacity: 0.5; }
     height: 600px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ANIMATIONS */
 @-webkit-keyframes play {
