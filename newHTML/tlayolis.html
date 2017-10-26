@@ -17,20 +17,20 @@ fluo.com.mx
 	<meta http-equiv="pragma" content="no-cache"/>
 	<meta name="google" content="notranslate"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0000, minimum-scale=1.0000, maximum-scale=1.0000, user-scalable=yes">
-  <title>Yot Mx</title> <!-- REVISAR -->
+  <title>Tlayolis | Yot Mx</title> <!-- REVISAR -->
   <link rel="canonical" href=" " /> <!-- FALTA -->
   <meta name="description" content=""/> <!-- FALTA -->
   <meta name="keywords" content=" "/> <!-- FALTA -->
   <meta name="author" content="www.fluo.com.mx">
-  <meta property="og:title" content="Yot Mx"> <!-- REVISAR -->
-	<meta property="og:site_name" content="Yot Mx"> <!-- REVISAR -->
+  <meta property="og:title" content="Tlayolis | Yot Mx"> <!-- REVISAR -->
+	<meta property="og:site_name" content="Tlayolis | Yot Mx"> <!-- REVISAR -->
 	<meta property="og:url" content=" "> <!-- FALTA -->
 	<meta property="og:type" content="website"> <!-- FALTA -->
 	<meta property="og:image" content="img/media.jpg"> <!-- FALTA -->
   <meta property="og:description" content=" "> <!-- FALTA -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:creator" content="@fluomx">
-	<meta name="twitter:title" content="Yot Mx"> <!-- REVISAR -->
+	<meta name="twitter:title" content="Tlayolis | Yot Mx"> <!-- REVISAR -->
 	<meta name="twitter:description" content=" "> <!-- FALTA -->
 	<meta name="twitter:image" content="img/media.jpg"> <!-- FALTA -->
   <link rel="apple-touch-icon" sizes="180x180" href="css/fav/apple-touch-icon.png">
@@ -40,6 +40,7 @@ fluo.com.mx
   <link rel="mask-icon" href="css/fav/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" type="text/css" href="css/master.css" media="all">
+  <link rel="stylesheet" type="text/css" href="css/sections.css" media="all">
 </head>
 <body>
   <p id="s"></p>
@@ -106,44 +107,24 @@ fluo.com.mx
   </nav>
   <div id="backW">
     <ul id="backs">
-        <li style="background-image:url('img/sot/background.jpg'); left:0;"></li>
-        <li style="background-image:url('img/potet/background.jpg'); left:100%;"></li>
-        <li style="background-image:url('img/tlayolis/background.jpg'); left:200%;"></li>
+        <li style="background-image:url('img/tlayolis/background-tlayolis-producto.jpg'); left:0;"></li>
+        <li class="jalapeno" style="left:100%;"></li>
+        <li class="habanero" style="left:200%;"></li>
+        <li class="bbq" style="left:300%;"></li>
+        <li class="footslider" style="left:400%;"></li>
     </ul>
   </div>
-  <section id="mainIndex">
-    <article class="normal showOpacity">
-      <header>
-        <img src="img/sot/logotipo-sot.svg" alt="Logotipo Sot Mx">
-        <p class="prox">Próximamente</p>
-        <h2>Lo natural es ser tú</h2>
-        <p>#eligeNatural #eligeSot</p>
-      </header>
-      <div>
-        <div style="background-image:url('img/inicio-0.png'); display:block;"></div>
+  <section id="mainProducto">
+    <article>
+      <div class="producto">
+        <img src="img/bulletT1.svg" alt="">
+        <img id="mock" src="img/tlayolis/jalapeño.png" alt="">
       </div>
-    </article>
-
-    <article class="normal hideOpacity">
-      <header>
-        <img src="img/potet/logotipo-potet.svg" alt="Logotipo Sot Mx">
-        <p class="prox">Próximamente</p>
-        <h2>Lo natural es ser tú</h2>
-        <p>#purasPapas</p>
-      </header>
-      <div> <div style="background-image:url('img/inicio-1.png'); "></div> </div>
-    </article>
-
-    <article class="tlayolis hideOpacity">
-      <header>
-        <img src="img/tlayolis/logotipo-tlayolis.svg" alt="Logotipo Sot Mx">
-        <p class="prox">Próximamente</p>
-        <p style="font-size:1rem; line-height:1.2; text-align:center; margin-bottom:10px;">Si nosotros pudimos hacer <br>
-          la mejor mezcla de papa y maíz</p>
-        <h2>¿Qué no puedes hacer tú?</h2>
-        <p>#AtréveteACambiar y #RífateAHacerlo</p>
-      </header>
-      <div> <div style="background-image:url('img/inicio-2.png')"></div> </div>
+      <div class="info">
+        <h2>Jalapeño</h2>
+        <p>El perfecto empujón para cambiar las perspectivas cotidianas</p>
+        <div style="background-image:url('img/tablas/tla-1.png');"></div>
+      </div>
     </article>
   </section>
   <footer class="main">
@@ -151,9 +132,7 @@ fluo.com.mx
     <p>info@yot.com.mx</p>
     <p>Coded by <a href="fluo.com.mx">Fluo MX</a></p>
   </footer>
-  <nav id="interfaz">
-    <a role="button" onclick="slider('prev', '#mainIndex', 'hideOpacity', 'showOpacity', true)"><img onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" alt="Anterior" title="Anterior" width="40"></a>
-    <a role="button" onclick="slider('next', '#mainIndex', 'hideOpacity', 'showOpacity', true)"><img onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" class="rotIcon" src="img/icons/arrow-out.svg" alt="Siguiente" title="Siguiente" width="40"></a>
+  <nav id="interfazProducto">
   </nav>
   <div id="preventHeight" class="hideDisplay">
     <p>Por favor incrementa la altura de tu pantalla</p>
@@ -167,15 +146,9 @@ fluo.com.mx
     window.onload = function(){
       countLoading();
       setPhone();
-      evtArrowIndex();
-      detectswipe('interfaz', swipeTransformIndex);
+      // detectswipe('interfaz', swipeTransformIndex);
     }
     window.onorientationchange = function(){
-      if(window.orientation == 90 || window.orientation == -90){
-        changeLandscape('l');
-      } else {
-        changeLandscape('p');
-      }
     }
     window.onresize = function (){
       var s = document.getElementById("s").innerHTML = "Width: " + window.innerWidth + "px | Height: " + window.innerHeight + "px";

@@ -156,6 +156,15 @@ function toggleAudio(t){
   }
 }
 
+function evtArrowIndex(){
+  var w = _('#interfaz');
+  var ch = w.children;
+  if(checkBowser){
+    for (var i = 0; i < 2; i++) {
+      ch[i].setAttribute('onclick', ' ');
+    }
+  }
+}
 
 var ct = 0;
 function slider(c, w, classHide, classShow, index){
