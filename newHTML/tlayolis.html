@@ -105,7 +105,7 @@ fluo.com.mx
       <img onmouseover="changeIcon('over', 'menu/menu-', this)" onmouseout="changeIcon('out', 'menu/menu-', this)" src="img/menu/menu-out.svg" height="50">
     </a>
   </nav>
-  <div id="backgroundProducto" class="inicio">
+  <div id="backgroundProducto" class="inicioTlayolis">
     <!-- <div id="papas" style="background-image:url('img/papas/tlayolis-jalapeno.png')"></div> -->
   </div>
   <section id="mainProducto">
@@ -127,7 +127,7 @@ fluo.com.mx
     </article>
     <!-- JALAPEÑO -->
     <article class="hideDisplay">
-      <div class="producto" onmouseover="hoverProducto(this)">
+      <div class="producto" onmouseover="hoverProducto(this, 'tlayolis')">
         <img src="img/bulletT1.svg" alt="">
         <img id="mock" src="img/tlayolis/jalapeño.png" alt="">
       </div>
@@ -143,7 +143,7 @@ fluo.com.mx
     </article>
     <!-- HABANERO -->
     <article class="hideDisplay">
-      <div class="producto" onmouseover="hoverProducto(this)">
+      <div class="producto" onmouseover="hoverProducto(this, 'tlayolis')">
         <img src="img/bulletT2.svg" alt="">
         <img id="mock" src="img/tlayolis/habanero.png" alt="">
       </div>
@@ -159,7 +159,7 @@ fluo.com.mx
     </article>
     <!-- BBQ -->
     <article class="hideDisplay">
-      <div class="producto" onmouseover="hoverProducto(this)">
+      <div class="producto" onmouseover="hoverProducto(this, 'tlayolis')">
         <img src="img/bulletT3.svg" alt="">
         <img id="mock" src="img/tlayolis/bbq.png" alt="">
       </div>
@@ -199,8 +199,14 @@ fluo.com.mx
   <audio id="hoverSound">
     <source src="assets/hover.mp3" type="audio/mpeg">
   </audio>
-  <audio id="hoverProducto">
+  <audio id="hoverProductoTlayolis">
     <source src="assets/hoverTlayolis.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="hoverProductoPotet">
+    <source src="assets/hoverPotet.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="hoverProductoSot">
+    <source src="assets/hoverSot.mp3" type="audio/mpeg">
   </audio>
   <script src="js/bowser.min.js" charset="utf-8"></script>
   <script src="js/main.js" charset="utf-8"></script>

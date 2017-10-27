@@ -137,8 +137,20 @@ nav#bullets>ul>li>a>img:hover{
   height: 100%;
   background-size: contain;
 }
-.inicio{
+.inicioTlayolis{
   background-image:url('../img/tlayolis/background-tlayolis-producto.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.inicioSot{
+  background-image:url('../img/sot/background-sot-producto.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.inicioPotet{
+  background-image:url('../img/potet/background-potet-producto.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

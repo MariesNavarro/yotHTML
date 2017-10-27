@@ -157,11 +157,9 @@ function toggleAudio(t){
 }
 
 
-function hoverProducto(t){
+function hoverProducto(t, c){
   var m = t.lastElementChild;
   var b = t.firstElementChild;
-  var s = _('#hoverProducto');
-  s.play();
   b.classList.add('jumpBlob1');
   m.classList.add('jumpMock1');
   setTimeout(function(){
@@ -174,6 +172,22 @@ function hoverProducto(t){
       b.classList.remove('jumpBlob2');
     },300)
   },300);
+  switch (c) {
+    case 'potet':
+      var s = _('#hoverProductoPotet');
+      s.play();
+    break;
+    case 'sot':
+      var s = _('#hoverProductoSot');
+      s.play();
+    break;
+    case 'tlayolis':
+    var s = _('#hoverProductoTlayolis');
+    s.play();
+    break;
+  }
+
+
 
 }
 
