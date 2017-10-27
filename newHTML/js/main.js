@@ -202,7 +202,7 @@ function evtArrowIndex(){
 }
 
 var ct = 0;
-function slider(c, w, classHide, classShow, index){
+function slider(c, w, classHide, classShow){
   var l = _(w).children.length-1;
   var sls = _(w).children;
   switch (c) {
@@ -210,16 +210,17 @@ function slider(c, w, classHide, classShow, index){
     ct--;
     if(ct < 0) {ct = l};
     inner(ct);
-    if(index) {index(ct)};
+    index(ct);
   break;
   case 'next':
     ct++;
     if(ct > l) {ct = 0};
     inner(ct);
-    if(index) {index(ct)};
+    index(ct);
   break;
   }
   function inner(c){
+    var b = _('#backs');
     var current = c;
     var prev = c-1;
     var next = c+1;
@@ -231,13 +232,6 @@ function slider(c, w, classHide, classShow, index){
     sls[prev].classList.add(classHide);
     sls[next].classList.remove(classShow);
     sls[next].classList.add(classHide);
-    setTimeout(function(){
-      sls[c].classList.remove(classHide);
-      sls[c].classList.add(classShow);
-    },300);
-  }
-  function index(c){
-    var b = _('#backs');
     switch (c) {
       case 0:
         b.style.left = "0";
@@ -249,6 +243,10 @@ function slider(c, w, classHide, classShow, index){
         b.style.left = "-200vw";
       break;
     }
+    setTimeout(function(){
+      sls[c].classList.remove(classHide);
+      sls[c].classList.add(classShow);
+    },300);
   }
 }
 
@@ -294,16 +292,23 @@ function bulletsProducto(c){
 }
 
 function sliderProducto(c){
+  var urlValue = window.location.href.slice(window.location.href.indexOf('-')+1);
   var slides = _('#mainProducto').children;
   var l = slides.length;
   for (var i = 0; i < l; i++) {
     slides[i].classList.remove('showDisplayFlex');
     slides[i].classList.add('hideDisplay');
   }
+  //back
+  if(urlValue === 'sot.html'){
+    console.log("Section Sot");
+  } else if (urlValue == 'potet.html') {
+    console.log("Section Potet");
+  } else {
+    console.log("Section Tlayolis");
+  }
   slides[c].classList.add('showDisplayFlex');
 }
-
-
 
 function detectswipe(el,func) {
   swipe_det = new Object();

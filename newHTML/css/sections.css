@@ -137,46 +137,122 @@ nav#bullets>ul>li>a>img:hover{
   height: 100%;
   background-size: contain;
 }
-.inicioTlayolis{
+.tlayolis-0{
   background-image:url('../img/tlayolis/background-tlayolis-producto.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.inicioSot{
-  background-image:url('../img/sot/background-sot-producto.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.inicioPotet{
-  background-image:url('../img/potet/background-potet-producto.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.jalapeno{
+/* JALAPEÑO */
+.tlayolis-1{
   background: #098442;
   background: -moz-linear-gradient(top, #098442 0%, #1b3e2a 100%);
   background: -webkit-linear-gradient(top, #098442 0%,#1b3e2a 100%);
   background: linear-gradient(to bottom, #098442 0%,#1b3e2a 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#098442', endColorstr='#1b3e2a',GradientType=0);
 }
-.habanero{
+/* HABANERO TLAYOLIS */
+.tlayolis-2{
   background: #bc7129;
   background: -moz-linear-gradient(top, #bc7129 0%, #443122 100%);
   background: -webkit-linear-gradient(top, #bc7129 0%,#443122 100%);
   background: linear-gradient(to bottom, #bc7129 0%,#443122 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc7129', endColorstr='#443122',GradientType=0);
 }
-
-.bbq{
+/* BBQ */
+.tlayolis-3{
   background: #9f3030;
   background: -moz-linear-gradient(top, #9f3030 0%, #482425 100%);
   background: -webkit-linear-gradient(top, #9f3030 0%,#482425 100%);
   background: linear-gradient(to bottom, #9f3030 0%,#482425 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f3030', endColorstr='#482425',GradientType=0);
 }
+/* FOOTER TLAYOLIS */
+.tlayolis-4{
+  background-image:url('../img/tlayolis/background-tlayolis-producto.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* INICIO SOT */
+.sot-0{
+  background-image:url('../img/sot/background-sot-producto.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* CAMOTE */
+.sot-1 {
+	background: #bc9537;
+	background: -moz-linear-gradient(top, #bc9537 0%, #7f6426 100%);
+	background: -webkit-linear-gradient(top, #bc9537 0%,#7f6426 100%);
+	background: linear-gradient(to bottom, #bc9537 0%,#7f6426 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc9537', endColorstr='#7f6426',GradientType=0 );
+}
+/* YUCA */
+.sot-2 {
+    background: #9f3039;
+    background: -moz-linear-gradient(top, #9f3039 0%, #701828 100%);
+    background: -webkit-linear-gradient(top, #9f3039 0%,#701828 100%);
+    background: linear-gradient(to bottom, #9f3039 0%,#701828 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f3039', endColorstr='#701828',GradientType=0 );
+}
+/* YUCA Y CAMOTE */
+.sot-3 {
+    background: #c21e72;
+    background: -moz-linear-gradient(top, #c21e72 0%, #a0105e 100%);
+    background: -webkit-linear-gradient(top, #c21e72 0%,#a0105e 100%);
+    background: linear-gradient(to bottom, #c21e72 0%,#a0105e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c21e72', endColorstr='#a0105e',GradientType=0 );
+}
+/* FOOTER SOT */
+.sot-4{
+  background-image:url('../img/sot/background-sot-producto.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* INICIO POTET */
+.potet-0{
+  background-image:url('../img/potet/background-potet-producto.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* SAL POTET*/
+.potet-1 {
+    background: #ffc521;
+    background: -moz-linear-gradient(top, #ffc521 0%, #ffb600 100%);
+    background: -webkit-linear-gradient(top, #ffc521 0%,#ffb600 100%);
+    background: linear-gradient(to bottom, #ffc521 0%,#ffb600 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc521', endColorstr='#ffb600',GradientType=0 );
+}
+/* HABANERO POTET*/
+.potet-2 {
+    background: #f78f30;
+    background: -moz-linear-gradient(top, #f78f30 1%, #f47a0e 100%);
+    background: -webkit-linear-gradient(top, #f78f30 1%,#f47a0e 100%);
+    background: linear-gradient(to bottom, #f78f30 1%,#f47a0e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f78f30', endColorstr='#f47a0e',GradientType=0 );
+}
+/* CHILE ARBOL*/
+.potet-3 {
+    background: #d33640;
+    background: -moz-linear-gradient(top, #d33640 1%, #d10c16 100%);
+    background: -webkit-linear-gradient(top, #d33640 1%,#d10c16 100%);
+    background: linear-gradient(to bottom, #d33640 1%,#d10c16 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d33640', endColorstr='#d10c16',GradientType=0 );
+}
+/* FOOTER POTET */
+.potet-4{
+  background-image:url('../img/potet/background-potet-producto.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
 .footslider{
   background: #9f3030;
   background: -moz-linear-gradient(top, #9f3030 0%, #482425 100%);
