@@ -1,25 +1,74 @@
-#mainProducto{
-  position: relative;
-  margin-top: 80px;
-  width: 100vw;
-  overflow: hidden;
-  border:1px solid red;
-}
-#mainProducto>article{
-  position: relative;
-  width: 100%;
-  height: 100%;
+nav#bullets{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5%;
+  height: 100vh;
+  display: none;
 
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
   flex-direction: column;
   -webkit-flex-direction:column;
   justify-content: center;
   -webkit-justify-content:center;
   align-items: center;
   -webkit-align-items: center;
+}
+nav#bullets>ul{
+  width: 100%;
+  height: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+}
+nav#bullets>ul>li>a>img{
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+nav#bullets>ul>li>a>img:hover{
+  -webkit-transform: scale(1.3,1.3);
+  -moz-transform: scale(1.3,1.3);
+  -ms-transform: scale(1.3,1.3);
+  -o-transform: scale(1.3,1.3);
+  transform: scale(1.3,1.3);
+}
+#mainProducto{
+  position: relative;
+  margin-top: 80px;
+  width: 100vw;
+  overflow: hidden;
+}
+#mainProducto>article{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#mainProducto>article.header>header{
+  text-align: center;
+  width: 320px;
+}
+#mainProducto>article.header>header>p{
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Caecilia B';
+  font-size: 1rem;
+  padding: 10px 0;
+  line-height: 1.1;
 }
 #mainProducto>article>div{
   position: relative;
@@ -40,6 +89,9 @@
   left: calc(50% - 130px) !important;
   top:5% !important;
 }
+#mainProducto>article>div.info{
+  height: auto !important;
+}
 #mainProducto>article>div.info>h2, #mainProducto>article>div.info>p{
   display: block;
   width: 100%;
@@ -52,13 +104,45 @@
 }
 #mainProducto>article>div.info>div{
   width: 250px;
-  height: 250px;
+  height: 180px;
   margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
-/* background */
+#interfaceInner{
+  width: 50%;
+  margin: 0 auto;
+  height: 60px !important;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction:row;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+}
+/* BACKGROUND */
+#backgroundProducto{
+  position: absolute;
+  width: 100vw;
+  height: 120vh;
+}
+#backgroundProducto>div#papas{
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+.inicio{
+  background-image:url('../img/tlayolis/background-tlayolis-producto.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .jalapeno{
   background: #098442;
   background: -moz-linear-gradient(top, #098442 0%, #1b3e2a 100%);
@@ -88,12 +172,43 @@
   background: linear-gradient(to bottom, #9f3030 0%,#482425 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f3030', endColorstr='#482425',GradientType=0);
 }
+/* HOVER PRODUCTOS */
+.jumpMock1{
+  margin-top: -10px;
+  margin-left: -10px;
+  transform: rotate(2deg);
+}
+.jumpMock2{
+  margin-top: 0;
+  margin-left: -5px;
+}
+
+.jumpBlob1{
+  margin-top: 10px;
+  margin-left: 10px;
+  transform: rotate(-2deg);
+}
+.jumpBlob2{
+  margin-top: 0;
+  margin-left: 5px;
+}
+
 /* desktop */
 @media screen and (min-width:800px){
+  nav#bullets{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
   #mainProducto{ height: calc(100vh - 160px) }
   #mainProducto>article{
+    width: 95%;
     flex-direction: row-reverse;
     -webkit-flex-direction:row-reverse;
+  }
+  #mainProducto>article.header>header>p{
+    width: 100%;
   }
   #mainProducto>article>div.producto>img{
     width: 380px;
@@ -102,6 +217,7 @@
     width:360px !important;
     left: calc(50% - 130px) !important;
   }
+  #interfaceInner{ width: 30%; }
   #mainProducto>article>div.info>p{ display: block; width: 40%;}
   #mainProducto>article>div.info>div{
     width: 320px;
