@@ -1,3 +1,6 @@
+body{
+  background: #000 !important;
+}
 nav#bullets{
   position: absolute;
   top: 0;
@@ -101,6 +104,7 @@ nav#bullets>ul>li>a>img:hover{
 }
 #mainProducto>article>div.info>p{
   width: 80%;
+  min-width: 300px;
   margin: 0 auto;
 }
 #mainProducto>article>div.info>div{
@@ -175,7 +179,6 @@ nav#bullets>ul>li>a>img:hover{
   background-position: center;
   background-size: cover;
 }
-
 /* INICIO SOT */
 .sot-0{
   background-image:url('../img/sot/background-sot-producto.jpg');
@@ -252,8 +255,6 @@ nav#bullets>ul>li>a>img:hover{
   background-position: center;
   background-size: cover;
 }
-
-
 .footslider{
   background: #9f3030;
   background: -moz-linear-gradient(top, #9f3030 0%, #482425 100%);
@@ -271,7 +272,6 @@ nav#bullets>ul>li>a>img:hover{
   margin-top: 0;
   margin-left: -5px;
 }
-
 .jumpBlob1{
   margin-top: 10px;
   margin-left: 10px;
@@ -281,6 +281,127 @@ nav#bullets>ul>li>a>img:hover{
   margin-top: 0;
   margin-left: 5px;
 }
+#transitionPotet{
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  width: 120vw;
+  height: 100vh;
+  z-index: 8000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+#transitionSot{
+  display: none;
+  position: fixed;
+  top: -200vh;
+  width: 100vw;
+  height: 200vh;
+  z-index: 8000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0.8s ease-out;
+  -moz-transition: all 0.8s ease-out;
+  -ms-transition: all 0.8s ease-out;
+  -o-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+}
+#rectSvg{
+  fill:#1F8245;
+}
+#transitionTlayolis{
+  position: fixed;
+  top: 0;
+  left: -10vw;
+  width: 120vw;
+  height: 250vh;
+  z-index: 8000;
+  opacity: 0;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+  transition: opacity 0.5s ease-out;
+}
+#transitionTlayolis>svg{
+  height: 100%;
+}
+/* Elements Wrap */
+#elementsTlWrap, #elementsSotWrap{
+  z-index: 8300;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row;
+  -webkit-flex-direction:row;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#elementsTlWrap>li, #elementsSotWrap>li{
+  width: 16.6%;
+  height: 100%;
+  margin-right: 2px;
+  margin-top: 150%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#elementsSotWrap>li{ margin-top: -150%;}
+#elementsTlWrap>li>img{
+  width: 80%;
+  max-width: 90px;
+}
+#elementsPtWrap{
+  z-index: 8300;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#elementsPtWrap>li{
+  width: 100%;
+  height: 16.6%;
+  margin-top: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#elementsPtWrap>li>img{
+  height: 80%;
+
+}
+
 
 /* desktop */
 @media screen and (min-width:800px){
@@ -312,48 +433,20 @@ nav#bullets>ul>li>a>img:hover{
     width: 320px;
     height: 320px;
   }
+  #elementsWrap>li{
+    width: 12.5%;
+  }
+  #elementsSotWrap>li>img{
+    width: 85%;
+    max-width: 130px;
+  }
 }
-#transitionPotet{
-  position: fixed;
-  top: 0;
-  left: 100vw;
-  width: 120vw;
-  height: 100vh;
-  z-index: 8000;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0;
 
-  -webkit-transition: all 1s ease-out;
-  -moz-transition: all 1s ease-out;
-  -ms-transition: all 1s ease-out;
-  -o-transition: all 1s ease-out;
-  transition: all 1s ease-out;
-}
-#transitionSot{
-  display: none;
-  position: fixed;
-  top: -200vh;
-  width: 100vw;
-  height: 200vh;
-  z-index: 8000;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  -webkit-transition: all 0.8s ease-out;
-  -moz-transition: all 0.8s ease-out;
-  -ms-transition: all 0.8s ease-out;
-  -o-transition: all 0.8s ease-out;
-  transition: all 0.8s ease-out;
-}
-#rectSvg{
-  fill:#1F8245;
-}
-#transitionTlayolis{
+#interfazProducto{
+  z-index: 8800;
   position: fixed;
   top: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 8000;
-  background: red;
+  background: #000;
 }

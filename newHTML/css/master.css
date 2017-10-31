@@ -388,7 +388,7 @@ ul#backs>li{
 }
 #mainIndex>article.normal>div>div, #mainIndex>article.tlayolis>div>div{
   width: 250px;
-  height: 250px;
+  /*height: 250px;*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
