@@ -190,8 +190,12 @@ fluo.com.mx
     <p>info@yot.com.mx</p>
     <p>Coded by <a href="fluo.com.mx">Fluo MX</a></p>
   </footer>
+  <!-- PREVENT -->
   <div id="preventHeight" class="hideDisplay">
     <p>Por favor incrementa la altura de tu pantalla</p>
+  </div>
+  <div id="preventLandscape" class="hideDisplay">
+    <p>Por favor rota tu pantalla</p>
   </div>
   <!-- TRANSITION -->
   <div id="transitionSot" style="background-image:url('img/transition/sot-1.png');"></div>
@@ -238,9 +242,14 @@ fluo.com.mx
         fadeInHeader();
       },1000);
       setPhone();
-      // detectswipe('interfaz', swipeTransformIndex);
+      preventSwipe();
     }
     window.onorientationchange = function(){
+      if(window.orientation == 90 || window.orientation == -90){
+        preventLandscape('l');
+      } else {
+        preventLandscape('p');
+      }
     }
     window.onresize = function (){
       var s = document.getElementById("s").innerHTML = "Width: " + window.innerWidth + "px | Height: " + window.innerHeight + "px";

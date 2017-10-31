@@ -445,8 +445,8 @@ nav#bullets>ul>li>a>img:hover{
 #interfazProducto{
   z-index: 8800;
   position: fixed;
-  top: 0;
+  top: 20vh;
   width: 100vw;
-  height: 100vh;
-  background: #000;
+  height: 60vh;
+  background: rgba(255,255,255,0);
 }

@@ -222,7 +222,7 @@ nav.main>a.menuMobile{
   display: block;
 }
 nav.main{
-  z-index: 7000;
+  z-index: 8900;
   position: fixed;
   width: 90vw;
   min-width: 300px;
@@ -462,7 +462,7 @@ footer.main>p{
 }
 footer.main>p>a{ text-decoration: underline; }
 footer.main>p>a:hover{ opacity: 0.5; }
-#preventHeight{
+#preventHeight, #preventLandscape{
   z-index: 8000;
   position: fixed;
   top:0;
@@ -477,6 +477,7 @@ footer.main>p>a:hover{ opacity: 0.5; }
   align-items: center;
   -webkit-align-items: center;
 }
+
 /* desktop */
 @media screen and (min-width:800px){
   a.menuMobile{ display: none !important; }
