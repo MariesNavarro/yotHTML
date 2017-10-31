@@ -105,12 +105,12 @@ fluo.com.mx
       <img onmouseover="changeIcon('over', 'menu/menu-', this)" onmouseout="changeIcon('out', 'menu/menu-', this)" src="img/menu/menu-out.svg" height="50">
     </a>
   </nav>
-  <div id="backgroundProducto" class="inicioPotet">
+  <div id="backgroundProducto" class="potet-0">
     <!-- <div id="papas" style="background-image:url('img/papas/tlayolis-jalapeno.png')"></div> -->
   </div>
   <section id="mainProducto">
     <article class="header showDisplayFlex">
-      <header>
+      <header id="coverHeader" class="hideOpacity">
         <img src="img/potet/logotipo-potet.svg" alt="Logotipo Tlayolis" width="320">
         <p style="color:#000;">
           Potet es una deliciosa botana de harina
@@ -126,11 +126,11 @@ fluo.com.mx
     </article>
     <!-- SAL DE MAR -->
     <article class="hideDisplay">
-      <div class="producto" onmouseover="hoverProducto(this, 'potet')">
+      <div class="producto elemRight" onmouseover="hoverProducto(this, 'potet')">
         <img src="img/bulletP1.svg" alt="">
         <img id="mock" src="img/potet/saldemar.png" alt="">
       </div>
-      <div class="info">
+      <div class="info elemLeft">
         <h2 style="color:#000;">Sal de mar</h2>
         <p style="color:#000;">El mood ideal para salir de  esta y conocer nuevos lugares, personas y experiencias</p>
         <div style="background-image:url('img/tablas/pot-1.png');"></div>
@@ -142,11 +142,11 @@ fluo.com.mx
     </article>
     <!-- HABANERO -->
     <article class="hideDisplay">
-      <div class="producto" onmouseover="hoverProducto(this, 'potet')">
+      <div class="producto elemRight" onmouseover="hoverProducto(this, 'potet')">
         <img src="img/bulletP2.svg" alt="">
         <img id="mock" src="img/potet/habanero.png" alt="">
       </div>
-      <div class="info">
+      <div class="info elemLeft">
         <h2 style="color:#000;">Habanero</h2>
         <p style="color:#000;">El mood ideal para salir de  esta y conocer nuevos lugares, personas y experiencias.</p>
         <div style="background-image:url('img/tablas/pot-2.png');"></div>
@@ -158,11 +158,11 @@ fluo.com.mx
     </article>
     <!-- BBQ -->
     <article class="hideDisplay">
-      <div class="producto" onmouseover="hoverProducto(this, 'potet')">
+      <div class="producto elemRight" onmouseover="hoverProducto(this, 'potet')">
         <img src="img/bulletP3.svg" alt="">
         <img id="mock" src="img/potet/chilearbol.png" alt="">
       </div>
-      <div class="info">
+      <div class="info elemLeft">
         <h2 style="color:#000;">Chile de árbol</h2>
         <p style="color:#000;">El mood ideal para salir de  esta y conocer nuevos lugares, personas y experiencias.</p>
         <div style="background-image:url('img/tablas/pot-3.png');"></div>
@@ -195,23 +195,27 @@ fluo.com.mx
   <div id="preventHeight" class="hideDisplay">
     <p>Por favor incrementa la altura de tu pantalla</p>
   </div>
+  <!-- TRANSITION -->
+  <div id="transitionPotet" style="background-image:url('img/transition/potet-1.png');"></div>
+  <!-- AUDIO -->
   <audio id="hoverSound">
     <source src="assets/hover.mp3" type="audio/mpeg">
-  </audio>
-  <audio id="hoverProductoTlayolis">
-    <source src="assets/hoverTlayolis.mp3" type="audio/mpeg">
   </audio>
   <audio id="hoverProductoPotet">
     <source src="assets/hoverPotet.mp3" type="audio/mpeg">
   </audio>
-  <audio id="hoverProductoSot">
-    <source src="assets/hoverSot.mp3" type="audio/mpeg">
+  <audio id="transitionPotetSound">
+    <source src="assets/transitionPotet.mp3" type="audio/mpeg">
   </audio>
   <script src="js/bowser.min.js" charset="utf-8"></script>
+  <script src="js/anime.min.js" charset="utf-8"></script>
   <script src="js/main.js" charset="utf-8"></script>
   <script type="text/javascript">
     window.onload = function(){
       countLoading();
+      setTimeout(function(){
+        fadeInHeader();
+      },1000);
       setPhone();
       // detectswipe('interfaz', swipeTransformIndex);
     }
@@ -225,6 +229,16 @@ fluo.com.mx
         preventHeight('max');
       }
     }
+  document.onkeydown = checkKey;
+  function checkKey(e) {
+    e = e || window.event;
+    if (e.keyCode == '37') {
+      countsliderProducto('prev');
+    }
+    if (e.keyCode == '39') {
+      countsliderProducto('next');
+    }
+  }
   </script>
 </body>
 </html>

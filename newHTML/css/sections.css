@@ -61,6 +61,7 @@ nav#bullets>ul>li>a>img:hover{
 #mainProducto>article.header>header{
   text-align: center;
   width: 320px;
+  transition: opacity 0.5s ease-out;
 }
 #mainProducto>article.header>header>p{
   width: 80%;
@@ -311,4 +312,48 @@ nav#bullets>ul>li>a>img:hover{
     width: 320px;
     height: 320px;
   }
+}
+#transitionPotet{
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  width: 120vw;
+  height: 100vh;
+  z-index: 8000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+#transitionSot{
+  display: none;
+  position: fixed;
+  top: -200vh;
+  width: 100vw;
+  height: 200vh;
+  z-index: 8000;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  -webkit-transition: all 0.8s ease-out;
+  -moz-transition: all 0.8s ease-out;
+  -ms-transition: all 0.8s ease-out;
+  -o-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+}
+#rectSvg{
+  fill:#1F8245;
+}
+#transitionTlayolis{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 8000;
+  background: red;
 }

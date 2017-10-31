@@ -105,12 +105,12 @@ fluo.com.mx
       <img onmouseover="changeIcon('over', 'menu/menu-', this)" onmouseout="changeIcon('out', 'menu/menu-', this)" src="img/menu/menu-out.svg" height="50">
     </a>
   </nav>
-  <div id="backgroundProducto" class="inicioTlayolis">
+  <div id="backgroundProducto" class="tlayolis-0">
     <!-- <div id="papas" style="background-image:url('img/papas/tlayolis-jalapeno.png')"></div> -->
   </div>
   <section id="mainProducto">
     <article class="header showDisplayFlex">
-      <header>
+      <header id="coverHeader" class="hideOpacity">
         <img src="img/tlayolis/logotipo-tlayolis-2.svg" alt="Logotipo Tlayolis" width="320">
         <p>
           Tlayolis es una deliciosa botana
@@ -127,11 +127,11 @@ fluo.com.mx
     </article>
     <!-- JALAPEÑO -->
     <article class="hideDisplay">
-      <div class="producto" onmouseover="hoverProducto(this, 'tlayolis')">
+      <div class="producto elemRight" onmouseover="hoverProducto(this, 'tlayolis')">
         <img src="img/bulletT1.svg" alt="">
         <img id="mock" src="img/tlayolis/jalapeño.png" alt="">
       </div>
-      <div class="info">
+      <div class="info elemLeft">
         <h2>Jalapeño</h2>
         <p>El perfecto empujón para cambiar las perspectivas cotidianas</p>
         <div style="background-image:url('img/tablas/tla-1.png');"></div>
@@ -143,11 +143,11 @@ fluo.com.mx
     </article>
     <!-- HABANERO -->
     <article class="hideDisplay">
-      <div class="producto" onmouseover="hoverProducto(this, 'tlayolis')">
+      <div class="producto elemRight" onmouseover="hoverProducto(this, 'tlayolis')">
         <img src="img/bulletT2.svg" alt="">
         <img id="mock" src="img/tlayolis/habanero.png" alt="">
       </div>
-      <div class="info">
+      <div class="info elemLeft">
         <h2>Habanero</h2>
         <p>El mood ideal para salir de fiesta y conocer nuevos lugares, personas y experiencias.</p>
         <div style="background-image:url('img/tablas/tla-2.png');"></div>
@@ -159,11 +159,11 @@ fluo.com.mx
     </article>
     <!-- BBQ -->
     <article class="hideDisplay">
-      <div class="producto" onmouseover="hoverProducto(this, 'tlayolis')">
+      <div class="producto elemRight" onmouseover="hoverProducto(this, 'tlayolis')">
         <img src="img/bulletT3.svg" alt="">
         <img id="mock" src="img/tlayolis/bbq.png" alt="">
       </div>
-      <div class="info">
+      <div class="info elemLeft">
         <h2>Barbecue</h2>
         <p>Ideal para disfrutar una comida con amigos y personas cercanas.</p>
         <div style="background-image:url('img/tablas/tla-3.png');"></div>
@@ -173,9 +173,7 @@ fluo.com.mx
         </ul>
       </div>
     </article>
-   <article class="hideDisplay" style="border:1px solid green;">
-
-    </article>
+   <article class="hideDisplay" style="border:1px solid green;"></article>
   </section>
   <nav id="bullets">
     <ul>
@@ -196,23 +194,30 @@ fluo.com.mx
   <div id="preventHeight" class="hideDisplay">
     <p>Por favor incrementa la altura de tu pantalla</p>
   </div>
+  <!-- TRANSITION -->
+  <div id="transitionTlayolis">
+    <svg viewBox="0 0 1920 1080">
+    <polygon id="rectSvg" class="st0" points="1920,547.2 0,541.2 0,528.2 1920,530.2" data-pointsIn="1920,547.2 0,541.2 0,528.2 1920,530.2" data-pointsOut="1920,1095.1 0,1633.1 0,-8.9 1920,-543.3"/>
+    </svg>
+  </div>
   <audio id="hoverSound">
     <source src="assets/hover.mp3" type="audio/mpeg">
   </audio>
   <audio id="hoverProductoTlayolis">
     <source src="assets/hoverTlayolis.mp3" type="audio/mpeg">
   </audio>
-  <audio id="hoverProductoPotet">
-    <source src="assets/hoverPotet.mp3" type="audio/mpeg">
-  </audio>
-  <audio id="hoverProductoSot">
-    <source src="assets/hoverSot.mp3" type="audio/mpeg">
+  <audio id="transitionTlayolisSound">
+    <source src="assets/transitionTlayolis.mp3" type="audio/mpeg">
   </audio>
   <script src="js/bowser.min.js" charset="utf-8"></script>
+  <script src="js/anime.min.js" charset="utf-8"></script>
   <script src="js/main.js" charset="utf-8"></script>
   <script type="text/javascript">
     window.onload = function(){
       countLoading();
+      setTimeout(function(){
+        fadeInHeader();
+      },1000);
       setPhone();
       // detectswipe('interfaz', swipeTransformIndex);
     }
@@ -224,6 +229,16 @@ fluo.com.mx
         preventHeight('min');
       } else {
         preventHeight('max');
+      }
+    }
+    document.onkeydown = checkKey;
+    function checkKey(e) {
+      e = e || window.event;
+      if (e.keyCode == '37') {
+        countsliderProducto('prev');
+      }
+      if (e.keyCode == '39') {
+        countsliderProducto('next');
       }
     }
   </script>

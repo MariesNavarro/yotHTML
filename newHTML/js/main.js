@@ -295,20 +295,64 @@ function sliderProducto(c){
   var urlValue = window.location.href.slice(window.location.href.indexOf('-')+1);
   var slides = _('#mainProducto').children;
   var l = slides.length;
+  var back = _('#backgroundProducto');
   for (var i = 0; i < l; i++) {
     slides[i].classList.remove('showDisplayFlex');
     slides[i].classList.add('hideDisplay');
   }
-  //back
   if(urlValue === 'sot.html'){
-    console.log("Section Sot");
+    transitionSot(c);
+    var sSot = _('#transitionSotSound');
+    sSot.play();
+    back.setAttribute('class', ' ');
+    back.classList.add('sot-'+c);
   } else if (urlValue == 'potet.html') {
-    console.log("Section Potet");
+    transitionPotet(c);
+    var sPotet = _('#transitionPotetSound');
+    sPotet.play();
+    back.setAttribute('class', ' ');
+    back.classList.add('potet-'+c);
   } else {
-    console.log("Section Tlayolis");
+    var sTlayolis = _('#transitionTlayolisSound');
+    sTlayolis.play();
+    back.setAttribute('class', ' ');
+    back.classList.add('tlayolis-'+c);
   }
   slides[c].classList.add('showDisplayFlex');
+  if(!checkBowser){
+    fadeOutProducts();
+    setTimeout(function(){
+      fadeInProducts();
+    },2000);
+  }
 }
+
+function transitionSot(c){
+  var w = _('#transitionSot');
+  w.style.backgroundImage = "url('img/transition/sot-"+c+".png')";
+  w.style.top = "-50vh";
+  w.style.display = "block";
+  setTimeout(function(){
+    w.style.top = "100vh";
+    setTimeout(function(){
+      w.style.display = "none";
+      w.style.top = "-200vh";
+    },1000);
+  },1200);
+}
+function transitionPotet(c){
+  var w = _('#transitionPotet');
+  w.style.backgroundImage = "url('img/transition/potet-"+c+".png')";
+  w.style.left = "-20vw";
+  w.style.opacity = "1";
+  setTimeout(function(){
+    w.style.left = "100vw";
+    setTimeout(function(){
+      w.style.opacity = "0";
+    },500);
+  },1000);
+}
+
 
 function detectswipe(el,func) {
   swipe_det = new Object();
@@ -353,4 +397,69 @@ function swipeTransformIndex(el,d) {
   } else {
       slider('prev', '#mainIndex', 'hideOpacity', 'showOpacity', true);
   }
+}
+
+function fadeInHeader(){
+  var w = _("#coverHeader");
+  w.classList.remove('hideOpacity');
+}
+
+
+var polyDom = _('#rectSvg')
+fadeInTlayolis();
+function fadeInTlayolis(){
+  // anime({
+  //     targets: '#rectSvg',
+  //     duration: 800,
+  //   	easing: 'easeOutQuad',
+  //   	points: polyDom.getAttribute('pointsIn')
+  // });
+
+  anime({
+    targets: polyDom,
+    duration: 800,
+    easing: 'easeOutQuad',
+    points: polyDom.getAttribute('pointsOut')
+  });
+}
+
+function fadeInProducts(){
+  anime({
+      targets: '.elemLeft',
+      translateX: [
+        {value:[20],duration: 500,easing: 'easeOutQuad'}
+      ],
+      opacity: [
+        {value:[1],duration: 500,easing: 'easeOutQuad'}
+      ]
+  });
+  anime({
+      targets: '.elemRight',
+      translateX: [
+        {value:[-20],duration: 500,easing: 'easeOutQuad'}
+      ],
+      opacity: [
+        {value:[1],duration: 500,easing: 'easeOutQuad'}
+      ]
+  });
+}
+function fadeOutProducts(){
+  anime({
+      targets: '.elemLeft',
+      translateX: [
+        {value:[-20],duration: 100,easing: 'easeOutQuad'}
+      ],
+      opacity: [
+        {value:[0],duration: 1,easing: 'easeOutQuad'}
+      ]
+  });
+  anime({
+      targets: '.elemRight',
+      translateX: [
+        {value:[20],duration: 100,easing: 'easeOutQuad'}
+      ],
+      opacity: [
+        {value:[0],duration: 1,easing: 'easeOutQuad'}
+      ]
+  });
 }

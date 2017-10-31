@@ -284,7 +284,6 @@ function sliderT(n){
 }
 
 
-
 function toggleSlides(i){
   var slide = __('slide'),
       prev,
