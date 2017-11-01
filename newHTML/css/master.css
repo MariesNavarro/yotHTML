@@ -678,10 +678,10 @@ footer.main>p>a:hover{ opacity: 0.5; }
  -o-transform: scale(1,1);
  transform: scale(1,1);
 }
-#tlayolisImg{
+/*#tlayolisImg{
   width: 500px !important;
   height: 500px !important;
-}
+}*/
 
 /* desktop */
 @media screen and (min-width:800px){
