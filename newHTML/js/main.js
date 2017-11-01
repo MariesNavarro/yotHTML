@@ -644,3 +644,26 @@ function fadeOutProducts(){
       ]
   });
 }
+
+function overNosotros(c, i){
+  var overInfo = __('.overInfo'),
+    iconMore = __('.iconMore'),
+    moreHover = _('#moreHover'),
+    imgProductoNos = __('.imgProductoNos');
+  switch (c) {
+    case 'over':
+    overInfo[i].style.opacity = "1";
+    iconMore[i].classList.remove('unrotateIcon');
+    iconMore[i].classList.add('rotateIcon');
+    imgProductoNos[i].classList.remove('zoomOutImg');
+    imgProductoNos[i].classList.add('zoomInImg');
+    break;
+    case 'out':
+    overInfo[i].style.opacity = "0";
+    iconMore[i].classList.remove('rotateIcon');
+    iconMore[i].classList.add('unrotateIcon');
+    imgProductoNos[i].classList.remove('zoomInImg');
+    imgProductoNos[i].classList.add('zoomOutImg');
+    break;
+  }
+}
