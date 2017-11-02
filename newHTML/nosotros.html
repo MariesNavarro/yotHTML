@@ -106,10 +106,10 @@ fluo.com.mx
   </nav>
   <section id="mainNosotros">
     <header>
-      <img src="img/logotipo-yot-color.svg" alt="Logotipo Yot Mx" width="280">
-      <p>Somos una empresa 100% mexicana dedicada a ofrecer botanas innovadoras de calidad. Nuestro foco son jóvenes que buscan opciones diferentes y accesibles con sabores novedosos.</p>
+      <img class="coverHeader hideOpacity" src="img/logotipo-yot-color.svg" alt="Logotipo Yot Mx" width="200">
+      <p class="coverHeader hideOpacity">Somos una empresa 100% mexicana dedicada a ofrecer botanas innovadoras de calidad. Nuestro foco son jóvenes que buscan opciones diferentes y accesibles con sabores novedosos.</p>
     </header>
-    <ul>
+    <ul class="coverHeader hideOpacity">
       <li style="background-image:url('img/nosotros-mision.jpg');">
         <h2>Misión</h2>
         <p>Ofrecer botanas innovadoras y diversas, al alcance de los mexicanos y sus estilos de vida.</p>
@@ -197,7 +197,7 @@ fluo.com.mx
           </div>
         </li>
         <li style="background:#47100f;" onmouseover="overNosotros('over', 6);" onmouseout="overNosotros('out', 6);">
-          <img src="img/nosotros/6.png" alt="" width="230">
+          <img class="imgProductoNos zoomOutImg" src="img/nosotros/6.png" alt="" width="230">
           <div class="overInfo" style="background: rgba(186, 113, 50, 0.5); opacity: 0;">
             <div class="productosBullets">
               <img src="img/bulletT3.svg">
@@ -208,7 +208,7 @@ fluo.com.mx
           </div>
         </li>
         <li style="background:#208245;" onmouseover="overNosotros('over', 7);" onmouseout="overNosotros('out', 7);">
-          <img src="img/nosotros/7.png" alt="" width="230">
+          <img class="imgProductoNos zoomOutImg" src="img/nosotros/7.png" alt="" width="230">
             <div class="overInfo" style="background: rgba(71, 16, 15, 0.5); opacity: 0;">
             <div class="productosBullets">
               <img src="img/bulletT1.svg">
@@ -219,7 +219,7 @@ fluo.com.mx
           </div>
         </li>
         <li style="background:#ba7132;" onmouseover="overNosotros('over', 8);" onmouseout="overNosotros('out', 8);">
-          <img src="img/nosotros/8.png" alt="" width="230">
+          <img class="imgProductoNos zoomOutImg" src="img/nosotros/8.png" alt="" width="230">
           <div class="overInfo" style="background: rgba(32, 130, 69, 0.5); opacity: 0;">
             <div class="productosBullets">
               <img src="img/bulletT2.svg">
@@ -229,8 +229,7 @@ fluo.com.mx
             <img class="iconMore unrotateIcon" src="img/icons/moreHover.svg" alt="" width="25">
           </div>
         </li>
-        <li id="lastMobile" style="background:#fff;">
-          <img src="img/nosotros/9.png" alt="" width="230">
+        <li id="lastMobile" style="background:#cc7832;">
         </li>
       </ul>
     </article>
@@ -255,8 +254,8 @@ fluo.com.mx
     window.onload = function(){
       countLoading();
       setTimeout(function(){
-        // fadeInHeader();
-      },1000);
+        fadeInHeader();
+      },3000);
       setPhone();
     }
     window.onorientationchange = function(){
