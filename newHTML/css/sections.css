@@ -64,6 +64,10 @@ nav#bullets>ul>li>a>img:hover{
 #mainProducto>article.header>header{
   text-align: center;
   width: 320px;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
 }
 #mainProducto>article.header>header>p{
@@ -397,12 +401,94 @@ nav#bullets>ul>li>a>img:hover{
   align-items: center;
   -webkit-align-items: center;
 }
-#elementsPtWrap>li>img{
-  height: 80%;
-
+#elementsPtWrap>li>img{ height: 80%; }
+/* SLIDER */
+.wrap_slider{
+  position: relative;
+  width: 100%;
+  height: 400px !important;
+  overflow: hidden;
 }
 
+.arrow_slider{
+  position: absolute;
+  min-width: 40px;
+  height: 100%;
+  margin: 0 10px;
+  background-image: url('../img/icons/arrow-out.svg');
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: center;
+  cursor: pointer;
+}
+.arr_prev{
+  left: 0;
+}
+.arr_next{
+  right: 0;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.ul_slider{
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  left: -100%;
+  border: 1px solid #000;
+  transition: all;
+  transition-timing-function: ease-out;
+}
+.transition_slider{
+  transition-duration: 0.5s;
+}
+.ul_slider>li{
+  display: inline-block;
+  float: left;
+  width: 33.3333333333%;
+  height: 100%;
+  box-sizing: border-box;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction:row;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+
+  transition: all 0.5s ease-out;
+}
+.ul_slider>li>div{
+  width: 33%;
+  height: 100%;
+  border: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+  transition: all 0.5s ease-out;
+}
+.ul_slider>li.current>div:nth-child(1){ width: 30%; background: blue;}
+.ul_slider>li.current>div:nth-child(2){ width: 40%; background: red;}
+.ul_slider>li.current>div:nth-child(3){ width: 30%; background: blue;}
+
+
+.img_slider{
+  width: 80%;
+  background: #000;
+}
 /* desktop */
 @media screen and (min-width:800px){
   nav#bullets{
