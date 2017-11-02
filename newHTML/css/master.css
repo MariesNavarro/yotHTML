@@ -56,12 +56,8 @@ body{
   height: auto;
   overflow: hidden;
 }
-.hideDisplay{
-  display: none
-}
-.showDisplay{
-  display: block
-}
+.hideDisplay{ display: none }
+.showDisplay{ display: block }
 .showDisplayFlex{
   display: -webkit-box;
   display: -ms-flexbox;
@@ -82,12 +78,8 @@ body{
   -o-transition: opacity 0s ease-out;
   transition: opacity 0s ease-out;
 }
-.showOpacity{
-  opacity: 1;
-}
-.hideOpacity{
-  opacity: 0;
-}
+.showOpacity{ opacity: 1 }
+.hideOpacity{ opacity: 0 }
 #loading{
   position: fixed;
   width: 100vw;
