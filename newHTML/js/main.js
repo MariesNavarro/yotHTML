@@ -2,13 +2,11 @@ function _(el){return document.querySelector(el); }
 function __(el){return document.querySelectorAll(el); }
 var checkBowser = false;
 if(bowser.mobile || bowser.tablet || /SymbianOS/.test(window.navigator.userAgent)) checkBowser = true;
-
 function changeIcon(c, el, t){
   var s = _('#hoverSound');
   t.setAttribute('src', 'img/' + el + c + '.svg');
   if(c === 'over') {s.play();}
 }
-
 function countLoading(){
   var p = _('#loading>#percentage');
   var w = _('#loading');
@@ -27,7 +25,6 @@ function countLoading(){
     p.innerHTML = x + "%";
   },200);
 }
-
 function setPhone(){
   var p = __('.phonePop');
   if(checkBowser){
@@ -40,7 +37,6 @@ function setPhone(){
     }
   }
 }
-
 function popPhone(s){
   var w = _('#telPopW');
   switch (s) {
@@ -58,8 +54,6 @@ function popPhone(s){
   break;
   }
 }
-
-
 function menuMobile(c){
   var w = _('.outerMobile');
   switch (c) {
@@ -77,7 +71,6 @@ function menuMobile(c){
     break;
   }
 }
-
 function overMenuClose(c, t){
 	  var rotA = t.children[0],
 	      rotB = t.children[1];
@@ -96,9 +89,6 @@ function overMenuClose(c, t){
 	  break;
 	  }
 	}
-
-
-
 function changeLandscape(c){
   var article = _("#mainIndex>article"),
       header = _('#mainIndex>article>header'),
@@ -151,7 +141,6 @@ function preventLandscape(c){
       break;
   }
 }
-
 var soundMuted = false;
 function toggleAudio(t){
   var m = _('#iconMute');
@@ -171,8 +160,6 @@ function toggleAudio(t){
     s.muted = false;
   }
 }
-
-
 function hoverProducto(t, c){
   var m = t.lastElementChild;
   var b = t.firstElementChild;
@@ -203,7 +190,6 @@ function hoverProducto(t, c){
     break;
   }
 }
-
 function evtArrowIndex(){
   var w = _('#interfaz');
   var ch = w.children;
@@ -213,7 +199,6 @@ function evtArrowIndex(){
     }
   }
 }
-
 var ct = 0;
 function slider(c, w, classHide, classShow){
   var l = _(w).children.length-1;
@@ -319,7 +304,7 @@ function sliderProducto(c){
     setTimeout(function(){
       btnSliderMob.classList.remove('hideDisplay');
       btnSliderMob.classList.add('showDisplay');
-    },1000);
+    },1500);
   }else{
     btnSliderMob.classList.remove('showDisplay');
     btnSliderMob.classList.add('hideDisplay');
