@@ -272,7 +272,11 @@ fluo.com.mx
       } else {
         preventHeight('max');
       }
+      if(!checkBowser && window.innerWidth < 800){
+        preventResizeProducto();
+      }
     }
+
   document.onkeydown = checkKey;
   function checkKey(e) {
     e = e || window.event;

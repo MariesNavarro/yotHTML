@@ -670,15 +670,14 @@ function fadeInHeader(){
 
 
 function preventResizeProducto(){
-  console.log("Prevent margens");
   var elemRight = __('.elemRight'),
-      elemLeft = __('elemLeft');
-      for (var i = 0; i < elemRight.length; i++) {
-        elemRight[i].setAttribute('style', ' ');
-      }
-      for (var i = 0; i < elemLeft.length; i++) {
-        elemLeft[i].setAttribute('style', ' ');
-      }
+      elemLeft = __('.elemLeft');
+  for (var i = 0; i < elemRight.length; i++) {
+    elemRight[i].setAttribute('style', ' ');
+  }
+  for (var i = 0; i < elemLeft.length; i++) {
+    elemLeft[i].setAttribute('style', ' ');
+  }
 }
 
 function fadeInProducts(){
