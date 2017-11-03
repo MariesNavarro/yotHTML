@@ -2,10 +2,42 @@ function _(el){return document.querySelector(el); }
 function __(el){return document.querySelectorAll(el); }
 var checkBowser = false;
 if(bowser.mobile || bowser.tablet || /SymbianOS/.test(window.navigator.userAgent)) checkBowser = true;
+
+
+
 function changeIcon(c, el, t){
   var s = _('#hoverSound');
   t.setAttribute('src', 'img/' + el + c + '.svg');
   if(c === 'over') {s.play();}
+
+  var textBullet = __('.textBullet');
+  if (textBullet === undefined || textBullet === null) {
+    textBullet = 0;
+  } else {
+    switch (c) {
+      case 'over1':
+        textBullet[0].style.color = "#490e0e";
+      break;
+      case 'over2':
+        textBullet[1].style.color = "#9f3030";
+      break;
+      case 'over3':
+        textBullet[2].style.color = "#ffc521";
+      break;
+      case 'over4':
+        textBullet[3].style.color = "#bf1d70";
+      break;
+      case 'over5':
+        textBullet[4].style.color = "#098442";
+      break;
+      case 'out':
+        for (var i = 0; i < textBullet.length; i++) {
+          textBullet[i].style.color = "#FFFFFF";
+        }
+      break;
+    }
+  }
+
 }
 function countLoading(){
   var p = _('#loading>#percentage');
