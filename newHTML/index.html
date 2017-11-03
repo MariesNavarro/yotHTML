@@ -112,7 +112,7 @@ fluo.com.mx
     </ul>
   </div>
   <section id="mainIndex">
-    <article class="normal showOpacity">
+    <article class="normal showOpacity" style="z-index:100">
       <header>
         <img src="img/sot/logotipo-sot.svg" alt="Logotipo Sot Mx">
         <p class="prox">Próximamente</p>
@@ -120,7 +120,9 @@ fluo.com.mx
         <p>#eligeNatural #eligeSot</p>
       </header>
       <div>
-        <div style="background-image:url('img/inicio-0.png'); display:block;"></div>
+        <div style="background-image:url('img/inicio-0.png'); display:block;">
+          <a href="section-sot.html"></a>
+        </div>
       </div>
     </article>
 
@@ -131,7 +133,11 @@ fluo.com.mx
         <h2 style="color:#000;">Lo natural es ser tú</h2>
         <p style="color:#000;">#purasPapas</p>
       </header>
-      <div> <div style="background-image:url('img/inicio-1.png'); "></div> </div>
+      <div>
+        <div style="background-image:url('img/inicio-1.png'); ">
+        <a href="section-potet.html"></a>
+      </div>
+    </div>
     </article>
 
     <article class="normal hideOpacity">
@@ -143,7 +149,11 @@ fluo.com.mx
         <h2>¿Qué no puedes hacer tú?</h2>
         <p>#AtréveteACambiar y #RífateAHacerlo</p>
       </header>
-      <div> <div id="tlayolisImg" style="background-image:url('img/inicio-2.png')"></div> </div>
+      <div>
+        <div id="tlayolisImg" style="background-image:url('img/inicio-2.png')">
+          <a href="section-tlayolis.html"></a>
+        </div>
+      </div>
     </article>
   </section>
   <footer class="main">
@@ -151,10 +161,8 @@ fluo.com.mx
     <p>info@yot.com.mx</p>
     <p>Coded by <a href="fluo.com.mx">Fluo MX</a></p>
   </footer>
-  <nav id="interfaz">
-    <a role="button" onclick="slider('prev', '#mainIndex', 'hideOpacity', 'showOpacity')"><img onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" alt="Anterior" title="Anterior" width="40"></a>
-    <a role="button" onclick="slider('next', '#mainIndex', 'hideOpacity', 'showOpacity')"><img onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" class="rotIcon" src="img/icons/arrow-out.svg" alt="Siguiente" title="Siguiente" width="40"></a>
-  </nav>
+    <a class="interfaz" role="button" onclick="slider('prev', '#mainIndex', 'hideOpacity', 'showOpacity')"><img onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" alt="Anterior" title="Anterior" width="40"></a>
+    <a class="interfaz interfaznext" role="button" onclick="slider('next', '#mainIndex', 'hideOpacity', 'showOpacity')"><img onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" class="rotIcon" src="img/icons/arrow-out.svg" alt="Siguiente" title="Siguiente" width="40"></a>
   <div id="preventHeight" class="hideDisplay">
     <p>Por favor incrementa la altura de tu pantalla</p>
   </div>
@@ -167,8 +175,9 @@ fluo.com.mx
     window.onload = function(){
       countLoading();
       setPhone();
-      evtArrowIndex();
-      detectswipe('interfaz', swipeTransformIndex);
+      // evtArrowIndex();
+      // detectswipe('interfaz', swipeTransformIndex);
+      // preventSwipe();
     }
     window.onorientationchange = function(){
       if(window.orientation == 90 || window.orientation == -90){

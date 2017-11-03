@@ -335,7 +335,7 @@ ul#backs>li{
 #mainIndex>article.normal, #mainIndex>article.tlayolis{
   position: absolute;
   top: 60px;
-  width: 100vw;
+  width: 90vw;
   height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -382,18 +382,24 @@ ul#backs>li{
   -webkit-align-items: center;
 }
 #mainIndex>article.normal>div>div, #mainIndex>article.tlayolis>div>div{
+  position: relative;
   width: 250px;
   height: 250px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
+#mainIndex>article.normal>div>div>a, #mainIndex>article.tlayolis>div>div>a{
+  /*background: red;*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 #mainIndex>article>header>p, #mainIndex>article>header>a{ line-height: 35px; }
 #mainIndex>article>header>p.prox{ text-transform: uppercase; }
-nav#interfaz{
+.interfaz{
   position: absolute;
-  width: 98vw;
-  min-width: 300px;
+  width: 40px;
   top: 0;
   left: 1vw;
   height: 90vh;
@@ -408,6 +414,7 @@ nav#interfaz{
   align-items: center;
   -webkit-align-items: center;
 }
+.interfaznext{ left: calc(99vw - 40px) }
 .rotIcon{
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);

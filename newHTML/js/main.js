@@ -208,13 +208,13 @@ function slider(c, w, classHide, classShow){
     ct--;
     if(ct < 0) {ct = l};
     inner(ct);
-    index(ct);
+    // index(ct);
   break;
   case 'next':
     ct++;
     if(ct > l) {ct = 0};
     inner(ct);
-    index(ct);
+    // index(ct);
   break;
   }
   function inner(c){
@@ -228,8 +228,10 @@ function slider(c, w, classHide, classShow){
     if(next > l) {next = 0};
     sls[prev].classList.remove(classShow);
     sls[prev].classList.add(classHide);
+    sls[prev].style.zIndex = "0";
     sls[next].classList.remove(classShow);
     sls[next].classList.add(classHide);
+    sls[next].style.zIndex = "0";
     switch (c) {
       case 0:
         b.style.left = "0";
@@ -244,6 +246,7 @@ function slider(c, w, classHide, classShow){
     setTimeout(function(){
       sls[c].classList.remove(classHide);
       sls[c].classList.add(classShow);
+      sls[c].style.zIndex = "100";
     },300);
   }
 }
@@ -258,6 +261,25 @@ function countsliderProducto(c){
     sliderCountProd += 1;
     if(sliderCountProd > 4){ sliderCountProd = 0; }
     sliderProducto(sliderCountProd);
+  }
+}
+
+var isProduct = window.location.href.slice(window.location.href.indexOf('=')+1);
+setSliderByUrl(isProduct);
+function setSliderByUrl(c){
+  switch (c) {
+    case '1':
+      bulletsProducto(1);
+    break;
+    case '2':
+      bulletsProducto(2);
+    break;
+    case '3':
+      bulletsProducto(3);
+
+    break;
+    default:
+      bulletsProducto(0);
   }
 }
 
@@ -309,14 +331,14 @@ function sliderProducto(c){
     btnSliderMob.classList.remove('showDisplay');
     btnSliderMob.classList.add('hideDisplay');
   }
-  if(urlValue === 'sot.html'){
+  if(urlValue[0] === 's'){
     itemsSot();
     transitionSot(c);
     var sSot = _('#transitionSotSound');
     sSot.play();
     back.setAttribute('class', ' ');
     back.classList.add('sot-'+c);
-  } else if (urlValue == 'potet.html') {
+  } else if (urlValue[0] == 'p') {
     itemsPotet();
     transitionPotet(c);
     var sPotet = _('#transitionPotetSound');
@@ -585,10 +607,13 @@ function swipeTransformIndex(el,d) {
 
 function preventSwipe(){
   var wr = _('#interfazProducto');
-  if(checkBowser){
-    wr.classList.remove('hideDisplay');
-    wr.classList.add('showDisplay');
-    detectswipe('interfazProducto', swipeTransformProduct);
+  if (wr === undefined || wr === null) {
+  } else {
+    if(checkBowser){
+      wr.classList.remove('hideDisplay');
+      wr.classList.add('showDisplay');
+      detectswipe('interfazProducto', swipeTransformProduct);
+    }
   }
 }
 
