@@ -697,6 +697,9 @@ footer.main>p>a:hover{ opacity: 0.5; }
 }
 /* desktop */
 @media screen and (min-width:800px){
+  body{
+    overflow-y: scroll;
+  }
   a.menuMobile{ display: none !important; }
   nav.main{
     width: 98vw;
