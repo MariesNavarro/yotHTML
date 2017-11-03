@@ -78,7 +78,7 @@ nav#bullets>ul>li>a>img:hover{
 #mainProducto>article>div{
   position: relative;
   width: 100%;
-  height: 280px;
+  height: 180px;
 }
 #mainProducto>article>div.producto{
   cursor: pointer;
@@ -86,13 +86,13 @@ nav#bullets>ul>li>a>img:hover{
 #mainProducto>article>div.producto>img{
   position: absolute;
   display: block;
-  width: 280px;
-  left: calc(50% - 140px);
+  width: 180px;
+  left: calc(50% - 90px);
 }
 #mock{
-  width:260px !important;
-  left: calc(50% - 130px) !important;
   top:5% !important;
+  width: 160px !important;
+  left: calc(50% - 80px) !important;
 }
 #mainProducto>article>div.info{
   height: auto !important;
@@ -110,7 +110,7 @@ nav#bullets>ul>li>a>img:hover{
 }
 #mainProducto>article>div.info>div{
   width: 250px;
-  height: 180px;
+  height: 160px;
   margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -321,9 +321,7 @@ nav#bullets>ul>li>a>img:hover{
   -o-transition: all 0.8s ease-out;
   transition: all 0.8s ease-out;
 }
-#rectSvg{
-  fill:#1F8245;
-}
+#rectSvg{ fill:#1F8245 }
 #transitionTlayolis{
   position: fixed;
   top: 0;
@@ -446,9 +444,7 @@ nav#bullets>ul>li>a>img:hover{
   background-position: center;
   cursor: pointer;
 }
-.arr_prev{
-  left: 0;
-}
+.arr_prev{ left: 0 }
 .arr_next{
   right: 0;
   -webkit-transform: rotate(180deg);
@@ -486,7 +482,6 @@ nav#bullets>ul>li>a>img:hover{
   width: 33.3333333333%;
   height: 100%;
   box-sizing: border-box;
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -497,7 +492,6 @@ nav#bullets>ul>li>a>img:hover{
   -webkit-justify-content:center;
   align-items: center;
   -webkit-align-items: center;
-
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   -ms-transition: all 0.5s ease-out;
@@ -517,12 +511,18 @@ nav#bullets>ul>li>a>img:hover{
   -webkit-justify-content:center;
   align-items: center;
   -webkit-align-items: center;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 .ul_slider>li.current>div:nth-child(1){ width: 20%;}
 .ul_slider>li.current>div:nth-child(2){ width: 40%;}
 .ul_slider>li.current>div:nth-child(3){ width: 20%;}
 .img_slider{ width: 80%; }
+
+
 /* desktop */
 @media screen and (min-width:800px){
   nav#bullets{
@@ -537,18 +537,21 @@ nav#bullets>ul>li>a>img:hover{
     flex-direction: row-reverse;
     -webkit-flex-direction:row-reverse;
   }
-  #mainProducto>article.header>header>p{
-    width: 100%;
-  }
+  #mainProducto>article.header>header>img{ width: 320px }
+  #mainProducto>article.header>header>p{ width: 100% }
+  #mainProducto>article>div{ height: 280px }
   #mainProducto>article>div.producto>img{
     width: 380px;
+    left: calc(50% - 190px);
   }
+
   #mock{
     width:360px !important;
-    left: calc(50% - 130px) !important;
+    left: calc(50% - 180px) !important;
   }
   #interfaceInner{ width: 30%; }
   #mainProducto>article>div.info>p{ display: block; width: 40%;}
+  #mainProducto>article>div.info>h2{ font-size: 1.7rem }
   #mainProducto>article>div.info>div{
     width: 320px;
     height: 320px;
@@ -561,6 +564,7 @@ nav#bullets>ul>li>a>img:hover{
     max-width: 130px;
   }
 }
+
 #interfazProducto{
   z-index: 8800;
   position: fixed;
@@ -614,4 +618,25 @@ nav#bullets>ul>li>a>img:hover{
   width: 100vw;
   height: 80vh;
   background: rgba(0,0,0,0);
+}
+/* desktop max */
+@media screen and (min-width:1500px){
+  #mainProducto>article.header>header{ width: 400px }
+  #mainProducto>article.header>header>img { width: 400px }
+  #mainProducto > article.header > header > p { font-size: 1.2rem }
+  #mainProducto > article > div { height: 600px }
+  #mainProducto > article > div.producto > img {
+    width: 600px;
+    left: calc(50% - 300px);
+  }
+  #mock {
+    width: 560px !important;
+    left: calc(50% - 280px) !important;
+  }
+  #mainProducto > article > div.info > h2 { font-size: 2rem }
+  #mainProducto > article > div.info > p { font-size: 1.2rem }
+  #mainProducto > article > div.info > div {
+    width: 420px;
+    height: 420px;
+  }
 }

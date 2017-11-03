@@ -173,8 +173,10 @@ fluo.com.mx
         </ul>
       </div>
     </article>
-    <!-- style="border:1px solid green;" -->
-   <article class="hideDisplay"></article>
+    <!-- SLIDER INTERNO -->
+   <article id="wrapSlider" class="hideDisplay">
+     <div id="initSlider1"></div>
+   </article>
   </section>
   <nav id="bullets">
     <ul>
@@ -225,7 +227,20 @@ fluo.com.mx
     </li>
   </ul>
   <!-- SWIPE -->
-  <nav id="interfazProducto"></nav>
+  <nav id="interfazProducto" class="hideDisplay"></nav>
+  <!-- CLICK SLIDER MOBILE  -->
+  <div id="sliderMobile" class="hideDisplay" onclick="evSliderMobPop('open')"></div>
+  <!-- POP SLIDER MOB -->
+  <div id="popSliderMob" class="hideDisplay" style="background-image:url('img/potet/background-potet-producto.jpg');">
+    <a id="closeMenu" class="closeMenu" role="button" onclick="evSliderMobPop('close')" onmouseover="overMenuClose('over', this)" onmouseout="overMenuClose('out', this)">
+      <span class="rotA rotccw"></span>
+      <span class="rotB rotcw"></span>
+      <img src="img/icons/circle.svg" width="35">
+    </a>
+    <img src="img/potet/s-1.png">
+    <div id="swipeSliderMob"></div>
+  </div>
+  <!-- AUDIO -->
   <audio id="hoverSound">
     <source src="assets/hover.mp3" type="audio/mpeg">
   </audio>
@@ -238,6 +253,7 @@ fluo.com.mx
   <script src="js/bowser.min.js" charset="utf-8"></script>
   <script src="js/anime.min.js" charset="utf-8"></script>
   <script src="js/main.js" charset="utf-8"></script>
+  <script src="js/slider.js" charset="utf-8"></script>
   <script type="text/javascript">
     window.onload = function(){
       countLoading();
@@ -261,6 +277,9 @@ fluo.com.mx
       } else {
         preventHeight('max');
       }
+      if(!checkBowser && window.innerWidth < 800){
+        preventResizeProducto();
+      }
     }
     document.onkeydown = checkKey;
     function checkKey(e) {
@@ -271,6 +290,12 @@ fluo.com.mx
       if (e.keyCode == '39') {
         countsliderProducto('next');
       }
+    }
+    if(!checkBowser){
+      var initSlider1 = new SliderYot('initSlider1', 'potet');
+    }else{
+      setRefSliderPop('1','potet');
+      detectswipe('swipeSliderMob', swipePopMob);
     }
   </script>
 </body>
