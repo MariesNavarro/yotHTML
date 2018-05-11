@@ -1,7 +1,7 @@
 <!--
 Yot Mx
-v1
-5 de Septiembre
+v2
+23 de Octubre
 [FLUO]
 info@fluo.com.mx
 fluo.com.mx
@@ -40,164 +40,160 @@ fluo.com.mx
   <link rel="mask-icon" href="css/fav/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" type="text/css" href="css/master.css" media="all">
-  <link rel="stylesheet" type="text/css" href="css/index.css" media="all">
 </head>
 <body>
-  <p id="size"></p>
-  <div id="loading">
+  <p id="s"></p>
+  <div id="loading" style="display:none">
     <div id="salsaWrap">
       <div id="salsaLiquid"></div>
     </div>
     <p id="percentage">1%</p>
   </div>
-  <!-- Ocultar nav hideDisplay  -->
-  <nav>
-    <ul id="outer">
-      <li id="logotipo">
-        <a href="index.html">
-          <img src="img/logotipo-yot.svg" alt="Logotipo Yot Mx" width="70">
-        </a>
-      </li>
-      <li class="menuDesk">
-        <a href="nosotros.html" onmouseover="menuItem('on', this, 1)" onmouseout="menuItem('out', this, 1)">
-          <img src="img/icons/menuOut-1.svg" alt="" width="150px">
-          <p class="hideOpacity">Nostros</p>
-        </a>
-      </li>
-      <li class="menuDesk">
-        <a href="sot.html" onmouseover="menuItem('on', this, 2)" onmouseout="menuItem('out', this, 2)">
-          <img src="img/icons/menuOut-2.svg" alt="" width="90">
-          <p class="hideOpacity">Sot</p>
-        </a>
-      </li>
-      <li class="menuDesk">
-        <a href="potet.html" onmouseover="menuItem('on', this, 3)" onmouseout="menuItem('out', this, 3)">
-          <img src="img/icons/menuOut-3.svg" alt="" width="90">
-          <p class="hideOpacity">Potet</p>
-        </a>
-      </li>
-      <li class="menuDesk">
-        <a href="tlayolis.html" onmouseover="menuItem('on', this, 4)" onmouseout="menuItem('out', this, 4)">
-          <img src="img/icons/menuOut-4.svg" alt="" width="90">
-          <p class="hideOpacity">Tlayolis</p>
-        </a>
-      </li>
-      <li class="menuDesk">
-        <a href="contacto.html" onmouseover="menuItem('on', this, 5)" onmouseout="menuItem('out', this, 5)">
-          <img src="img/icons/menuOut-5.svg" alt="" width="90">
-          <p class="hideOpacity">Contacto</p>
-        </a>
-      </li>
-      <li id="menuMob">
-        <a role="button" onmouseover="menuItem('onM', this, 0)" onmouseout="menuItem('outM', this, 0)" onclick="menuMobile('open')">
-          <img src="img/icons/menuOut-0m.svg" alt="Background menu" width="120">
-        </a>
-      </li>
-    </ul>
-    <ul id="innerMobile" class="">
-      <a role="button" onclick="menuMobile('close')">
-        <img src="img/icons/regresar.svg" alt="Cerrar menú" width="45">
+  <div id="telPopW">
+    <div>
+      <a class="closeMenu" role="button" onclick="popPhone('close')" onmouseover="overMenuClose('over', this)" onmouseout="overMenuClose('out', this)">
+        <span class="rotA rotccw"></span>
+        <span class="rotB rotcw"></span>
+        <img src="img/icons/circle.svg" width="35">
       </a>
-      <div>
-        <li><a href="nosotros.html"><img src="img/icons/menuOut-1.svg" width="100"></a></li>
-        <li><a href="#"><img src="img/icons/menuOut-2.svg" width="100"></a></li>
-        <li><a href="#"><img src="img/icons/menuOut-3.svg" width="100"></a></li>
-        <li><a href="tlayolis.html"><img src="img/icons/menuOut-4.svg" width="100"></a></li>
-        <li><a href="#"><img src="img/icons/menuOut-5.svg" width="100"></a></li>
-      </div>
-    </ul>
-  </nav>
-  <!-- Ocultar #main hideDisplay  -->
-  <div id="main" class="">
-    <ul id="backHome">
-      <li style="background-image:url('img/back-sot.jpg');"></li>
-      <li style="background-image:url('img/back-potet.png');"></li>
-      <li style="background:#724e4c; left:200vw;"></li>
-    </ul>
-    <section id="sot" class="producto hideOpacity hideDisplay">
-      <div>
-        <div class="mockup" style="background-image:url('img/producto-sot.png')"></div>
-      </div>
-      <div>
-          <div>
-            <img class="logotipoProducto" src="img/logotipo-sot.svg" alt="" width="150">
-            <div class="infoproducto">
-                <p class="prox">Próximamente</p>
-                <h3>Lo natural es ser tú</h3>
-                <p class="hashtag">#EligeLoNatural #EligeSOT</p>
-            </div>
-          </div>
-      </div>
-    </section>
-    <section id="potet" class="producto hideOpacity hideDisplay">
-      <div>
-        <div class="mockup" style="background-image:url('img/producto-potet.png')"></div>
-      </div>
-      <div>
-          <div>
-            <img class="logotipoProducto" src="img/logotipo-potet.svg" alt="" width="150">
-            <div class="infoproducto">
-                <p class="prox">Próximamente</p>
-                <h3>Lo natural es ser tú</h3>
-                <p class="hashtag">#PurasPapas</p>
-            </div>
-          </div>
-      </div>
-    </section>
-    <section id="tlayolis" class="producto hideOpacity hideDisplay">
-        <p>
-          Si nosotros pudimos hacer <br>
-          la mejor mezcla de papa y maíz, <br><br>
-           <span id="pregunta">¿Qué no puedes hacer tú?</span>
-        </p>
-        <div id="mocktla"></div>
-        <div>
-          <p class="hashtag">#AtréveteACambiar y #RífateAHacerlo</p>
-          <br>
-            <p class="prox">Próximamente</p>
-        </div>
-    </section>
-    <div id="interface">
-      <a role="button" onclick="countSlider('prev')"><img src="img/icons/slider-arrowOut.svg" alt="" height="40" onmouseover="overArrow('on', this)" onmouseout="overArrow('out', this)"></a>
-      <a role="button" onclick="countSlider('next')"><img class="reflect" src="img/icons/slider-arrowOut.svg" alt="" height="40" onmouseover="overArrow('on', this)" onmouseout="overArrow('out', this)"></a>
+      <p>
+        +1 52 5567303009<br>
+        Horarios de atención: <br>
+        Lunes - Viernes <br>
+        9:00am a 19:00pm <br>
+      </p>
     </div>
   </div>
-  <footer>
-      <!-- <a role="button"></a> -->
+  <nav class="main">
+    <a href="index.html">
+      <img onmouseover="changeIcon('over', 'menu/logotipo-', this)" onmouseout="changeIcon('out', 'menu/logotipo-', this)" src="img/menu/logotipo-out.svg" height="53">
+    </a>
+    <ul class="outerMobile">
+      <a id="closeMenu" class="closeMenu" role="button" onclick="menuMobile('close')" onmouseover="overMenuClose('over', this)" onmouseout="overMenuClose('out', this)">
+        <span class="rotA rotccw"></span>
+        <span class="rotB rotcw"></span>
+        <img src="img/icons/circle.svg" width="35">
+      </a>
+      <span>
+        <li><a href="nosotros.html"> <img onmouseover="changeIcon('over', 'menu/nosotros-', this)" onmouseout="changeIcon('out', 'menu/nosotros-', this)" src="img/menu/nosotros-out.svg" title="Ir a Nosotros" alt="Nosotros" height="30"> </a></li>
+        <li><a href="section-sot.html"> <img onmouseover="changeIcon('over', 'menu/sot-', this)" onmouseout="changeIcon('out', 'menu/sot-', this)" src="img/menu/sot-out.svg" title="Ir a Sot" alt="Sot" height="30"> </a></li>
+        <li><a href="section-potet.html"> <img onmouseover="changeIcon('over', 'menu/potet-', this)" onmouseout="changeIcon('out', 'menu/potet-', this)" src="img/menu/potet-out.svg" title="Ir a Potet" alt="Potet" height="30"> </a></li>
+        <li><a href="section-tlayolis.html"> <img onmouseover="changeIcon('over', 'menu/tlayolis-', this)" onmouseout="changeIcon('out', 'menu/tlayolis-', this)" src="img/menu/tlayolis-out.svg" title="Ir a Tlayolis" alt="Tlayolis" height="30"> </a></li>
+        <li class="last">
+          <a role="button" class="phonePop" > <img onmouseover="changeIcon('over', 'menu/tel-', this)" onmouseout="changeIcon('out', 'menu/tel-', this)" src="img/menu/tel-out.svg" title="5567303009" alt="Teléfono Yot Mx" height="35"> </a>
+          <a href="mailto:info@yot.com.mx"> <img onmouseover="changeIcon('over', 'menu/mail-', this)" onmouseout="changeIcon('out', 'menu/mail-', this)" src="img/menu/mail-out.svg" title="info@yot.com.mx" alt="Correo Yot Mx" height="35"> </a>
+          <a href="#"> <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" title="Ir a Facebook" alt="Facebook" height="35"> </a>
+          <a href="#"> <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" title="Ir a Instagram" alt="Instagram" height="35"> </a>
+        </li>
+      </span>
+    </ul>
+    <ul class="outerDesktop desktop">
+      <li><a href="nosotros.html"> <img onmouseover="changeIcon('over', 'menu/nosotros-', this)" onmouseout="changeIcon('out', 'menu/nosotros-', this)" src="img/menu/nosotros-out.svg" title="Ir a Nosotros" alt="Nosotros" height="30"> </a></li>
+      <li><a href="section-sot.html"> <img onmouseover="changeIcon('over', 'menu/sot-', this)" onmouseout="changeIcon('out', 'menu/sot-', this)" src="img/menu/sot-out.svg" title="Ir a Sot" alt="Sot" height="30"> </a></li>
+      <li><a href="section-potet.html"> <img onmouseover="changeIcon('over', 'menu/potet-', this)" onmouseout="changeIcon('out', 'menu/potet-', this)" src="img/menu/potet-out.svg" title="Ir a Potet" alt="Potet" height="30"> </a></li>
+      <li><a href="section-tlayolis.html"> <img onmouseover="changeIcon('over', 'menu/tlayolis-', this)" onmouseout="changeIcon('out', 'menu/tlayolis-', this)" src="img/menu/tlayolis-out.svg" title="Ir a Tlayolis" alt="Tlayolis" height="30"> </a></li>
+    </ul>
+    <ul class="outerRedes desktop">
+      <li><a role="button" class="phonePop" > <img onmouseover="changeIcon('over', 'menu/tel-', this)" onmouseout="changeIcon('out', 'menu/tel-', this)" src="img/menu/tel-out.svg" title="5567303009" alt="Teléfono Yot Mx" height="30"> </a></li>
+      <li><a href="mailto:info@yot.com.mx"> <img onmouseover="changeIcon('over', 'menu/mail-', this)" onmouseout="changeIcon('out', 'menu/mail-', this)" src="img/menu/mail-out.svg" title="info@yot.com.mx" alt="Correo Yot Mx" height="30"> </a></li>
+      <li><a href="#" target="_blank"> <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" title="Ir a Facebook" alt="Facebook" height="30"> </a></li>
+      <li><a href="#" target="_blank"> <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" title="Ir a Instagram" alt="Instagram" height="30"> </a></li>
+      <li><a role="button" onclick="toggleAudio()"> <img id="iconMute" onmouseover="changeIcon('over', 'menu/nomuted-', this)" onmouseout="changeIcon('out', 'menu/nomuted-', this)" src="img/menu/nomuted-out.svg" title="Mute" alt="Icono Sonido" height="30"> </a></li>
+    </ul>
+    <a role="button" class="menuMobile" onclick="menuMobile('open')">
+      <img onmouseover="changeIcon('over', 'menu/menu-', this)" onmouseout="changeIcon('out', 'menu/menu-', this)" src="img/menu/menu-out.svg" height="50">
+    </a>
+  </nav>
+  <div id="backW">
+    <ul id="backs">
+        <li style="background-image:url('img/sot/background.jpg'); left:0;"></li>
+        <li style="background-image:url('img/potet/background.jpg'); left:100%;"></li>
+        <li style="background-image:url('img/tlayolis/background.jpg'); left:200%;"></li>
+    </ul>
+  </div>
+  <section id="mainIndex">
+    <article class="normal showOpacity" style="z-index:100">
+      <header>
+        <img src="img/sot/logotipo-sot.svg" alt="Logotipo Sot Mx">
+        <p class="prox">Próximamente</p>
+        <h2>Lo natural es ser tú</h2>
+        <p>#eligeNatural #eligeSot</p>
+      </header>
       <div>
-        <p>Derechos reservados Grupo Yot Mx© 2017</p>
-        <ul>
-          <li><a href="#"><img src="img/icons/facebook.svg" alt="" width="25"></a></li>
-          <li><a href="#"><img src="img/icons/instagram.svg" alt="" width="25"></a></li>
-          <li><a href="#"><img src="img/icons/mail.svg" alt="" width="25"></a></li>
-        </ul>
-        <p>info@yot.com.mx</p>
-        <p>Coded by Fluo MX</p>
+        <div style="background-image:url('img/inicio-0.png'); display:block;">
+          <a href="section-sot.html"></a>
+        </div>
       </div>
+    </article>
+
+    <article class="normal hideOpacity">
+      <header>
+        <img src="img/potet/logotipo-potet.svg" alt="Logotipo Potet Mx">
+        <p class="prox" style="color:#000;">Próximamente</p>
+        <h2 style="color:#000;">Lo natural es ser tú</h2>
+        <p style="color:#000;">#purasPapas</p>
+      </header>
+      <div>
+        <div style="background-image:url('img/inicio-1.png'); ">
+        <a href="section-potet.html"></a>
+      </div>
+    </div>
+    </article>
+
+    <article class="normal hideOpacity">
+      <header>
+        <img src="img/tlayolis/logotipo-tlayolis.svg" alt="Logotipo Sot Mx">
+        <p class="prox">Próximamente</p>
+        <p style="font-size:1rem; line-height:1.2; text-align:center; margin-bottom:10px;">Si nosotros pudimos hacer <br>
+          la mejor mezcla de papa y maíz</p>
+        <h2>¿Qué no puedes hacer tú?</h2>
+        <p>#AtréveteACambiar y #RífateAHacerlo</p>
+      </header>
+      <div>
+        <div id="tlayolisImg" style="background-image:url('img/inicio-2.png')">
+          <a href="section-tlayolis.html"></a>
+        </div>
+      </div>
+    </article>
+  </section>
+  <footer class="main">
+    <p>Derechos reservados Grupo Yot Mx© 2017</p>
+    <p>info@yot.com.mx</p>
+    <p>Coded by <a href="fluo.com.mx">Fluo MX</a></p>
   </footer>
+    <a class="interfaz" role="button" onclick="slider('prev', '#mainIndex', 'hideOpacity', 'showOpacity')"><img onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" alt="Anterior" title="Anterior" width="40"></a>
+    <a class="interfaz interfaznext" role="button" onclick="slider('next', '#mainIndex', 'hideOpacity', 'showOpacity')"><img onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" class="rotIcon" src="img/icons/arrow-out.svg" alt="Siguiente" title="Siguiente" width="40"></a>
+  <div id="preventHeight" class="hideDisplay">
+    <p>Por favor incrementa la altura de tu pantalla</p>
+  </div>
+  <audio id="hoverSound">
+    <source src="assets/hover.mp3" type="audio/mpeg">
+  </audio>
   <script src="js/bowser.min.js" charset="utf-8"></script>
+  <script src="js/main.js" charset="utf-8"></script>
   <script type="text/javascript">
-    var checkMobileIndex = false;
-    window.console.log("%cCoded by Mn - http://fluo.com.mx", "color:pink;  font-size: 10px; background:#000; padding:2px;");
-    function _(el){return document.querySelector(el); }
-    if(bowser.mobile || bowser.tablet || /SymbianOS/.test(window.navigator.userAgent)) checkMobileIndex = true;
-    document.onkeydown = checkKey;
-    function checkKey(e) {
-    e = e || window.event;
-      // if (e.keyCode == '38') {
-      //   console.log("up")
-      // }
-      // else if (e.keyCode == '40') {
-      //   console.log("down")
-      // }
-      if (e.keyCode == '37') {
-       countSlider('prev')
+    window.onload = function(){
+      countLoading();
+      setPhone();
+      // evtArrowIndex();
+      // detectswipe('interfaz', swipeTransformIndex);
+      // preventSwipe();
+    }
+    window.onorientationchange = function(){
+      if(window.orientation == 90 || window.orientation == -90){
+        changeLandscape('l');
+      } else {
+        changeLandscape('p');
       }
-      else if (e.keyCode == '39') {
-       countSlider('next')
+    }
+    window.onresize = function (){
+      var s = document.getElementById("s").innerHTML = "Width: " + window.innerWidth + "px | Height: " + window.innerHeight + "px";
+      if(!checkBowser && window.innerHeight < 380){
+        preventHeight('min');
+      } else {
+        preventHeight('max');
       }
     }
   </script>
-  <script src="js/main.js" charset="utf-8"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!--
 Yot Mx
-v1
-5 de Septiembre
+v2
+23 de Octubre
 [FLUO]
 info@fluo.com.mx
 fluo.com.mx
@@ -17,20 +17,20 @@ fluo.com.mx
 	<meta http-equiv="pragma" content="no-cache"/>
 	<meta name="google" content="notranslate"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0000, minimum-scale=1.0000, maximum-scale=1.0000, user-scalable=yes">
-  <title>Yot Mx</title> <!-- REVISAR -->
+  <title>Tlayolis | Yot Mx</title> <!-- REVISAR -->
   <link rel="canonical" href=" " /> <!-- FALTA -->
   <meta name="description" content=""/> <!-- FALTA -->
   <meta name="keywords" content=" "/> <!-- FALTA -->
   <meta name="author" content="www.fluo.com.mx">
-  <meta property="og:title" content="Yot Mx"> <!-- REVISAR -->
-	<meta property="og:site_name" content="Yot Mx"> <!-- REVISAR -->
+  <meta property="og:title" content="Tlayolis | Yot Mx"> <!-- REVISAR -->
+	<meta property="og:site_name" content="Tlayolis | Yot Mx"> <!-- REVISAR -->
 	<meta property="og:url" content=" "> <!-- FALTA -->
 	<meta property="og:type" content="website"> <!-- FALTA -->
 	<meta property="og:image" content="img/media.jpg"> <!-- FALTA -->
   <meta property="og:description" content=" "> <!-- FALTA -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:creator" content="@fluomx">
-	<meta name="twitter:title" content="Yot Mx"> <!-- REVISAR -->
+	<meta name="twitter:title" content="Tlayolis | Yot Mx"> <!-- REVISAR -->
 	<meta name="twitter:description" content=" "> <!-- FALTA -->
 	<meta name="twitter:image" content="img/media.jpg"> <!-- FALTA -->
   <link rel="apple-touch-icon" sizes="180x180" href="css/fav/apple-touch-icon.png">
@@ -40,260 +40,255 @@ fluo.com.mx
   <link rel="mask-icon" href="css/fav/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" type="text/css" href="css/master.css" media="all">
-  <link rel="stylesheet" type="text/css" href="css/nosotros.css" media="all">
 </head>
-<body>
-  <p id="size"></p>
-  <div id="loading">
+<body style="overflow-x:hidden; overflow-y:auto; background:#490e0e;">
+  <p id="s"></p>
+  <div id="loading" style="display:none">
     <div id="salsaWrap">
       <div id="salsaLiquid"></div>
     </div>
     <p id="percentage">1%</p>
   </div>
-  <!-- Ocultar nav hideDisplay  -->
-  <nav class="nosotrosNav">
-    <ul id="outer">
-      <li id="logotipo">
-        <a href="index.html">
-          <img src="img/logotipo-yot.svg" alt="Logotipo Yot Mx" width="70">
-        </a>
-      </li>
-      <li class="menuDesk">
-        <a href="nosotros.html" onmouseover="menuItem('on', this, 1)" onmouseout="menuItem('out', this, 1)">
-          <img src="img/icons/menuOut-1.svg" alt="" width="150px">
-          <p class="hideOpacity">Nostros</p>
-        </a>
-      </li>
-      <li class="menuDesk">
-        <a href="sot.html" onmouseover="menuItem('on', this, 2)" onmouseout="menuItem('out', this, 2)">
-          <img src="img/icons/menuOut-2.svg" alt="" width="90">
-          <p class="hideOpacity">Sot</p>
-        </a>
-      </li>
-      <li class="menuDesk">
-        <a href="potet.html" onmouseover="menuItem('on', this, 3)" onmouseout="menuItem('out', this, 3)">
-          <img src="img/icons/menuOut-3.svg" alt="" width="90">
-          <p class="hideOpacity">Potet</p>
-        </a>
-      </li>
-      <li class="menuDesk">
-        <a href="tlayolis.html" onmouseover="menuItem('on', this, 4)" onmouseout="menuItem('out', this, 4)">
-          <img src="img/icons/menuOut-4.svg" alt="" width="90">
-          <p class="hideOpacity">Tlayolis</p>
-        </a>
-      </li>
-      <li class="menuDesk">
-        <a href="contacto.html" onmouseover="menuItem('on', this, 5)" onmouseout="menuItem('out', this, 5)">
-          <img src="img/icons/menuOut-5.svg" alt="" width="90">
-          <p class="hideOpacity">Contacto</p>
-        </a>
-      </li>
-      <li id="menuMob">
-        <a role="button" onmouseover="menuItem('onM', this, 0)" onmouseout="menuItem('outM', this, 0)" onclick="menuMobile('open')">
-          <img src="img/icons/menuOut-0m.svg" alt="Background menu" width="120">
-        </a>
-      </li>
-    </ul>
-    <ul id="innerMobile" class="">
-      <a role="button" onclick="menuMobile('close')">
-        <img src="img/icons/regresar.svg" alt="Cerrar menú" width="45">
+  <div id="telPopW">
+    <div>
+      <a class="closeMenu" role="button" onclick="popPhone('close')" onmouseover="overMenuClose('over', this)" onmouseout="overMenuClose('out', this)">
+        <span class="rotA rotccw"></span>
+        <span class="rotB rotcw"></span>
+        <img src="img/icons/circle.svg" width="35">
       </a>
-      <div>
-        <li><a href="nosotros.html"><img src="img/icons/menuOut-1.svg" width="100"></a></li>
-        <li><a href="sot.html"><img src="img/icons/menuOut-2.svg" width="100"></a></li>
-        <li><a href="potet.html"><img src="img/icons/menuOut-3.svg" width="100"></a></li>
-        <li><a href="tlayolis.html"><img src="img/icons/menuOut-4.svg" width="100"></a></li>
-        <li><a href="contacto.html"><img src="img/icons/menuOut-5.svg" width="100"></a></li>
-      </div>
-    </ul>
-  </nav>
-  <!-- Ocultar #main hideDisplay  -->
-  <div id="main" class="">
-      <section id="coverN">
-        <div>
-          <img src="img/logotipo-yot-b.svg" alt="Logotipo Yot Mx" width="250">
-          <p>
-            Somos una empresa 100% mexicana dedicada a
-            ofrecer botanas innovadoras de calidad.
-            Nuestro foco son jóvenes que buscan opciones
-            diferentes y accesibles con sabores novedosos.
-          </p>
-        </div>
-      </section>
-
-      <section id="nuestroN">
-          <header>
-            <h2>Nuestros <br> Productos</h2>
-          </header>
-          <!-- PRODUCTOS DESPLEGABLES -->
-          <ul>
-            <li class="liImg" style="background: #fdc339;" onmouseover="overNosotros('over', 0)" onmouseout="overNosotros('out', 0)">
-              <img class="imgProductoNos" src="img/items/0.png" alt="" width="250">
-              <div class="overInfo" style="background:rgba(254,171,59,0.5)">
-                <div class="productosBullets">
-                  <img src="img/items/back-0.svg">
-                </div>
-                <h2 style="color:#000;">Sal de Mar</h2>
-                <p style="color:#000;">Perfecto empujón para cambiar <br>
-                las perspectivas cotidianas.</p>
-                <img class="iconMore unrotateIcon" src="img/icons/moreHoverBlack.svg" alt="" width="25">
-              </div>
-            </li>
-            <li class="liImg" style="background: #f48f3d;" onmouseover="overNosotros('over', 1)" onmouseout="overNosotros('out', 1)">
-              <img class="imgProductoNos" src="img/items/1.png" alt="" width="250">
-              <div class="overInfo" style="background:rgba(207,68,58,0.5)">
-                <div class="productosBullets">
-                  <img src="img/items/back-1.svg">
-                </div>
-                <h2 style="color:#000;">Habanero</h2>
-                <p style="color:#000;">Perfecto empujón para cambiar <br>
-                las perspectivas cotidianas.</p>
-                <img class="iconMore unrotateIcon" src="img/icons/moreHoverBlack.svg" alt="" width="25">
-              </div>
-
-            </li>
-            <li class="liImg" style="background: #cf3a44;" onmouseover="overNosotros('over', 2)" onmouseout="overNosotros('out', 2)">
-              <img class="imgProductoNos" src="img/items/2.png" alt="" width="250">
-              <div class="overInfo" style="background:rgba(253,193,57,0.5)">
-                <div class="productosBullets">
-                  <img src="img/items/back-2.svg">
-                </div>
-                <h2 style="color:#000;">Chile de árbol</h2>
-                <p style="color:#000;">Perfecto empujón para cambiar <br>
-                las perspectivas cotidianas.</p>
-                <img class="iconMore unrotateIcon" src="img/icons/moreHoverBlack.svg" alt="" width="25">
-              </div>
-            </li>
-            <li class="liImg" style="background: #be2872;" onmouseover="overNosotros('over', 3)" onmouseout="overNosotros('out', 3)">
-              <img class="imgProductoNos" src="img/items/3.png" alt="" width="250">
-              <div class="overInfo" style="background:rgba(156,50,59,0.5)">
-                <div class="productosBullets">
-                  <img src="img/items/back-3.svg">
-                </div>
-                <h2>Chile de árbol</h2>
-                <p>Ideal para disfrutar una comida <br>
-                con amigos y personas cercanas.</p>
-                <img class="iconMore unrotateIcon" src="img/icons/moreHover.svg" alt="" width="25">
-              </div>
-            </li>
-            <li class="liImg" style="background: #9c323b;" onmouseover="overNosotros('over', 4)" onmouseout="overNosotros('out', 4)">
-              <img class="imgProductoNos" src="img/items/4.png" alt="" width="250">
-              <div class="overInfo" style="background:rgba(187,148,64,0.5)">
-                <div class="productosBullets">
-                  <img src="img/items/back-4.svg">
-                </div>
-                <h2>Yuca</h2>
-                <p>El mood ideal para salir de fiesta y <br>
-                conocer nuevos lugares, personas <br>
-                y experiencias.</p>
-                <img class="iconMore unrotateIcon" src="img/icons/moreHover.svg" alt="" width="25">
-              </div>
-            </li>
-            <li class="liImg" style="background: #bb9440;" onmouseover="overNosotros('over', 5)" onmouseout="overNosotros('out', 5)">
-              <img class="imgProductoNos zoomOutImg" src="img/items/5.png" alt="" width="250">
-              <div class="overInfo" style="background:rgba(190,40, 114,0.5)">
-                <div class="productosBullets">
-                  <img src="img/items/back-5.svg">
-                </div>
-                <h2>Sal de Mar</h2>
-                <p>Perfecto empujón para cambiar <br>
-                las perspectivas cotidianas.</p>
-                <img class="iconMore unrotateIcon" src="img/icons/moreHover.svg" alt="" width="25">
-              </div>
-            </li>
-            <li class="liImg" style="background: #47100f;" onmouseover="overNosotros('over', 6)" onmouseout="overNosotros('out', 6)">
-              <img class="imgProductoNos zoomOutImg" src="img/items/6.png" alt="" width="250">
-              <div class="overInfo" style="background:rgba(186,113,50,0.5)">
-                <div class="productosBullets">
-                  <img src="img/items/back-6.svg">
-                </div>
-                <h2>Barbecue</h2>
-                <p>Ideal para disfrutar una comida <br>
-                con amigos y personas cercanas.</p>
-                <img class="iconMore unrotateIcon" src="img/icons/moreHover.svg" alt="" width="25">
-              </div>
-            </li>
-            <li class="liImg" style="background: #208245;" onmouseover="overNosotros('over', 7)" onmouseout="overNosotros('out', 7)">
-              <img class="imgProductoNos zoomOutImg" src="img/items/7.png" alt="" width="250">
-              <div class="overInfo" style="background:rgba(71,16,15,0.5)">
-                <div class="productosBullets">
-                  <img src="img/items/back-7.svg">
-                </div>
-                <h2>Jalapeño</h2>
-                <p>El perfecto empujón para cambiar <br>
-                  las perspectivas cotidianas.</p>
-                <img class="iconMore unrotateIcon" src="img/icons/moreHover.svg" alt="" width="25">
-              </div>
-            </li>
-            <li class="liImg" style="background: #ba7132;" onmouseover="overNosotros('over', 8)" onmouseout="overNosotros('out', 8)">
-              <img class="imgProductoNos zoomInOut" src="img/items/8.png" alt="" width="250">
-              <div class="overInfo" style="background:rgba(32,130,69,0.5)">
-                <div class="productosBullets">
-                  <img src="img/items/back-8.svg">
-                </div>
-                <h2>Habanero</h2>
-                <p>El mood ideal para salir de fiesta y <br>
-                conocer nuevos lugares, personas <br>
-                y experiencias.</p>
-                <img class="iconMore unrotateIcon" src="img/icons/moreHover.svg" alt="" width="25">
-              </div>
-            </li>
-            <li id="moreHover" class="liTexto" style="background: #e6e6e6;">
-              <a>
-                Ver más <br>
-                información +
-              </a>
-            </li>
-          </ul>
-      </section>
-      <ul id="misionvision">
-        <li>
-          <div>
-            <h3>Misión</h3>
-            <br>
-            <p>
-              Ofrecer botanas innovadoras y
-              diversas, al alcance de los
-              mexicanos y sus estilos de vida.
-            </p>
-          </div>
+      <p>
+        +1 52 5567303009<br>
+        Horarios de atención: <br>
+        Lunes - Viernes <br>
+        9:00am a 19:00pm <br>
+      </p>
+    </div>
+  </div>
+  <nav class="main">
+    <a href="index.html">
+      <img onmouseover="changeIcon('over', 'menu/logotipo-', this)" onmouseout="changeIcon('out', 'menu/logotipo-', this)" src="img/menu/logotipo-out.svg" height="53">
+    </a>
+    <ul class="outerMobile">
+      <a id="closeMenu" class="closeMenu" role="button" onclick="menuMobile('close')" onmouseover="overMenuClose('over', this)" onmouseout="overMenuClose('out', this)">
+        <span class="rotA rotccw"></span>
+        <span class="rotB rotcw"></span>
+        <img src="img/icons/circle.svg" width="35">
+      </a>
+      <span>
+        <li><a href="nosotros.html"> <img onmouseover="changeIcon('over', 'menu/nosotros-', this)" onmouseout="changeIcon('out', 'menu/nosotros-', this)" src="img/menu/nosotros-out.svg" title="Ir a Nosotros" alt="Nosotros" height="30"> </a></li>
+        <li><a href="section-sot.html"> <img onmouseover="changeIcon('over', 'menu/sot-', this)" onmouseout="changeIcon('out', 'menu/sot-', this)" src="img/menu/sot-out.svg" title="Ir a Sot" alt="Sot" height="30"> </a></li>
+        <li><a href="section-potet.html"> <img onmouseover="changeIcon('over', 'menu/potet-', this)" onmouseout="changeIcon('out', 'menu/potet-', this)" src="img/menu/potet-out.svg" title="Ir a Potet" alt="Potet" height="30"> </a></li>
+        <li><a href="section-tlayolis.html"> <img onmouseover="changeIcon('over', 'menu/tlayolis-', this)" onmouseout="changeIcon('out', 'menu/tlayolis-', this)" src="img/menu/tlayolis-out.svg" title="Ir a Tlayolis" alt="Tlayolis" height="30"> </a></li>
+        <li class="last">
+          <a role="button" class="phonePop" > <img onmouseover="changeIcon('over', 'menu/tel-', this)" onmouseout="changeIcon('out', 'menu/tel-', this)" src="img/menu/tel-out.svg" title="5567303009" alt="Teléfono Yot Mx" height="35"> </a>
+          <a href="mailto:info@yot.com.mx"> <img onmouseover="changeIcon('over', 'menu/mail-', this)" onmouseout="changeIcon('out', 'menu/mail-', this)" src="img/menu/mail-out.svg" title="info@yot.com.mx" alt="Correo Yot Mx" height="35"> </a>
+          <a href="#"> <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" title="Ir a Facebook" alt="Facebook" height="35"> </a>
+          <a href="#"> <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" title="Ir a Instagram" alt="Instagram" height="35"> </a>
         </li>
-        <li>
-          <div>
-            <h3>Visión</h3>
-              <br>
-            <p>
-              Ser la mejor empresa mexicana
-              de botanas que se dedique a
-              innovar a través del estilo de
-              vida de sus consumidores.
-            </p>
+      </span>
+    </ul>
+    <ul class="outerDesktop desktop">
+      <li><a href="nosotros.html"> <img onmouseover="changeIcon('over', 'menu/nosotros-', this)" onmouseout="changeIcon('out', 'menu/nosotros-', this)" src="img/menu/nosotros-out.svg" title="Ir a Nosotros" alt="Nosotros" height="30"> </a></li>
+      <li><a href="section-sot.html"> <img onmouseover="changeIcon('over', 'menu/sot-', this)" onmouseout="changeIcon('out', 'menu/sot-', this)" src="img/menu/sot-out.svg" title="Ir a Sot" alt="Sot" height="30"> </a></li>
+      <li><a href="section-potet.html"> <img onmouseover="changeIcon('over', 'menu/potet-', this)" onmouseout="changeIcon('out', 'menu/potet-', this)" src="img/menu/potet-out.svg" title="Ir a Potet" alt="Potet" height="30"> </a></li>
+      <li><a href="section-tlayolis.html"> <img onmouseover="changeIcon('over', 'menu/tlayolis-', this)" onmouseout="changeIcon('out', 'menu/tlayolis-', this)" src="img/menu/tlayolis-out.svg" title="Ir a Tlayolis" alt="Tlayolis" height="30"> </a></li>
+    </ul>
+    <ul class="outerRedes desktop">
+      <li><a role="button" class="phonePop" > <img onmouseover="changeIcon('over', 'menu/tel-', this)" onmouseout="changeIcon('out', 'menu/tel-', this)" src="img/menu/tel-out.svg" title="5567303009" alt="Teléfono Yot Mx" height="30"> </a></li>
+      <li><a href="mailto:info@yot.com.mx"> <img onmouseover="changeIcon('over', 'menu/mail-', this)" onmouseout="changeIcon('out', 'menu/mail-', this)" src="img/menu/mail-out.svg" title="info@yot.com.mx" alt="Correo Yot Mx" height="30"> </a></li>
+      <li><a href="#" target="_blank"> <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" title="Ir a Facebook" alt="Facebook" height="30"> </a></li>
+      <li><a href="#" target="_blank"> <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" title="Ir a Instagram" alt="Instagram" height="30"> </a></li>
+      <li><a role="button" onclick="toggleAudio()"> <img id="iconMute" onmouseover="changeIcon('over', 'menu/nomuted-', this)" onmouseout="changeIcon('out', 'menu/nomuted-', this)" src="img/menu/nomuted-out.svg" title="Mute" alt="Icono Sonido" height="30"> </a></li>
+    </ul>
+    <a role="button" class="menuMobile" onclick="menuMobile('open')">
+      <img onmouseover="changeIcon('over', 'menu/menu-', this)" onmouseout="changeIcon('out', 'menu/menu-', this)" src="img/menu/menu-out.svg" height="50">
+    </a>
+  </nav>
+  <section id="mainNosotros">
+    <header>
+      <img class="coverHeader hideOpacity" src="img/logotipo-yot-color.svg" alt="Logotipo Yot Mx" width="200">
+      <p class="coverHeader hideOpacity">Somos una empresa 100% mexicana dedicada a ofrecer botanas innovadoras de calidad. Nuestro foco son jóvenes que buscan opciones diferentes y accesibles con sabores novedosos.</p>
+    </header>
+    <ul>
+      <li style="background-image:url('img/nosotros-mision.jpg');">
+        <h2>Misión</h2>
+        <p>Ofrecer botanas innovadoras y diversas, al alcance de los mexicanos y sus estilos de vida.</p>
+      </li>
+      <li style="background-image:url('img/nosotros-vision.jpg');">
+        <h2>Visión</h2>
+        <p>Ser la mejor empresa mexicana de botanas que se dedique a innovar a través del estilo de vida de sus consumidores.</p>
+      </li>
+    </ul>
+    <div>
+      <h1>Nuestros <br>Productos</h1>
+    </div>
+    <article>
+      <ul>
+        <!-- Sal de Mar -->
+        <li style="background:#fdc339;" onmouseover="overNosotros('over', 0);" onmouseout="overNosotros('out', 0);">
+          <img class="imgProductoNos zoomOutImg"  src="img/nosotros/0.png" alt="Potet Sal de Mar" width="230">
+          <a href="section-potet.html?producto=1">
+            <div class="overInfo" style="background: rgba(254, 171, 59, 0.5); opacity: 0;">
+              <div class="productosBullets">
+                <img src="img/bulletP1.svg">
+              </div>
+              <h2 style="color:#000;">Sal de Mar</h2>
+              <p style="color:#000;">Perfecto empujón para cambiar <br>las perspectivas cotidianas.</p>
+              <img class="iconMore unrotateIcon" src="img/icons/moreHoverBlack.svg" width="25">
+            </div>
+          </a>
+        </li>
+        <!-- Habanero -->
+        <li style="background:#f48f3d;" onmouseover="overNosotros('over', 1);" onmouseout="overNosotros('out', 1);">
+          <img class="imgProductoNos zoomOutImg" src="img/nosotros/1.png" alt="Potet Habanero" width="230">
+          <a href="section-potet.html?producto=2">
+            <div class="overInfo" style="background: rgba(207, 68, 58, 0.5); opacity: 0;">
+              <div class="productosBullets">
+              <img src="img/bulletP2.svg">
+            </div>
+              <h2 style="color:#000;">Habanero</h2>
+              <p style="color:#000;">Perfecto empujón para cambiar <br> las perspectivas cotidianas.</p>
+              <img class="iconMore unrotateIcon" src="img/icons/moreHoverBlack.svg" width="25">
+            </div>
+          </a>
+        </li>
+        <!-- Chile de árbol -->
+        <li style="background:#cf3a44;" onmouseover="overNosotros('over', 2);" onmouseout="overNosotros('out', 2);">
+          <img class="imgProductoNos zoomOutImg" src="img/nosotros/2.png" alt="Potet Chile de Árbol" width="230">
+          <a href="section-potet.html?producto=3">
+            <div class="overInfo" style="background: rgba(253, 193, 57, 0.5); opacity: 0;">
+          	<div class="productosBullets">
+          		<img src="img/bulletP3.svg">
+          	</div>
+          	<h2 style="color:#000;">Chile de árbol</h2>
+          	<p style="color:#000;">Perfecto empujón para cambiar <br> las perspectivas cotidianas.</p>
+          	<img class="iconMore unrotateIcon" src="img/icons/moreHoverBlack.svg" width="25">
           </div>
+          </a>
+        </li>
+        <!-- Camote y Yuca -->
+        <li style="background:#be2872;" onmouseover="overNosotros('over', 3);" onmouseout="overNosotros('out', 3);">
+          <img class="imgProductoNos zoomOutImg" src="img/nosotros/3.png" alt="Sot Camote y Yuca" width="230">
+          <a href="section-sot.html?producto=3">
+            <div class="overInfo" style="background: rgba(156, 50, 59, 0.5); opacity: 0;">
+              <div class="productosBullets">
+                <img src="img/bulletS1.svg">
+              </div>
+              <h2>Camote y Yuca</h2>
+              <p>Ideal para disfrutar una comida <br> con amigos y personas cercanas.</p>
+              <img class="iconMore unrotateIcon" src="img/icons/moreHover.svg" width="25">
+            </div>
+          </a>
+        </li>
+        <!-- Yuca -->
+        <li style="background:#9c323b;" onmouseover="overNosotros('over', 4);" onmouseout="overNosotros('out', 4);">
+          <img class="imgProductoNos zoomOutImg" src="img/nosotros/4.png" alt="Sot Yuca" width="230">
+          <a href="section-sot.html?producto=2">
+            <div class="overInfo" style="background: rgba(187, 148, 64, 0.5); opacity: 0;">
+              <div class="productosBullets">
+                <img src="img/bulletS3.svg">
+              </div>
+              <h2>Yuca</h2>
+              <p>El mood ideal para salir de fiesta y <br> conocer nuevos lugares, personas <br> y experiencias.</p>
+              <img class="iconMore unrotateIcon" src="img/icons/moreHover.svg" width="25">
+            </div>
+          </a>
+        </li>
+        <!-- Camote -->
+        <li style="background:#bb9440;" onmouseover="overNosotros('over', 5);" onmouseout="overNosotros('out', 5);">
+          <img class="imgProductoNos zoomOutImg" src="img/nosotros/5.png" alt="Sot Camote" width="230">
+          <a href="section-sot.html?producto=1">
+            <div class="overInfo" style="background: rgba(190, 40, 114, 0.5); opacity: 0;">
+              <div class="productosBullets">
+                <img src="img/bulletS2.svg">
+              </div>
+              <h2>Camote</h2>
+              <p>Perfecto empujón para cambiar <br> las perspectivas cotidianas.</p>
+              <img class="iconMore unrotateIcon" src="img/icons/moreHover.svg" width="25">
+            </div>
+          </a>
+        </li>
+        <!-- Barbecue -->
+        <li style="background:#47100f;" onmouseover="overNosotros('over', 6);" onmouseout="overNosotros('out', 6);">
+          <img class="imgProductoNos zoomOutImg" src="img/nosotros/6.png" alt="Tlayolis Barbecue" width="230">
+          <a href="section-tlayolis.html?producto=3">
+            <div class="overInfo" style="background: rgba(186, 113, 50, 0.5); opacity: 0;">
+              <div class="productosBullets">
+                <img src="img/bulletT3.svg">
+              </div>
+              <h2>Barbecue</h2>
+              <p>Ideal para disfrutar una comida <br> con amigos y personas cercanas.</p>
+              <img class="iconMore unrotateIcon" src="img/icons/moreHover.svg" width="25">
+            </div>
+          </a>
+        </li>
+        <!-- Jalapeño -->
+        <li style="background:#208245;" onmouseover="overNosotros('over', 7);" onmouseout="overNosotros('out', 7);">
+          <img class="imgProductoNos zoomOutImg" src="img/nosotros/7.png" alt="Tlayolis Jalapeño" width="230">
+          <a href="section-tlayolis.html?producto=1">
+            <div class="overInfo" style="background: rgba(71, 16, 15, 0.5); opacity: 0;">
+              <div class="productosBullets">
+                <img src="img/bulletT1.svg">
+              </div>
+              <h2>Jalapeño</h2>
+              <p>El perfecto empujón para cambiar <br> las perspectivas cotidianas.</p>
+              <img class="iconMore unrotateIcon" src="img/icons/moreHover.svg" width="25">
+            </div>
+          </a>
+        </li>
+        <!-- Habanero -->
+        <li style="background:#ba7132;" onmouseover="overNosotros('over', 8);" onmouseout="overNosotros('out', 8);">
+          <img class="imgProductoNos zoomOutImg" src="img/nosotros/8.png" alt="Tlayolis Habanero" width="230">
+          <a href="section-tlayolis.html?producto=2">
+            <div class="overInfo" style="background: rgba(32, 130, 69, 0.5); opacity: 0;">
+              <div class="productosBullets">
+                <img src="img/bulletT2.svg">
+              </div>
+              <h2>Habanero</h2>
+              <p>El mood ideal para salir de fiesta y <br> conocer nuevos lugares, personas <br> y experiencias.</p>
+              <img class="iconMore unrotateIcon" src="img/icons/moreHover.svg" width="25">
+            </div>
+          </a>
+        </li>
+        <li id="lastMobile" style="background:#cc7832;">
         </li>
       </ul>
-  </div>
-  <footer>
-      <!-- <a role="button"></a> -->
-      <div>
-        <p>Derechos reservados Grupo Yot Mx© 2017</p>
-        <ul>
-          <li><a href="#"><img src="img/icons/facebook.svg" alt="" width="25"></a></li>
-          <li><a href="#"><img src="img/icons/instagram.svg" alt="" width="25"></a></li>
-          <li><a href="#"><img src="img/icons/mail.svg" alt="" width="25"></a></li>
-        </ul>
-        <p>info@yot.com.mx</p>
-        <p>Coded by Fluo MX</p>
-      </div>
+    </article>
+  </section>
+  <footer class="main">
+    <p>Derechos reservados Grupo Yot Mx© 2017</p>
+    <p>info@yot.com.mx</p>
+    <p>Coded by <a href="fluo.com.mx">Fluo MX</a></p>
   </footer>
+  <!-- PREVENT -->
+  <div id="preventHeight" class="hideDisplay">
+    <p>Por favor incrementa la altura de tu pantalla</p>
+  </div>
+  <!-- AUDIO -->
+  <audio id="hoverSound">
+    <source src="assets/hover.mp3" type="audio/mpeg">
+  </audio>
   <script src="js/bowser.min.js" charset="utf-8"></script>
+  <script src="js/anime.min.js" charset="utf-8"></script>
+  <script src="js/main.js" charset="utf-8"></script>
   <script type="text/javascript">
-    var checkMobileIndex = false;
-    window.console.log("%cCoded by Mn - http://fluo.com.mx", "color:pink;  font-size: 10px; background:#000; padding:2px;");
-    function _(el){return document.querySelector(el); }
-    function __(el){return document.getElementsByClassName(el); }
-
-    if(bowser.mobile || bowser.tablet || /SymbianOS/.test(window.navigator.userAgent)) checkMobileIndex = true;
+    window.onload = function(){
+      countLoading();
+      setTimeout(function(){
+        fadeInHeader();
+      },1000);
+      setPhone();
+    }
+    window.onorientationchange = function(){
+    }
+    window.onresize = function (){
+      var s = document.getElementById("s").innerHTML = "Width: " + window.innerWidth + "px | Height: " + window.innerHeight + "px";
+      if(!checkBowser && window.innerHeight < 380){
+        preventHeight('min');
+      } else {
+        preventHeight('max');
+      }
+    }
   </script>
-  <script src="js/nosotros.js" charset="utf-8"></script>
 </body>
 </html>
