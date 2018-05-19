@@ -1,7 +1,7 @@
 <!--
 Yot Mx
-v2
-23 de Octubre
+v2.5
+10 de Mayo 2018
 [FLUO]
 info@fluo.com.mx
 fluo.com.mx
@@ -65,34 +65,43 @@ fluo.com.mx
       </p>
     </div>
   </div>
+  <!-- SLIDER BACKGROUND -->
+  <div id="sliderBack" class="tlayolisBackSlider"></div>
+  <!-- MENU -->
   <nav class="main">
-    <a href="index.html">
-      <img onmouseover="changeIcon('over', 'menu/logotipo-', this)" onmouseout="changeIcon('out', 'menu/logotipo-', this)" src="img/menu/logotipo-out.svg" height="53">
+    <a href="index.html" onmouseover="hoverSound('#logoSound')">
+      <img onmouseover="changeIcon('over', 'menu/logotipo-', this)" onmouseout="changeIcon('out', 'menu/logotipo-', this)" src="img/menu/logotipo-out.svg" height="53" title="Ir a Inicio">
     </a>
     <ul class="outerMobile">
-      <a id="closeMenu" class="closeMenu" role="button" onclick="menuMobile('close')" onmouseover="overMenuClose('over', this)" onmouseout="overMenuClose('out', this)">
-        <span class="rotA rotccw"></span>
-        <span class="rotB rotcw"></span>
-        <img src="img/icons/circle.svg" width="35">
-      </a>
+      <div id="wrClose">
+        <a id="homeMobile" href="index.html">
+          <img onmouseover="changeIcon('over', 'menu/logotipo-', this)" onmouseout="changeIcon('out', 'menu/logotipo-', this)" src="img/menu/logotipo-out.svg" height="53" title="Ir a Inicio">
+        </a>
+        <a id="closeMenu" class="closeMenu" role="button" onclick="menuMobile('close')" onmouseover="overMenuClose('over', this)" onmouseout="overMenuClose('out', this)">
+          <span class="rotA rotccw"></span>
+          <span class="rotB rotcw"></span>
+          <img src="img/icons/circle.svg" width="50">
+        </a>
+      </div>
       <span>
         <li><a href="nosotros.html"> <img onmouseover="changeIcon('over', 'menu/nosotros-', this)" onmouseout="changeIcon('out', 'menu/nosotros-', this)" src="img/menu/nosotros-out.svg" title="Ir a Nosotros" alt="Nosotros" height="30"> </a></li>
         <li><a href="section-sot.html"> <img onmouseover="changeIcon('over', 'menu/sot-', this)" onmouseout="changeIcon('out', 'menu/sot-', this)" src="img/menu/sot-out.svg" title="Ir a Sot" alt="Sot" height="30"> </a></li>
         <li><a href="section-potet.html"> <img onmouseover="changeIcon('over', 'menu/potet-', this)" onmouseout="changeIcon('out', 'menu/potet-', this)" src="img/menu/potet-out.svg" title="Ir a Potet" alt="Potet" height="30"> </a></li>
         <li><a href="section-tlayolis.html"> <img onmouseover="changeIcon('over', 'menu/tlayolis-', this)" onmouseout="changeIcon('out', 'menu/tlayolis-', this)" src="img/menu/tlayolis-out.svg" title="Ir a Tlayolis" alt="Tlayolis" height="30"> </a></li>
+        <!-- SOCIAL -->
         <li class="last">
-          <a role="button" class="phonePop" > <img onmouseover="changeIcon('over', 'menu/tel-', this)" onmouseout="changeIcon('out', 'menu/tel-', this)" src="img/menu/tel-out.svg" title="5567303009" alt="Teléfono Yot Mx" height="35"> </a>
-          <a href="mailto:info@yot.com.mx"> <img onmouseover="changeIcon('over', 'menu/mail-', this)" onmouseout="changeIcon('out', 'menu/mail-', this)" src="img/menu/mail-out.svg" title="info@yot.com.mx" alt="Correo Yot Mx" height="35"> </a>
-          <a href="#"> <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" title="Ir a Facebook" alt="Facebook" height="35"> </a>
-          <a href="#"> <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" title="Ir a Instagram" alt="Instagram" height="35"> </a>
+          <a role="button" class="phonePop" > <img onmouseover="changeIcon('over', 'menu/tel-', this)" onmouseout="changeIcon('out', 'menu/tel-', this)" src="img/menu/tel-out.svg" title="5567303009" alt="Teléfono Yot Mx" height="45"> </a>
+          <a href="mailto:info@yot.com.mx"> <img onmouseover="changeIcon('over', 'menu/mail-', this)" onmouseout="changeIcon('out', 'menu/mail-', this)" src="img/menu/mail-out.svg" title="info@yot.com.mx" alt="Correo Yot Mx" height="45"> </a>
+          <a href="#"> <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" title="Ir a Facebook" alt="Facebook" height="45"> </a>
+          <a href="#"> <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" title="Ir a Instagram" alt="Instagram" height="45"> </a>
         </li>
       </span>
     </ul>
     <ul class="outerDesktop desktop">
-      <li><a href="nosotros.html"> <img onmouseover="changeIcon('over', 'menu/nosotros-', this)" onmouseout="changeIcon('out', 'menu/nosotros-', this)" src="img/menu/nosotros-out.svg" title="Ir a Nosotros" alt="Nosotros" height="30"> </a></li>
-      <li><a href="section-sot.html"> <img onmouseover="changeIcon('over', 'menu/sot-', this)" onmouseout="changeIcon('out', 'menu/sot-', this)" src="img/menu/sot-out.svg" title="Ir a Sot" alt="Sot" height="30"> </a></li>
-      <li><a href="section-potet.html"> <img onmouseover="changeIcon('over', 'menu/potet-', this)" onmouseout="changeIcon('out', 'menu/potet-', this)" src="img/menu/potet-out.svg" title="Ir a Potet" alt="Potet" height="30"> </a></li>
-      <li><a href="section-tlayolis.html"> <img onmouseover="changeIcon('over', 'menu/tlayolis-', this)" onmouseout="changeIcon('out', 'menu/tlayolis-', this)" src="img/menu/tlayolis-out.svg" title="Ir a Tlayolis" alt="Tlayolis" height="30"> </a></li>
+      <li><a href="nosotros.html" onmouseover="hoverSound('#nosotrosSound')"> <img onmouseover="changeIcon('over', 'menu/nosotros-', this)" onmouseout="changeIcon('out', 'menu/nosotros-', this)" src="img/menu/nosotros-out.svg" title="Ir a Nosotros" alt="Nosotros" height="30"> </a></li>
+      <li><a href="section-sot.html" onmouseover="hoverSound('#sotSound')"> <img onmouseover="changeIcon('over', 'menu/sot-', this)" onmouseout="changeIcon('out', 'menu/sot-', this)" src="img/menu/sot-out.svg" title="Ir a Sot" alt="Sot" height="30"> </a></li>
+      <li><a href="section-potet.html" onmouseover="hoverSound('#potetSound')"> <img onmouseover="changeIcon('over', 'menu/potet-', this)" onmouseout="changeIcon('out', 'menu/potet-', this)" src="img/menu/potet-out.svg" title="Ir a Potet" alt="Potet" height="30"> </a></li>
+      <li><a href="section-tlayolis.html" onmouseover="hoverSound('#tlayolisSound')"> <img onmouseover="changeIcon('over', 'menu/tlayolis-', this)" onmouseout="changeIcon('out', 'menu/tlayolis-', this)" src="img/menu/tlayolis-out.svg" title="Ir a Tlayolis" alt="Tlayolis" height="30"> </a></li>
     </ul>
     <ul class="outerRedes desktop">
       <li><a role="button" class="phonePop" > <img onmouseover="changeIcon('over', 'menu/tel-', this)" onmouseout="changeIcon('out', 'menu/tel-', this)" src="img/menu/tel-out.svg" title="5567303009" alt="Teléfono Yot Mx" height="30"> </a></li>
@@ -108,69 +117,45 @@ fluo.com.mx
   <div id="backgroundProducto" class="tlayolis-0">
     <!-- <div id="papas" style="background-image:url('img/papas/tlayolis-jalapeno.png')"></div> -->
   </div>
+  <!-- CONTENIDO -->
   <section id="mainProducto">
     <article class="header showDisplayFlex">
-      <header id="coverHeader" class="hideOpacity">
-        <img src="img/tlayolis/logotipo-tlayolis-2.svg" alt="Logotipo Tlayolis" width="320">
-        <p>
-          Tlayolis es una deliciosa botana
-          de harina de maíz adicionada con
-          harina de papa con el tamaño y la
-          cantidad ideal para compartir con
-          tus amigos.
-        </p>
-        <p>
-          Una vez que las pruebes,
-          ¡Serán parte de todas tus reuniones!
-        </p>
-      </header>
+      <header id="coverHeader" class="hideOpacity tlayolis"></header>
     </article>
     <!-- JALAPEÑO -->
-    <article class="hideDisplay">
-      <div class="producto elemRight" onmouseover="hoverProducto(this, 'tlayolis')">
-        <img src="img/bulletT1.svg">
-        <img id="mock" src="img/tlayolis/jalapeño.png" alt="">
+    <article class="hideDisplay productoArticle">
+      <div class="producto elemRight" onmouseover="hoverProducto(this, 'tlayolis')" onclick="prodPop('open', this)">
+        <img class="bulletBack" src="img/bulletT1.svg">
+        <img id="mock" src="img/tlayolis/jalapeno.png" alt="">
       </div>
       <div class="info elemLeft">
         <h2>Jalapeño</h2>
         <p>El perfecto empujón para cambiar las perspectivas cotidianas</p>
-        <div style="background-image:url('img/tablas/tla-1.png');"></div>
-        <ul id="interfaceInner">
-          <li><a role="button" onclick="countsliderProducto('prev')"><img onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" width="40"></a></li>
-          <li><a role="button" onclick="countsliderProducto('next')"><img class="rotIcon" onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" width="40"></a></li>
-        </ul>
+        <div style="background-image:url('img/tablas/tla-jalapeno.png');"></div>
       </div>
     </article>
     <!-- HABANERO -->
-    <article class="hideDisplay">
-      <div class="producto elemRight" onmouseover="hoverProducto(this, 'tlayolis')">
-        <img src="img/bulletT2.svg">
+    <article class="hideDisplay productoArticle">
+      <div class="producto elemRight" onmouseover="hoverProducto(this, 'tlayolis')" onclick="prodPop('open', this)">
+        <img class="bulletBack" src="img/bulletT2.svg">
         <img id="mock" src="img/tlayolis/habanero.png" alt="">
       </div>
       <div class="info elemLeft">
         <h2>Habanero</h2>
         <p>El mood ideal para salir de fiesta y conocer nuevos lugares, personas y experiencias.</p>
-        <div style="background-image:url('img/tablas/tla-2.png');"></div>
-        <ul id="interfaceInner">
-          <li><a role="button" onclick="countsliderProducto('prev')"><img onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" width="40"></a></li>
-          <li><a role="button" onclick="countsliderProducto('next')"><img class="rotIcon" onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" width="40"></a></li>
-        </ul>
+        <div style="background-image:url('img/tablas/tla-habanero.png');"></div>
       </div>
     </article>
     <!-- BBQ -->
-    <article class="hideDisplay">
-      <div class="producto elemRight" onmouseover="hoverProducto(this, 'tlayolis')">
-        <img src="img/bulletT3.svg">
+    <article class="hideDisplay productoArticle">
+      <div class="producto elemRight" onmouseover="hoverProducto(this, 'tlayolis')" onclick="prodPop('open', this)">
+        <img class="bulletBack" src="img/bulletT3.svg">
         <img id="mock" src="img/tlayolis/bbq.png" alt="">
       </div>
       <div class="info elemLeft">
         <h2>Barbecue</h2>
         <p>Ideal para disfrutar una comida con amigos y personas cercanas.</p>
-        <div style="background-image:url('img/tablas/tla-3.png');"></div>
-        <ul id="interfaceInner">
-          <li><a role="button" onclick="countsliderProducto('prev')"><img onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" width="40"></a></li>
-          <li><a role="button" onclick="countsliderProducto('next')"><img class="rotIcon" onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" width="40"></a></li>
-        </ul>
+        <div style="background-image:url('img/tablas/tla-bbq.png');"></div>
       </div>
     </article>
     <!-- SLIDER INTERNO -->
@@ -178,6 +163,12 @@ fluo.com.mx
      <div id="initSlider1"></div>
    </article>
   </section>
+  <nav id="arrows">
+    <span>
+      <a role="button" onclick="countsliderProducto('prev')"><img onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" width="40"></a>
+      <a role="button" onclick="countsliderProducto('next')"><img class="rotIcon" onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" width="40"></a>
+    </span>
+  </nav>
   <nav id="bullets">
     <ul>
       <li><p class="textBullet">Tlayolis</p></li>
@@ -186,7 +177,7 @@ fluo.com.mx
       <li><p class="textBullet">Barbecue</p></li>
       <li><p class="textBullet">Fotos</p></li>
     </ul>
-    <ul style="width:40px;">
+    <ul style="width:35px;">
       <li><a role="button" onclick="bulletsProducto(0)"><img onmouseover="changeIcon('over1', 'icons/bullet-', this)" onmouseout="changeIcon('out', 'icons/bullet-', this)" src="img/icons/bullet-out.svg" width="20"></a></li>
       <li><a role="button" onclick="bulletsProducto(1)"><img onmouseover="changeIcon('over2', 'icons/bullet-', this)" onmouseout="changeIcon('out', 'icons/bullet-', this)" src="img/icons/bullet-out.svg" width="20"></a></li>
       <li><a role="button" onclick="bulletsProducto(2)"><img onmouseover="changeIcon('over3', 'icons/bullet-', this)" onmouseout="changeIcon('out', 'icons/bullet-', this)" src="img/icons/bullet-out.svg" width="20"></a></li>
@@ -237,25 +228,69 @@ fluo.com.mx
   <nav id="interfazProducto" class="hideDisplay"></nav>
   <!-- CLICK SLIDER MOBILE  -->
   <div id="sliderMobile" class="hideDisplay" onclick="evSliderMobPop('open')"></div>
+  <!-- POP PRODUCTO -->
+  <div id="popProd" class="popImg hideDisplay">
+    <div>
+      <a role="button" onclick="prodPop('close')">
+        <img src="img/icons/close.svg" width="40">
+      </a>
+    </div>
+    <img id="popProdImg" src="img/tlayolis/jalapeno-pop.jpg">
+  </div>
+  <!-- POP SLIDER DESK -->
+  <div id="popSliderDesk" class="popImg hideDisplay">
+    <div>
+      <a role="button" onclick="sliderPop('close')">
+        <img src="img/icons/close.svg" width="40">
+      </a>
+    </div>
+    <img id="popSliderImg" src="img/tlayolis/s-1-full.png">
+  </div>
   <!-- POP SLIDER MOB -->
-  <div id="popSliderMob" class="hideDisplay" style="background-image:url('img/potet/background-potet-producto.jpg');">
+  <div id="popSliderMob" class="hideDisplay" style="background-image:url('img/potet/background-tlayolis-producto-mobile.jpg');">
     <a id="closeMenu" class="closeMenu" role="button" onclick="evSliderMobPop('close')" onmouseover="overMenuClose('over', this)" onmouseout="overMenuClose('out', this)">
       <span class="rotA rotccw"></span>
       <span class="rotB rotcw"></span>
-      <img src="img/icons/circle.svg" width="35">
+      <img src="img/icons/circle.svg" width="50">
     </a>
-    <img src="img/potet/s-1.png">
+    <img src="img/potet/s-1-full.png">
     <div id="swipeSliderMob"></div>
   </div>
-  <!-- AUDIO -->
-  <audio id="hoverSound">
-    <source src="assets/hover.mp3" type="audio/mpeg">
+  <!-- AUDIOS -->
+  <audio id="logoSound" class="audio">
+    <source src="audios/Korg4.wav">
   </audio>
-  <audio id="hoverProductoTlayolis">
-    <source src="assets/hoverTlayolis.mp3" type="audio/mpeg">
+  <audio id="nosotrosSound" class="audio">
+    <source src="audios/CursorPrincipal.wav">
   </audio>
-  <audio id="transitionTlayolisSound">
-    <source src="assets/transitionTlayolis.mp3" type="audio/mpeg">
+  <audio id="sotSound" class="audio">
+    <source src="audios/Envoltura6.wav">
+  </audio>
+  <audio id="potetSound" class="audio">
+    <source src="audios/CrunchSolo.wav">
+  </audio>
+  <audio id="tlayolisSound" class="audio">
+    <source src="audios/Tapa9.wav">
+  </audio>
+  <!-- TRANSITIONS SOUNDS -->
+  <audio id="entradaSound" class="audio">
+    <source src="audios/Tapa9.wav">
+  </audio>
+  <audio id="producto1Sound" class="audio">
+    <source src="audios/tlayolis/AcordeCmaj7TapaTlayolis.wav">
+  </audio>
+  <audio id="producto2Sound" class="audio">
+    <source src="audios/tlayolis/AcordeCTapaTlayolis.wav">
+  </audio>
+  <audio id="producto3Sound" class="audio">
+    <source src="audios/tlayolis/AcordeDTapaTlayolis.wav">
+  </audio>
+  <audio id="sliderSound" class="audio">
+    <source src="audios/tlayolis/AcordeGmaj7TapaTlayolis.wav">
+  </audio>
+  <!-- HOVER -->
+  <audio id="hoverProductoTlayolis" class="audio">
+    <source src="audios/Tapa9.wav">
   </audio>
   <script src="js/bowser.min.js" charset="utf-8"></script>
   <script src="js/anime.min.js" charset="utf-8"></script>
@@ -299,9 +334,10 @@ fluo.com.mx
       }
     }
     if(!checkBowser){
-      var initSlider1 = new SliderYot('initSlider1', 'potet');
+      var initSlider1 = new SliderYot('initSlider1', 'tlayolis');
+      sliderFun();
     }else{
-      setRefSliderPop('1','potet');
+      setRefSliderPop('1','tlayolis');
       detectswipe('swipeSliderMob', swipePopMob);
     }
   </script>

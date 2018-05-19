@@ -1,10 +1,26 @@
-body{ background: #000 !important }
+#sliderBack{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.sotBackSlider{
+  background-image:url('../img/sot/background-sot-producto-mobile.jpg');
+}
+.potetBackSlider{
+  background-image:url('../img/potet/background-potet-producto-mobile.jpg');
+}
+.tlayolisBackSlider{
+  background-image:url('../img/tlayolis/background-tlayolis-producto-mobile.jpg');
+}
 nav#bullets{
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 30vh;
+  right: -15px;
   width: 120px;
-  height: 100vh;
+  height: 40vh;
   display: none;
   flex-direction: row;
   -webkit-flex-direction:row;
@@ -15,7 +31,7 @@ nav#bullets{
 }
 nav#bullets>ul{
   width: 40%;
-  height: 580px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -48,10 +64,12 @@ nav#bullets>ul>li>a>img:hover{
 }
 /* NEW ARROWS */
 nav#arrows{
-  display: none;
-  position: relative;
-  width: 95%;
-  height: 50px;
+	display: block;
+	position: absolute;
+	width: 100vw;
+	height: 50px;
+	top: calc(50vh - 20px);
+	z-index: 90909090;
 }
 nav#arrows>span{
   display: block;
@@ -64,14 +82,14 @@ nav#arrows>span>a:last-child{
 }
 #mainProducto{
   position: relative;
-  margin-top: 80px;
   width: 100vw;
   overflow: hidden;
 }
 #mainProducto>article{
   position: relative;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 60px);
+  margin: 0 auto;
   flex-direction: column;
   -webkit-flex-direction:column;
   justify-content: center;
@@ -79,30 +97,30 @@ nav#arrows>span>a:last-child{
   align-items: center;
   -webkit-align-items: center;
 }
+#mainProducto>article.productoArticle{height: auto}
 #mainProducto>article.header>header{
-  text-align: center;
-  width: 320px;
+  width: 80%;
+  height: 100%;
   -webkit-transition: opacity 0.5s ease-out;
   -moz-transition: opacity 0.5s ease-out;
   -ms-transition: opacity 0.5s ease-out;
   -o-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
-#mainProducto>article.header>header>p{
-  width: 80%;
-  margin: 0 auto;
-  font-family: 'Caecilia B';
-  font-size: 1rem;
-  padding: 10px 0;
-  line-height: 1.1;
-}
+#mainProducto>article.header>header.sot{ background-image: url('../img/sot/texto-sot-producto-mobile.svg') }
+#mainProducto>article.header>header.potet{ background-image: url('../img/potet/texto-potet-producto-mobile.svg') }
+#mainProducto>article.header>header.tlayolis{ background-image: url('../img/tlayolis/texto-tlayolis-producto-mobile.png') }
 #mainProducto>article>div{
   position: relative;
   width: 100%;
-  height: 180px;
+  height: 220px;
 }
 #mainProducto>article>div.producto{
   cursor: pointer;
+  position: relative;
 }
 #mainProducto>article>div.producto>img{
   position: absolute;
@@ -110,11 +128,18 @@ nav#arrows>span>a:last-child{
   width: 180px;
   left: calc(50% - 90px);
 }
-#mock{
+#mainProducto>article>div.producto>img.bulletBack{
+  width: 250px;
+  left: calc(50% - 125px);
+}
+#mainProducto>article>div.producto>img.mock{
+  top: 20px;
+}
+/* #mock{
   top:5% !important;
   width: 160px !important;
   left: calc(50% - 80px) !important;
-}
+} */
 #mainProducto>article>div.info{
   height: auto !important;
 }
@@ -122,11 +147,11 @@ nav#arrows>span>a:last-child{
   display: block;
   width: 100%;
   text-align: center;
-  padding: 3px 0;
+  padding: 8px 0;
 }
 #mainProducto>article>div.info>p{
-  width: 80%;
-  min-width: 300px;
+  width: 70%;
+  min-width: 180px;
   margin: 0 auto;
 }
 #mainProducto>article>div.info>div{
@@ -156,8 +181,9 @@ nav#arrows>span>a:last-child{
 /* BACKGROUND */
 #backgroundProducto{
   position: absolute;
+  top: 0;
   width: 100vw;
-  height: 120vh;
+  height: calc(100vh + 180px);
 }
 #backgroundProducto>div#papas{
   width: 100%;
@@ -165,7 +191,7 @@ nav#arrows>span>a:last-child{
   background-size: contain;
 }
 .tlayolis-0{
-  background-image:url('../img/tlayolis/background-tlayolis-producto.jpg');
+  background-image:url('../img/tlayolis/background-tlayolis-producto-mobile.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -203,34 +229,34 @@ nav#arrows>span>a:last-child{
 }
 /* INICIO SOT */
 .sot-0{
-  background-image:url('../img/sot/background-sot-producto.jpg');
+  background-image:url('../img/sot/background-sot-producto-mobile.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 /* CAMOTE */
 .sot-1 {
-	background: #bc9537;
-	background: -moz-linear-gradient(top, #bc9537 0%, #7f6426 100%);
-	background: -webkit-linear-gradient(top, #bc9537 0%,#7f6426 100%);
-	background: linear-gradient(to bottom, #bc9537 0%,#7f6426 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc9537', endColorstr='#7f6426',GradientType=0 );
+	background: #DA8853;
+	background: -moz-linear-gradient(top, #DA8853 0%, #6A1746 100%);
+	background: -webkit-linear-gradient(top, #DA8853 0%,#6A1746 100%);
+	background: linear-gradient(to bottom, #DA8853 0%,#6A1746 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#DA8853', endColorstr='#6A1746',GradientType=0 );
 }
-/* YUCA */
+/* PLATANITOS */
 .sot-2 {
-    background: #9f3039;
-    background: -moz-linear-gradient(top, #9f3039 0%, #701828 100%);
-    background: -webkit-linear-gradient(top, #9f3039 0%,#701828 100%);
-    background: linear-gradient(to bottom, #9f3039 0%,#701828 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f3039', endColorstr='#701828',GradientType=0 );
+    background: #244A5A;
+    background: -moz-linear-gradient(top, #244A5A 0%, #051720 100%);
+    background: -webkit-linear-gradient(top, #244A5A 0%,#051720 100%);
+    background: linear-gradient(to bottom, #244A5A 0%,#051720 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#244A5A', endColorstr='#051720',GradientType=0 );
 }
 /* YUCA Y CAMOTE */
 .sot-3 {
-    background: #c21e72;
-    background: -moz-linear-gradient(top, #c21e72 0%, #a0105e 100%);
-    background: -webkit-linear-gradient(top, #c21e72 0%,#a0105e 100%);
-    background: linear-gradient(to bottom, #c21e72 0%,#a0105e 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c21e72', endColorstr='#a0105e',GradientType=0 );
+    background: #6A1746;
+    background: -moz-linear-gradient(top, #6A1746 0%, #3E0B26 100%);
+    background: -webkit-linear-gradient(top, #6A1746 0%,#3E0B26 100%);
+    background: linear-gradient(to bottom, #6A1746 0%,#3E0B26 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6A1746', endColorstr='#3E0B26',GradientType=0 );
 }
 /* FOOTER SOT */
 .sot-4{
@@ -241,7 +267,7 @@ nav#arrows>span>a:last-child{
 }
 /* INICIO POTET */
 .potet-0{
-  background-image:url('../img/potet/background-potet-producto.jpg');
+  background-image:url('../img/potet/background-potet-producto-mobile.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -452,7 +478,6 @@ nav#arrows>span>a:last-child{
   position: relative;
   width: 100%;
   height: 400px !important;
-  overflow: hidden;
 }
 .arrow_slider{
   position: absolute;
@@ -464,6 +489,7 @@ nav#arrows>span>a:last-child{
   background-size: 40px;
   background-position: center;
   cursor: pointer;
+  display: none
 }
 .arr_prev{ left: 0 }
 .arr_next{
@@ -520,6 +546,7 @@ nav#arrows>span>a:last-child{
   transition: all 0.5s ease-out;
 }
 .ul_slider>li>div{
+  position: relative;
   width: 33%;
   height: 100%;
   display: -webkit-box;
@@ -538,11 +565,32 @@ nav#arrows>span>a:last-child{
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
+.ul_slider>li.current>div{ cursor: pointer }
 .ul_slider>li.current>div:nth-child(1){ width: 20%;}
 .ul_slider>li.current>div:nth-child(2){ width: 40%;}
 .ul_slider>li.current>div:nth-child(3){ width: 20%;}
 .img_slider{ width: 80%; }
 
+#hoverZoom, #hoverNext,#hoverPrev{
+  position: absolute;
+  width: 80%;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+#hoverZoom:hover,#hoverNext:hover,#hoverPrev:hover{
+  opacity: 0.3;
+}
+#popProd{
+  position: fixed;
+  width: 100vw;
+  min-width: 250px;
+  height: 100vh;
+  min-height: 300px;
+}
 
 /* desktop */
 @media screen and (min-width:800px){
@@ -553,8 +601,12 @@ nav#arrows>span>a:last-child{
     display: flex;
   }
   nav#arrows{
-    display: block;
+    position: relative;
+    width: 95%;
+    height: 50px;
+    top: 0;
   }
+  #backgroundProducto{ height: 100vh; }
   #mainProducto{
     height: calc(100vh - 200px);
     min-height: 500px;
@@ -564,14 +616,28 @@ nav#arrows>span>a:last-child{
     flex-direction: row-reverse;
     -webkit-flex-direction:row-reverse;
   }
-  #mainProducto>article.header>header>img{ width: 320px }
-  #mainProducto>article.header>header>p{ width: 100% }
   #mainProducto>article>div{ height: 280px }
   #mainProducto>article>div.producto>img{
     width: 380px;
     left: calc(50% - 190px);
   }
+  #mainProducto>article>div.producto>img.bulletBack{
+    width: 450px;
+    left: calc(50% - 225px);
+    top: 10px;
+  }
+  #mainProducto>article{ height: 100% }
+  #mainProducto>article.header>header.sot{
+    background-image: url('../img/sot/texto-sot-producto-desktop.svg') }
+  #mainProducto>article.header>header.potet{
+    background-image: url('../img/potet/texto-potet-producto-desktop.svg') }
+  #mainProducto>article.header>header.tlayolis{
+    background-image: url('../img/tlayolis/texto-tlayolis-producto-desktop.png') }
 
+  .sot-0{ background-image:url('../img/sot/background-sot-producto-desktop.jpg') }
+  .potet-0{ background-image:url('../img/potet/background-potet-producto-desktop.jpg') }
+  .tlayolis-0{
+    background-image:url('../img/tlayolis/background-tlayolis-producto-desktop.jpg');}
   #mock{
     width:360px !important;
     left: calc(50% - 180px) !important;
@@ -590,6 +656,15 @@ nav#arrows>span>a:last-child{
     width: 85%;
     max-width: 130px;
   }
+  .sotBackSlider{
+    background-image:url('../img/sot/background-sot-producto-desktop.jpg');
+  }
+  .potetBackSlider{
+    background-image:url('../img/potet/background-potet-producto-desktop.jpg');
+  }
+  .tlayolisBackSlider{
+    background-image:url('../img/tlayolis/background-tlayolis-producto-desktop.jpg');
+  }
 }
 
 #interfazProducto{
@@ -600,16 +675,58 @@ nav#arrows>span>a:last-child{
   height: 60vh;
   background: rgba(0,0,0,0);
 }
+.popImg{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 9800;
+  background: rgba(0,0,0,0.9);
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.popImg>div{
+  position: relative;
+  width: 90vw;
+  height: 40px;
+  margin-bottom: 30px;
+}
+.popImg>div>a{
+  position: absolute;
+  right: 0;
+}
+.popImg>div>a:hover{
+  opacity: 0.5;
+}
+.popImg>img{
+  height: 60%;
+}
 #sliderMobile{
   position: absolute;
   top: calc(45% - 60px);
   left: calc(50% - 70px);
   width: 140px;
   height: 140px;
-  background-image: url('../img/icons/zoom.svg');
-  background-repeat: no-repeat;
-  background-size: 140px;
-  background-position: center;
   opacity: 0.9;
   z-index: 9800;
 }
@@ -648,13 +765,15 @@ nav#arrows>span>a:last-child{
 }
 /* desktop max */
 @media screen and (min-width:1500px){
-  #mainProducto>article.header>header{ width: 400px }
-  #mainProducto>article.header>header>img { width: 400px }
-  #mainProducto > article.header > header > p { font-size: 1.2rem }
   #mainProducto > article > div { height: 600px }
   #mainProducto > article > div.producto > img {
     width: 600px;
     left: calc(50% - 300px);
+  }
+  #mainProducto>article>div.producto>img.bulletBack{
+    width: 680px;
+    left: calc(50% - 340px);
+    top: 30px;
   }
   #mock {
     width: 560px !important;

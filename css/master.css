@@ -54,7 +54,7 @@ body{
   left: 0;
   width: 100vw;
   height: auto;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .hideDisplay{ display: none }
 .showDisplay{ display: block }
@@ -80,6 +80,10 @@ body{
 }
 .showOpacity{ opacity: 1 }
 .hideOpacity{ opacity: 0 }
+.backgroundImage {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
 #loading{
   position: fixed;
   width: 100vw;
@@ -97,7 +101,6 @@ body{
   -webkit-justify-content:center;
   align-items: center;
   -webkit-align-items: center;
-  /*display: none;*/
 }
 #percentage{
   font-family: 'Caecilia B', sans-serif;
@@ -165,22 +168,27 @@ body{
   text-align: center;
   line-height: 20px;
 }
-.closeMenu{
-	position: absolute;
-	right: 20px;
-	top: 60px;
-	width: 25px;
-	height: 25px;
-	cursor: pointer;
+#wrClose{
+  position: relative;
+  margin: 0 auto;
+  width: 90vw;
+  height: 80px;
 }
-.closeMenu>img{
+#homeMobile{
   position: absolute;
-  top: -5px;
-  left: -7px;
+  top: 12px;
+  left: -1px;
+}
+#closeMenu{
+  position: absolute;
+  width: 50px;
+  cursor: pointer;
+  right: 10px;
+  top: 10px;
 }
 .closeMenu>span{
 	display: block;
-	width: 90%;
+	width: 60%;
 	height: 3px;
 	background: #fff;
 	border-radius: 5px;
@@ -191,6 +199,7 @@ body{
 	transition: all 0.5s ease-out;
 	position: absolute;
 	top: calc(50% - 2px);
+  left: 20%;
 }
 .rotccw {
   -webkit-transform: rotate(-45deg);
@@ -206,20 +215,14 @@ body{
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-#closeMenu{
-  position: absolute;
-  top: 20px;
-}
-nav.main>a.menuMobile{
-  display: block;
-}
+nav.main>a.menuMobile{ display: block }
 nav.main{
   z-index: 8900;
-  position: fixed;
+  position: relative;
   width: 90vw;
   min-width: 300px;
   left: 5vw;
-  height: 100px;
+  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -249,7 +252,7 @@ nav.main>ul.outerMobile{
 }
 nav.main>ul.outerMobile>span{
   position: absolute;
-  top: 10%;
+  top: 90px;
   display: block;
   width: 100%;
   height: 60%;
@@ -265,7 +268,7 @@ nav.main>ul.outerMobile>span{
   -webkit-justify-content: space-between;
 }
 nav.main>ul.outerMobile>span>li.last{
-  width: 50%;
+  width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -297,7 +300,7 @@ ul#backs{
   top: 0;
   left: 0;
   width: 300vw;
-  height: 100vh;
+  height: 100%;
   -webkit-transition: left 0.5s ease-out;
   -moz-transition: left 0.5s ease-out;
   -ms-transition: left 0.5s ease-out;
@@ -308,7 +311,7 @@ ul#backs>li{
   display: inline-block;
   float: left;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   top: 0;
   background-repeat: no-repeat;
   background-position: center;
@@ -317,26 +320,24 @@ ul#backs>li{
 /* CONTENIDO */
 #mainIndex{
   position: relative;
-  width: 100vw;
-  height: 90vh;
-  overflow: hidden;
-
+  margin: 0 auto;
+  width: calc(100vw - 80px);
+  height: calc(100vh - 180px);
+  min-height: 420px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
   -webkit-flex-direction:column;
-  justify-content: center;
-  -webkit-justify-content:center;
   align-items: center;
   -webkit-align-items: center;
+  overflow: hidden;
 }
 #mainIndex>article.normal, #mainIndex>article.tlayolis{
   position: absolute;
-  top: 60px;
-  width: 90vw;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -349,26 +350,37 @@ ul#backs>li{
   -o-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
 }
-#mainIndex>article.tlayolis{
-  margin-top: 50px;
-}
-#mainIndex>article.normal>header, #mainIndex>article.normal>div, #mainIndex>article.tlayolis>header, #mainIndex>article.tlayolis>div{
-  width: 100%;
-  min-width: 300px;
-}
-#mainIndex>article.normal>header, #mainIndex>article.tlayolis>header{
+.mockupMob{ display: block}
+.mockupDesk{ display: none}
+#mainIndex>article.normal>ul{
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
   -webkit-flex-direction:column;
-  justify-content: flex-end;
-  -webkit-justify-content:flex-end;
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
   align-items: center;
   -webkit-align-items: center;
+  height: 100%;
 }
-#mainIndex>article.normal>header>img, #mainIndex>article.tlayolis>header>img{ width: 100px; }
+#mainIndex>article.normal>ul>li{ width: 100% }
+/* MOBILE HEIGHTS BANNER */
+#mainIndex>article.normal>ul.standar>li:first-child,
+#mainIndex>article.normal>ul.standar>li:nth-child(3){
+  height: 24%;
+}
+#mainIndex>article.normal>ul.standar>li:nth-child(2){
+  height: 48%;
+}
+#mainIndex>article.normal>ul.tlayolis>li:first-child,
+#mainIndex>article.normal>ul.tlayolis>li:nth-child(3){
+  height: 19%;
+}
+#mainIndex>article.normal>ul.tlayolis>li:nth-child(2){
+  height: 58%;
+}
 #mainIndex>article.normal>div, #mainIndex>article.tlayolis>div{
   display: -webkit-box;
   display: -ms-flexbox;
@@ -390,7 +402,6 @@ ul#backs>li{
   background-size: contain;
 }
 #mainIndex>article.normal>div>div>a, #mainIndex>article.tlayolis>div>div>a{
-  /*background: red;*/
   position: absolute;
   width: 100%;
   height: 100%;
@@ -413,6 +424,7 @@ ul#backs>li{
   -webkit-justify-content: space-between;
   align-items: center;
   -webkit-align-items: center;
+  z-index: 3000;
 }
 .interfaznext{ left: calc(99vw - 40px) }
 .rotIcon{
@@ -443,7 +455,7 @@ footer.main{
   z-index: 7000;
   position: relative;
   width: 90vw;
-  min-width: 300px;
+  min-width: 250px;
   left: 5vw;
   bottom: 0;
   height: 100px;
@@ -697,9 +709,7 @@ footer.main>p>a:hover{ opacity: 0.5; }
 }
 /* desktop */
 @media screen and (min-width:800px){
-  body{
-    overflow-y: scroll;
-  }
+  body{ overflow-y: scroll }
   a.menuMobile{ display: none !important; }
   nav.main{
     width: 98vw;
@@ -718,26 +728,45 @@ footer.main>p>a:hover{ opacity: 0.5; }
     -webkit-align-items: center;
   }
   /* contenido */
+  .mockupMob{ display: none}
+  .mockupDesk{ display: block}
+  #mainIndex{
+    width: calc(100vw - 100px);
+    height: calc(100vh - 140px); }
   #mainIndex>article.normal{
     height: calc(100vh - 160px);
     flex-direction: row-reverse;
     -webkit-flex-direction: row-reverse;
   }
-  #mainIndex>article.normal>header, #mainIndex>article.normal>div{
+  #mainIndex>article.normal>ul, #mainIndex>article.normal>div{
     height: 100%;
     width: 50%;
   }
-  #mainIndex>article.normal>header{
-    justify-content: center;
-    -webkit-justify-content: center;
+  #mainIndex>article.normal>ul{
+    -webkit-justify-content:center;
+    justify-content:center;
   }
-  #mainIndex>article.normal>header>img, #mainIndex>article.tlayolis>header>img{ width: 200px; }
+  /* DESKTOP HEIGHTS BANNER */
+  #mainIndex>article.normal>ul.standar>li:nth-child(3),
+  #mainIndex>article.normal>ul.tlayolis>li:nth-child(3){
+    height: 30%;
+  }
+  #mainIndex>article.normal>ul.standar>li:first-child{
+    height: 28%;
+  }
+  #mainIndex>article.normal>ul.tlayolis>li:first-child{
+    height: 18%;
+  }
+  #mainIndex>article.normal>ul.standar>li:first-child,
+  #mainIndex>article.normal>ul.tlayolis>li:first-child{
+    margin-bottom: 20px;
+  }
   #mainIndex>article.normal>div{
     justify-content: center;
     -webkit-justify-content: center;
   }
-  #mainIndex>article.normal>div>div, #mainIndex>article.tlayolis>div>div{
-    width: 450px;
+  #mainIndex>article.normal>div>div{
+    width: 90%;
     height: 450px;
   }
   #mainIndex>article.normal>div>img{
