@@ -708,6 +708,29 @@ function swipePopMob(el, d){
   }
 }
 
+function arrowPopDesk(c){
+  var imgPop = _('#popSliderImg'),
+      typeInner,
+      urlValue = window.location.href.slice(window.location.href.indexOf('-')+1);
+      if(urlValue === 'sot.html'){
+        typeInner = 'sot';
+      }else if (urlValue === 'potet.html') {
+        typeInner = 'potet';
+      } else {
+        typeInner = 'tlayolis';
+      }
+
+      if(c === 'next'){
+        cPopSlider+=1;
+        if(cPopSlider > 5){ cPopSlider = 1; }
+        imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.png');
+      }else{
+        cPopSlider-=1;
+        if(cPopSlider < 1){ cPopSlider = 5; }
+        imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.png');
+      }
+}
+
 function arrowPopSlider(c){
   var imgPop = _('#popSliderMob>img'),
       typeInner,

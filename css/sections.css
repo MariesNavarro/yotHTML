@@ -728,6 +728,14 @@ nav#arrows>span>a:last-child{
 .popImg>img{
   height: 60%;
 }
+#arrowPopDesk{
+  position: relative;
+  width: 105px;
+  height: 35px;
+  margin: 10px auto;
+}
+#arrowPopDesk>a{ position: absolute }
+#arrowPopDesk>a:first-child{ left: 0 }
 #sliderMobile{
   position: absolute;
   top: calc(45% - 60px);
