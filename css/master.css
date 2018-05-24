@@ -217,7 +217,7 @@ body{
 }
 nav.main>a.menuMobile{ display: block }
 nav.main{
-  z-index: 8900;
+  z-index: 10000;
   position: relative;
   width: 90vw;
   min-width: 300px;
@@ -409,7 +409,7 @@ ul#backs>li{
 #mainIndex>article>header>p, #mainIndex>article>header>a{ line-height: 35px; }
 #mainIndex>article>header>p.prox{ text-transform: uppercase; }
 .interfaz{
-  position: absolute;
+  position: fixed;
   width: 40px;
   top: 0;
   left: 1vw;
@@ -456,9 +456,10 @@ footer.main{
   position: relative;
   width: 90vw;
   min-width: 250px;
-  left: 5vw;
   bottom: 0;
-  height: 100px;
+  /* height: 120px; */
+  margin: 15px auto;
+  /* border: 1px solid red; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;

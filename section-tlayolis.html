@@ -161,12 +161,13 @@ fluo.com.mx
     <!-- SLIDER INTERNO -->
    <article id="wrapSlider" class="hideDisplay">
      <div id="initSlider1"></div>
+     <a role="button" onclick="evSliderMobPop('open');">Click para ver imágenes</a>
    </article>
   </section>
   <nav id="arrows">
     <span>
-      <a role="button" onclick="countsliderProducto('prev')"><img onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" width="40"></a>
-      <a role="button" onclick="countsliderProducto('next')"><img class="rotIcon" onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" width="40"></a>
+      <a role="button" onclick="countsliderProducto('prev')"><img onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" width="35"></a>
+      <a role="button" onclick="countsliderProducto('next')"><img class="rotIcon" onmouseover="changeIcon('over', 'icons/arrow-', this)" onmouseout="changeIcon('out', 'icons/arrow-', this)" src="img/icons/arrow-out.svg" width="35"></a>
     </span>
   </nav>
   <nav id="bullets">
@@ -247,14 +248,22 @@ fluo.com.mx
     <img id="popSliderImg" src="img/tlayolis/s-1-full.png">
   </div>
   <!-- POP SLIDER MOB -->
-  <div id="popSliderMob" class="hideDisplay" style="background-image:url('img/potet/background-tlayolis-producto-mobile.jpg');">
+  <div id="popSliderMob" class="hideDisplay" style="background-image:url('img/tlayolis/background-tlayolis-producto-mobile.jpg');">
     <a id="closeMenu" class="closeMenu" role="button" onclick="evSliderMobPop('close')" onmouseover="overMenuClose('over', this)" onmouseout="overMenuClose('out', this)">
       <span class="rotA rotccw"></span>
       <span class="rotB rotcw"></span>
       <img src="img/icons/circle.svg" width="50">
     </a>
-    <img src="img/potet/s-1-full.png">
+    <img src="img/tlayolis/s-1-full.png">
     <div id="swipeSliderMob"></div>
+    <div id="arrowPopMobile">
+      <a role="button" onclick="arrowPopSlider('prev')">
+        <img onmouseover="changeIcon('over', 'icons/arrow-', this);" onmouseout="changeIcon('out', 'icons/arrow-', this);" src="img/icons/arrow-out.svg" width="35">
+      </a>
+      <a role="button" onclick="arrowPopSlider('next')">
+        <img class="rotIcon" onmouseover="changeIcon('over', 'icons/arrow-', this);" onmouseout="changeIcon('out', 'icons/arrow-', this);" src="img/icons/arrow-out.svg" width="35">
+      </a>
+    </div>
   </div>
   <!-- AUDIOS -->
   <audio id="logoSound" class="audio">

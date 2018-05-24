@@ -708,6 +708,30 @@ function swipePopMob(el, d){
   }
 }
 
+function arrowPopSlider(c){
+  var imgPop = _('#popSliderMob>img'),
+      typeInner,
+      urlValue = window.location.href.slice(window.location.href.indexOf('-')+1);
+    if(urlValue === 'sot.html'){
+      typeInner = 'sot';
+    }else if (urlValue === 'potet.html') {
+      typeInner = 'potet';
+    } else {
+      typeInner = 'tlayolis';
+    }
+  if(c === 'next'){
+    cPopSlider+=1;
+    if(cPopSlider > 5){ cPopSlider = 1; }
+    changeUrlImgSliderRefMob(cPopSlider, typeInner);
+    imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.png');
+  }else{
+    cPopSlider-=1;
+    if(cPopSlider < 1){ cPopSlider = 5; }
+    changeUrlImgSliderRefMob(cPopSlider, typeInner);
+    imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.png');
+  }
+}
+
 function swipeTransformProduct(el,d){
   if(d === 'prev'){
     countsliderProducto('next');
@@ -731,14 +755,17 @@ function changeUrlImgSliderRefMob(c, type){
 }
 
 function evSliderMobPop(c){
-  var wr = _('#popSliderMob');
+  var wr = _('#popSliderMob'),
+      arrowGenerales = _('#arrows');
   if(c === 'open'){
+    arrowGenerales.style.display ="none";
     wr.classList.remove('hideDisplay');
     wr.classList.add('showDisplayFlex');
     setTimeout(function(){
       wr.style.opacity = "1";
     },300);
   } else {
+    arrowGenerales.style.display ="block";
     wr.style.opacity = "0";
     setTimeout(function(){
       wr.classList.remove('showDisplayFlex');
@@ -862,8 +889,10 @@ function sliderPop(c){
       srcSlash = src.indexOf('-'),
       srcImg = src.slice(0,(srcSlash + 2)) + "-full.png",
       wr = _("#popSliderDesk"),
+      arrowGenerales = _('#arrows'),
       img = _('#popSliderImg');
   if(c === 'open'){
+    arrowGenerales.style.display = "none";
     img.setAttribute('src', srcImg);
     wr.classList.remove('hideDisplay');
     wr.classList.add('showDisplayFlex');
@@ -871,6 +900,7 @@ function sliderPop(c){
       wr.style.opacity = 1;
     },500);
   } else {
+    arrowGenerales.style.display = "block";
     wr.style.opacity = 0;
     setTimeout(function(){
       wr.classList.remove('showDisplayFlex');
