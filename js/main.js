@@ -889,20 +889,20 @@ function sliderFun(){
   var zoomWr = _('.current').children[1],
       zoom = document.createElement("IMG");
       zoom.setAttribute("onclick", "sliderPop('open')");
-      zoom.setAttribute("src", "img/zoom.png");
+      zoom.setAttribute("src", "img/icons/zoom.png");
       zoom.setAttribute("id", "hoverZoom");
       zoomWr.appendChild(zoom);
   var nextWr = _('.current').children[2],
       next = document.createElement("IMG");
       next.setAttribute("onclick", "initSlider1.evArrow('next')");
-      next.setAttribute("src", "img/next.png");
+      next.setAttribute("src", "img/icons/next.png");
       next.setAttribute("id", "hoverNext");
       nextWr.appendChild(next);
 
   var prevWr = _('.current').children[0],
       prev = document.createElement("IMG");
       prev.setAttribute("onclick", "initSlider1.evArrow('prev')");
-      prev.setAttribute("src", "img/prev.png");
+      prev.setAttribute("src", "img/icons/prev.png");
       prev.setAttribute("id", "hoverPrev");
       prevWr.appendChild(prev);
 }
