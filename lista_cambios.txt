@@ -1,2 +1,4 @@
 Optimización de svg 
 Optimización de imagenes
+Optimizacion desde servidor 
+Reparar icono sot trancisión
