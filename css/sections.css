@@ -649,7 +649,9 @@ nav#arrows>span>a:last-child{
   }
   #interfaceInner{ width: 30%; }
   #mainProducto>article>div.info>p{ display: block; width: 40%;}
-  #mainProducto>article>div.info>h2{ font-size: 1.7rem }
+  #mainProducto>article>div.info>h2{
+    margin-top: 50px;
+    font-size: 1.7rem }
   #mainProducto>article>div.info>div{
     width: 320px;
     height: 320px;

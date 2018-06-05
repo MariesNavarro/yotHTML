@@ -4,11 +4,11 @@ var backgroundsProductos = ["img/tlayolis/background.jpg", "img/potet/background
 
 var nosotrosImg = ['img/nosotros/nosotros-mision.jpg', 'img/nosotros/nosotros-vision.jpg'];
 
-var sotProducto = ["img/sot/background-sot-producto-desktop.jpg", "img/sot/background-sot-producto-mobile.jpg"];
+var sotProducto = ["img/sot/background-sot-producto-desktop.jpg"];
 
-var potetProducto = ["img/potet/background-potet-producto-desktop.jpg", "img/potet/background-potet-producto-mobile.jpg"];
+var potetProducto = ["img/potet/background-potet-producto-desktop.jpg"];
 
-var tlayolisProducto = ["img/tlayolis/background-tlayolis-producto-desktop.jpg", "img/tlayolis/background-tlayolis-producto-mobile.jpg"];
+var tlayolisProducto = ["img/tlayolis/background-tlayolis-producto-desktop.jpg"];
 
 var xhrList = [], urlList = [];
 var wrLoad = document.getElementById('loading');
