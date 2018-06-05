@@ -1,5 +1,5 @@
 <!--
-Yot Mx
+Yot Mx - Sot
 v2.8
 3 de Junio 2018
 [FLUO]
@@ -44,11 +44,11 @@ fluo.com.mx
 </head>
 <body>
   <p id="s"></p>
-  <div id="loading" style="display:none">
+  <div id="loading">
     <div id="salsaWrap">
       <div id="salsaLiquid"></div>
     </div>
-    <p id="percentage">1%</p>
+    <p id="percentage">Cargando...</p>
   </div>
   <div id="telPopW">
     <div>
@@ -306,12 +306,13 @@ fluo.com.mx
     <source src="audios/Envoltura6.wav">
   </audio>
   <script src="js/bowser.min.js" charset="utf-8"></script>
+  <script src="js/loads.js" charset="utf-8"></script>
   <script src="js/anime.min.js" charset="utf-8"></script>
   <script src="js/main.js" charset="utf-8"></script>
   <script src="js/slider.js" charset="utf-8"></script>
   <script type="text/javascript">
     window.onload = function(){
-      countLoading();
+      xhReq(sotProducto);
       setTimeout(function(){
         fadeInHeader();
       },1000);
@@ -353,7 +354,6 @@ fluo.com.mx
       setRefSliderPop('1','sot');
       // detectswipe('swipeSliderMob', swipePopMob);
     }
-
   </script>
 </body>
 </html>

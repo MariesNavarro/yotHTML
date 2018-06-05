@@ -3,8 +3,6 @@ function __(el){return document.querySelectorAll(el); }
 var checkBowser = false;
 if(bowser.mobile || bowser.tablet || /SymbianOS/.test(window.navigator.userAgent)) checkBowser = true;
 
-
-
 function changeIcon(c, el, t){
   // var s = _('#hoverSound');
   t.setAttribute('src', 'img/' + el + c + '.svg');
@@ -46,24 +44,6 @@ function hoverSound(el){
  s.play();
 }
 
-function countLoading(){
-  var p = _('#loading>#percentage');
-  var w = _('#loading');
-  var x = 0;
-  var count = setInterval(function(){
-    x++;
-    if(x === 1) {
-      w.style.display = "block !important";
-    }
-    if(x > 10){
-      x = 100;
-      w.style.opacity = "0";
-      setTimeout(function(){ w.style.display = "none"; },600);
-      clearInterval(count);
-    }
-    p.innerHTML = x + "%";
-  },200);
-}
 function setPhone(){
   var p = __('.phonePop');
   if(checkBowser){

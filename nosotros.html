@@ -1,5 +1,5 @@
 <!--
-Yot Mx
+Yot Mx - Nosotros
 v2.8
 3 de Junio 2018
 [FLUO]
@@ -17,7 +17,7 @@ fluo.com.mx
 	<meta http-equiv="pragma" content="no-cache"/>
 	<meta name="google" content="notranslate"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0000, minimum-scale=1.0000, maximum-scale=1.0000, user-scalable=yes">
-  <title>Tlayolis | Yot Mx</title> <!-- REVISAR -->
+  <title>Nosotros | Yot Mx</title> <!-- REVISAR -->
   <link rel="canonical" href=" " /> <!-- FALTA -->
   <meta name="description" content=""/> <!-- FALTA -->
   <meta name="keywords" content=" "/> <!-- FALTA -->
@@ -43,11 +43,11 @@ fluo.com.mx
 </head>
 <body style="overflow-x:hidden; overflow-y:auto; background:#490e0e;">
   <p id="s"></p>
-  <div id="loading" style="display:none">
+  <div id="loading">
     <div id="salsaWrap">
       <div id="salsaLiquid"></div>
     </div>
-    <p id="percentage">1%</p>
+    <p id="percentage">Cargando...</p>
   </div>
   <div id="telPopW">
     <div>
@@ -288,11 +288,12 @@ fluo.com.mx
     <source src="audios/Tapa9.wav">
   </audio>
   <script src="js/bowser.min.js" charset="utf-8"></script>
+  <script src="js/loads.js" charset="utf-8"></script>
   <script src="js/anime.min.js" charset="utf-8"></script>
   <script src="js/main.js" charset="utf-8"></script>
   <script type="text/javascript">
     window.onload = function(){
-      countLoading();
+      xhReq(nosotrosImg);
       setTimeout(function(){
         fadeInHeader();
       },1000);
