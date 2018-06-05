@@ -194,7 +194,9 @@ fluo.com.mx
   <script type="text/javascript">
     window.onload = function(){
       xhReq(backgroundsHome);
-      xhReq(backgroundsProductos);
+      setTimeout(function(){
+        xhReq(backgroundsProductos);
+      },3000);
       setPhone();
       // evtArrowIndex();
       // detectswipe('mainIndex', swipeTransformIndex);

@@ -1,6 +1,6 @@
-var backgroundsHome = ["img/sot/background.jpg", "img/tlayolis/background.jpg", "img/potet/background.jpg"];
+var backgroundsHome = ["img/sot/background.jpg"];
 
-var backgroundsProductos = ["img/sot/background-sot-producto-desktop.jpg", "img/sot/background-sot-producto-mobile.jpg", "img/potet/background-potet-producto-desktop.jpg", "img/potet/background-potet-producto-mobile.jpg", "img/tlayolis/background-tlayolis-producto-desktop.jpg", "img/tlayolis/background-tlayolis-producto-mobile.jpg"];
+var backgroundsProductos = ["img/tlayolis/background.jpg", "img/potet/background.jpg","img/sot/background-sot-producto-desktop.jpg", "img/sot/background-sot-producto-mobile.jpg", "img/potet/background-potet-producto-desktop.jpg", "img/potet/background-potet-producto-mobile.jpg", "img/tlayolis/background-tlayolis-producto-desktop.jpg", "img/tlayolis/background-tlayolis-producto-mobile.jpg"];
 
 var nosotrosImg = ['img/nosotros/nosotros-mision.jpg', 'img/nosotros/nosotros-vision.jpg'];
 
