@@ -1,4 +1,13 @@
-Optimización de svg 
+Optimización de svg
 Optimización de imagenes
-Optimizacion desde servidor 
+Optimizacion desde servidor
 Reparar icono sot trancisión
+
+
+Cambio de teléfono
+Reemplazar en bullets "Fotos" por "Prepáralas"
+
+En hover a los bullets quitar color
+onmouseover="changeIcon('over1', 'icons/bullet-', this)" onmouseout="changeIcon('out', 'icons/bullet-', this)"
+
+En los bullets tambien cuando haga over en la palabra escalar

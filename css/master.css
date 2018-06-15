@@ -64,6 +64,12 @@ body{
   display: -webkit-flex;
   display: flex;
 }
+.transition {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
 .transitionBlock{
   -webkit-transition: opacity 0.5s ease-out;
   -moz-transition: opacity 0.5s ease-out;
@@ -84,6 +90,10 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain; }
+.backgroundImageCov {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 #loading{
   position: fixed;
   width: 100vw;
@@ -136,7 +146,7 @@ body{
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.9);
   z-index: 8500;
   display: none;
   opacity: 0;
@@ -148,26 +158,31 @@ body{
 }
 #telPopW>div{
   position: absolute;
-  width: 300px;
-  height: 220px;
-  top: calc(50% - 110px);
-  left: calc(50% - 150px);
-  background: #490e0e;
+  width: 200px;
+  height: 200px;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  background-image: url('../img/icons/pop-telefono.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 #telPopW>div>a{
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: -15px;
+  top: -15px;
 }
 #telPopW>div>a:hover{
 	opacity: 0.5;
 }
 #telPopW>div>p{
-  width: 90%;
-  margin: 60px auto;
+  position: absolute;
+  top: calc(50% - 35px);
+  width: 100%;
+  height: 70px;
+  font-size: 1.1rem;
   color: #fff;
   text-align: center;
-  line-height: 20px;
+  line-height: 1.3;
 }
 #wrClose{
   position: relative;
@@ -269,7 +284,7 @@ nav.main>ul.outerMobile>span{
   -webkit-justify-content: space-between;
 }
 nav.main>ul.outerMobile>span>li.last{
-  width: 85%;
+  width: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -282,7 +297,7 @@ nav.main>ul.outerMobile>span>li.last{
   -webkit-justify-content: space-between;
 }
 nav.main>ul.outerDesktop{ width: 50%; }
-nav.main>ul.outerRedes{ width: 20%; }
+nav.main>ul.outerRedes{ width: 120px; }
 nav.main>ul.desktop{
   display: none;
   margin-right: 5px;
@@ -412,9 +427,9 @@ ul#backs>li{
 .interfaz{
   position: fixed;
   width: 40px;
-  top: 0;
+  height: 30px;
+  top: calc(50% - 20px);
   left: 1vw;
-  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -500,69 +515,83 @@ footer.main>p>a:hover{ opacity: 0.5; }
   height: auto;
 }
 #mainNosotros>header{
-  width: 100%;
-  height: 90vh;
-  background-image: url('../img/tlayolis/background-tlayolis-producto.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  -webkit-flex-direction:column;
+  position: relative;
+  width: 100vw;
+  min-width: 250px;
+  height: 85vh;
+  background: black;
+}
+#mainNosotros>header>ul{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 400%;
+  height: 100%;
+}
+#mainNosotros>header>ul>li{
+  width: 100vw;
+  height: 100%;
+}
+#mainNosotros>header>div{
+  position: absolute;
+  top:25%;
+  left: 5%;
+  width: 90%;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
   justify-content: center;
-  align-items: center;
   -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
 }
-#mainNosotros>header>img{
-  padding-top: 30px;
-  width: 200px;
-  -webkit-transition: opacity 0.5s ease-out;
-  -moz-transition: opacity 0.5s ease-out;
-  -ms-transition: opacity 0.5s ease-out;
-  -o-transition: opacity 0.5s ease-out;
-  transition: opacity 0.5s ease-out;
-}
-#mainNosotros>header>p{
-  width: 250px;
-  color: #490e0e;
-  font-size: 1.1rem;
-  line-height: 1.1;
+#mainNosotros>header>div>p{
+  display: block;
+  width: calc(100% - 100px);
   text-align: center;
-  padding: 20px 0;
-  -webkit-transition: opacity 0.5s ease-out;
-  -moz-transition: opacity 0.5s ease-out;
-  -ms-transition: opacity 0.5s ease-out;
-  -o-transition: opacity 0.5s ease-out;
-  transition: opacity 0.5s ease-out;
+  margin: 0 5%;
+  font-size: 1rem;
 }
 #mainNosotros>ul{
-  width: 100%;
-  height: 600px;
+  width: 100vw;
+  min-width: 250px;
+  height: 210vh;
+  background: red;
 }
 #mainNosotros>ul>li{
   width: 100%;
+  height: 70vh;
+}
+.middle{
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+}
+#mainNosotros>ul>li>div{
   height: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  -webkit-flex-direction:column;
+  width: 100%;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
   justify-content: center;
-  -webkit-justify-content:center;
+
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
 }
-#mainNosotros>ul>li>h2{ padding: 10px 30px; }
-#mainNosotros>ul>li>p{
+#mainNosotros>ul>li>div>p{
+  width: 90%;
   display: block;
-  width: 60%;
-  padding: 10px 30px;
-}
+  font-size: 1.2rem }
+/* GRID */
 #mainNosotros>div{
   width: 100%;
   height: 150px;
@@ -579,7 +608,7 @@ footer.main>p>a:hover{ opacity: 0.5; }
 #mainNosotros>div>h1{
   text-transform: uppercase;
   font-size: 1.5rem;
-  padding: 0 30px;
+  text-align: center;
 }
 /* CUADRICULA */
 #mainNosotros>article{
@@ -709,6 +738,21 @@ footer.main>p>a:hover{ opacity: 0.5; }
  -o-transform: scale(1,1);
  transform: scale(1,1);
 }
+.scaleUp{
+  -webkit-transform: scale(1.3,1.3);
+  -moz-transform: scale(1.3,1.3);
+  -ms-transform: scale(1.3,1.3);
+  -o-transform: scale(1.3,1.3);
+  transform: scale(1.3,1.3);
+}
+
+.scaleDown{
+  -webkit-transform: scale(1.3,1.3);
+  -moz-transform: scale(1.3,1.3);
+  -ms-transform: scale(1.3,1.3);
+  -o-transform: scale(1.3,1.3);
+  transform: scale(1.3,1.3);
+}
 /* desktop */
 @media screen and (min-width:800px){
   body{ overflow-y: scroll }
@@ -783,30 +827,18 @@ footer.main>p>a:hover{ opacity: 0.5; }
     height: 60px;
   }
   /* nosotros */
-  #mainNosotros>header{
-    height: 100vh;
+  #mainNosotros>header>div>p{
+    display: block;
+    width: calc(60% - 100px);
+    text-align: center;
+    margin: 0 20%;
+    font-size: 2.5rem;
   }
-  #mainNosotros>header{
-    flex-direction: row;
-    -webkit-flex-direction:row;
-    justify-content: space-around;
-    -webkit-justify-content: space-around;
-  }
-  #mainNosotros>header>img{
-    padding-top: 10px;
-    width: 280px;
-  }
-  #mainNosotros>header>p{
-    text-align: left;
-  }
-  #mainNosotros>ul{ height: 300px; }
-  #mainNosotros>ul>li{
+  #mainNosotros>ul>li>div{
     width: 50%;
     height: 100%;
-    float: left;
   }
-  #mainNosotros>ul>li>h2{ padding: 10px 60px; }
-  #mainNosotros>ul>li>p{ padding: 10px 60px; }
+  #mainNosotros>ul>li>div>p{ font-size: 1.5rem }
   #mainNosotros>div{ height: 200px; }
   #mainNosotros>div>h1{ padding: 0 60px; }
   #mainNosotros>article>ul>li{
@@ -815,8 +847,15 @@ footer.main>p>a:hover{ opacity: 0.5; }
   }
   #mainNosotros>article>ul>li>img{ width: 250px }
   #mainNosotros>article>ul>li#lastMobile{ display: none; }
-  .overInfo>h2 { font-size: 1.2rem }
-  , .overInfo>p{ font-size: 1rem }
+  .middle{
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+  }
+  .overInfo>h2 { font-size: 1.8rem }
+  .overInfo>p{ font-size: 1rem }
 }
 /* desktop max */
 @media screen and (min-width:1500px){

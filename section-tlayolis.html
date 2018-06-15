@@ -1,7 +1,7 @@
 <!--
 Yot Mx - Tlayolis
-v2.8
-3 de Junio 2018
+v2.9
+14 de Junio 2018
 [FLUO]
 info@fluo.com.mx
 fluo.com.mx
@@ -58,10 +58,9 @@ fluo.com.mx
         <img src="img/icons/circle.svg" width="35">
       </a>
       <p>
-        +1 52 5567303009<br>
-        Horarios de atención: <br>
-        Lunes - Viernes <br>
-        9:00am a 19:00pm <br>
+        ¿Se te antojaron? <br>
+        Llámanos <br>
+        +1 52 5567303009
       </p>
     </div>
   </div>
@@ -92,8 +91,8 @@ fluo.com.mx
         <li class="last">
           <a role="button" class="phonePop" > <img onmouseover="changeIcon('over', 'menu/tel-', this)" onmouseout="changeIcon('out', 'menu/tel-', this)" src="img/menu/tel-out.svg" title="5567303009" alt="Teléfono Yot Mx" height="45"> </a>
           <a href="mailto:info@yot.com.mx"> <img onmouseover="changeIcon('over', 'menu/mail-', this)" onmouseout="changeIcon('out', 'menu/mail-', this)" src="img/menu/mail-out.svg" title="info@yot.com.mx" alt="Correo Yot Mx" height="45"> </a>
-          <a href="#"> <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" title="Ir a Facebook" alt="Facebook" height="45"> </a>
-          <a href="#"> <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" title="Ir a Instagram" alt="Instagram" height="45"> </a>
+          <!-- <a href="#"> <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" title="Ir a Facebook" alt="Facebook" height="45"> </a>
+          <a href="#"> <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" title="Ir a Instagram" alt="Instagram" height="45"> </a> -->
         </li>
       </span>
     </ul>
@@ -106,8 +105,8 @@ fluo.com.mx
     <ul class="outerRedes desktop">
       <li><a role="button" class="phonePop" > <img onmouseover="changeIcon('over', 'menu/tel-', this)" onmouseout="changeIcon('out', 'menu/tel-', this)" src="img/menu/tel-out.svg" title="5567303009" alt="Teléfono Yot Mx" height="30"> </a></li>
       <li><a href="mailto:info@yot.com.mx"> <img onmouseover="changeIcon('over', 'menu/mail-', this)" onmouseout="changeIcon('out', 'menu/mail-', this)" src="img/menu/mail-out.svg" title="info@yot.com.mx" alt="Correo Yot Mx" height="30"> </a></li>
-      <li><a href="#" target="_blank"> <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" title="Ir a Facebook" alt="Facebook" height="30"> </a></li>
-      <li><a href="#" target="_blank"> <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" title="Ir a Instagram" alt="Instagram" height="30"> </a></li>
+      <!-- <li><a href="#" target="_blank"> <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" title="Ir a Facebook" alt="Facebook" height="30"> </a></li>
+      <li><a href="#" target="_blank"> <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" title="Ir a Instagram" alt="Instagram" height="30"> </a></li> -->
       <li><a role="button" onclick="toggleAudio()"> <img id="iconMute" onmouseover="changeIcon('over', 'menu/nomuted-', this)" onmouseout="changeIcon('out', 'menu/nomuted-', this)" src="img/menu/nomuted-out.svg" title="Mute" alt="Icono Sonido" height="30"> </a></li>
     </ul>
     <a role="button" class="menuMobile" onclick="menuMobile('open')">
@@ -120,7 +119,16 @@ fluo.com.mx
   <!-- CONTENIDO -->
   <section id="mainProducto">
     <article class="header showDisplayFlex">
-      <header id="coverHeader" class="hideOpacity tlayolis"></header>
+      <header id="coverHeader" class="hideOpacity tlayolis">
+        <div id="redesIndividuales" class="showDisplayFlex">
+          <a href="www.facebook.com/tlayolis" title="Facebook Tlayolis" target="_blank">
+            <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" height="30">
+          </a>
+          <a href="www.instagram.com/tlayolis" title="Instagram Tlayolis" target="_blank">
+            <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" height="30">
+          </a>
+        </div>
+      </header>
     </article>
     <!-- JALAPEÑO -->
     <article class="hideDisplay productoArticle">
@@ -130,8 +138,8 @@ fluo.com.mx
       </div>
       <div class="info elemLeft">
         <h2>Jalapeño</h2>
-        <p>El perfecto empujón para cambiar las perspectivas cotidianas</p>
-        <div style="background-image:url('img/tablas/tla-jalapeno.png');"></div>
+        <p>Tlayolis Jalapeño es el perfecto empujón para cambiar las perspectivas cotidianas.</p>
+        <div style="background-image:url('img/tablas/tla-jalapeno.svg');"></div>
       </div>
     </article>
     <!-- HABANERO -->
@@ -142,8 +150,8 @@ fluo.com.mx
       </div>
       <div class="info elemLeft">
         <h2>Habanero</h2>
-        <p>El mood ideal para salir de fiesta y conocer nuevos lugares, personas y experiencias.</p>
-        <div style="background-image:url('img/tablas/tla-habanero.png');"></div>
+        <p>El sabor de Tlayolis Habanero te hará entrar en el mood ideal para vivir nuevas experiencias y aventuras.</p>
+        <div style="background-image:url('img/tablas/tla-habanero.svg');"></div>
       </div>
     </article>
     <!-- BBQ -->
@@ -154,8 +162,8 @@ fluo.com.mx
       </div>
       <div class="info elemLeft">
         <h2>Barbecue</h2>
-        <p>Ideal para disfrutar una comida con amigos y personas cercanas.</p>
-        <div style="background-image:url('img/tablas/tla-bbq.png');"></div>
+        <p>El sabor Barbecue es perfecto para disfrutar una comida con los amigos y la familia. Una vez que las pruebes, ¡Serán parte de todas tus reuniones!</p>
+        <div style="background-image:url('img/tablas/tla-bbq.svg');"></div>
       </div>
     </article>
     <!-- SLIDER INTERNO -->
@@ -172,18 +180,18 @@ fluo.com.mx
   </nav>
   <nav id="bullets">
     <ul>
-      <li><p class="textBullet">Tlayolis</p></li>
-      <li><p class="textBullet">Jalapeño</p></li>
-      <li><p class="textBullet">Habanero</p></li>
-      <li><p class="textBullet">Barbecue</p></li>
-      <li><p class="textBullet">Fotos</p></li>
+      <li><a onmouseover="bulletHover('.b1El', 'over')" onmouseout="bulletHover('.b1El', 'out')" class="b1El transition" role="button" onclick="bulletsProducto(0)"><p class="textBullet">Tlayolis</p></a></li>
+      <li><a onmouseover="bulletHover('.b2El', 'over')" onmouseout="bulletHover('.b2El', 'out')" class="b2El transition" role="button" onclick="bulletsProducto(1)"><p class="textBullet">Jalapeño</p></a></li>
+      <li><a onmouseover="bulletHover('.b3El', 'over')" onmouseout="bulletHover('.b3El', 'out')" class="b3El transition" role="button" onclick="bulletsProducto(2)"><p class="textBullet">Habanero</p></a></li>
+      <li><a onmouseover="bulletHover('.b4El', 'over')" onmouseout="bulletHover('.b4El', 'out')" class="b4El transition" role="button" onclick="bulletsProducto(3)"><p class="textBullet">Barbecue</p></a></li>
+      <li><a onmouseover="bulletHover('.b5El', 'over')" onmouseout="bulletHover('.b5El', 'out')" class="b5El transition" role="button" onclick="bulletsProducto(4)"><p class="textBullet">Prepáralas</p></a></li>
     </ul>
-    <ul style="width:35px;">
-      <li><a role="button" onclick="bulletsProducto(0)"><img onmouseover="changeIcon('over1', 'icons/bullet-', this)" onmouseout="changeIcon('out', 'icons/bullet-', this)" src="img/icons/bullet-out.svg" width="20"></a></li>
-      <li><a role="button" onclick="bulletsProducto(1)"><img onmouseover="changeIcon('over2', 'icons/bullet-', this)" onmouseout="changeIcon('out', 'icons/bullet-', this)" src="img/icons/bullet-out.svg" width="20"></a></li>
-      <li><a role="button" onclick="bulletsProducto(2)"><img onmouseover="changeIcon('over3', 'icons/bullet-', this)" onmouseout="changeIcon('out', 'icons/bullet-', this)" src="img/icons/bullet-out.svg" width="20"></a></li>
-      <li><a role="button" onclick="bulletsProducto(3)"><img onmouseover="changeIcon('over4', 'icons/bullet-', this)" onmouseout="changeIcon('out', 'icons/bullet-', this)" src="img/icons/bullet-out.svg" width="20"></a></li>
-      <li><a role="button" onclick="bulletsProducto(4)"><img onmouseover="changeIcon('over5', 'icons/bullet-', this)" onmouseout="changeIcon('out', 'icons/bullet-', this)" src="img/icons/bullet-out.svg" width="20"></a></li>
+    <ul>
+      <li><a onmouseover="bulletHover('.b1El', 'over')" onmouseout="bulletHover('.b1El', 'out')" class="b1El transition" role="button"><img onclick="bulletsProducto(0)" src="img/icons/bullet-out.svg" width="20"></a></li>
+      <li><a onmouseover="bulletHover('.b2El', 'over')" onmouseout="bulletHover('.b2El', 'out')" class="b2El transition" role="button"><img onclick="bulletsProducto(1)" src="img/icons/bullet-out.svg" width="20"></a></li>
+      <li><a onmouseover="bulletHover('.b3El', 'over')" onmouseout="bulletHover('.b3El', 'out')" class="b3El transition" role="button"><img onclick="bulletsProducto(2)" src="img/icons/bullet-out.svg" width="20"></a></li>
+      <li><a onmouseover="bulletHover('.b4El', 'over')" onmouseout="bulletHover('.b4El', 'out')" class="b4El transition" role="button"><img onclick="bulletsProducto(3)" src="img/icons/bullet-out.svg" width="20"></a></li>
+      <li><a onmouseover="bulletHover('.b5El', 'over')" onmouseout="bulletHover('.b5El', 'out')" class="b5El transition" role="button"><img onclick="bulletsProducto(4)" src="img/icons/bullet-out.svg" width="20"></a></li>
     </ul>
   </nav>
   <footer class="main">
@@ -320,8 +328,9 @@ fluo.com.mx
       setTimeout(function(){
         fadeInHeader();
       },1000);
+      blockScroll();
       setPhone();
-      preventSwipe();
+      // preventSwipe();
     }
     window.onorientationchange = function(){
       if(window.orientation == 90 || window.orientation == -90){
@@ -355,6 +364,7 @@ fluo.com.mx
       var initSlider1 = new SliderYot('initSlider1', 'tlayolis');
       sliderFun();
     }else{
+      animateOnMobile();
       setRefSliderPop('1','tlayolis');
       // detectswipe('swipeSliderMob', swipePopMob);
     }
