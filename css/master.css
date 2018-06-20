@@ -518,7 +518,7 @@ footer.main>p>a:hover{ opacity: 0.5; }
   position: relative;
   width: 100vw;
   min-width: 250px;
-  height: 85vh;
+  height: 100vh;
   background: black;
 }
 #mainNosotros>header>ul{
@@ -558,12 +558,14 @@ footer.main>p>a:hover{ opacity: 0.5; }
 #mainNosotros>ul{
   width: 100vw;
   min-width: 250px;
-  height: 210vh;
+  height: 300vh;
   background: red;
 }
 #mainNosotros>ul>li{
   width: 100%;
-  height: 70vh;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .middle{
   -webkit-justify-content: flex-start;
@@ -588,7 +590,7 @@ footer.main>p>a:hover{ opacity: 0.5; }
   align-items: center;
 }
 #mainNosotros>ul>li>div>p{
-  width: 90%;
+  width: 70%;
   display: block;
   font-size: 1.2rem }
 /* GRID */

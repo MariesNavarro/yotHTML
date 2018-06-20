@@ -705,12 +705,12 @@ function swipePopMob(el, d){
     cPopSlider-=1;
     if(cPopSlider < 1){ cPopSlider = 5; }
     changeUrlImgSliderRefMob(cPopSlider, typeInner);
-    imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.png');
+    imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.jpg');
   } else{
     cPopSlider+=1;
     if(cPopSlider > 5){ cPopSlider = 1; }
     changeUrlImgSliderRefMob(cPopSlider, typeInner);
-    imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.png');
+    imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.jpg');
   }
 }
 
@@ -729,11 +729,11 @@ function arrowPopDesk(c){
       if(c === 'next'){
         cPopSlider+=1;
         if(cPopSlider > 5){ cPopSlider = 1; }
-        imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.png');
+        imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.jpg');
       }else{
         cPopSlider-=1;
         if(cPopSlider < 1){ cPopSlider = 5; }
-        imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.png');
+        imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.jpg');
       }
 }
 
@@ -752,12 +752,12 @@ function arrowPopSlider(c){
     cPopSlider+=1;
     if(cPopSlider > 5){ cPopSlider = 1; }
     changeUrlImgSliderRefMob(cPopSlider, typeInner);
-    imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.png');
+    imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.jpg');
   }else{
     cPopSlider-=1;
     if(cPopSlider < 1){ cPopSlider = 5; }
     changeUrlImgSliderRefMob(cPopSlider, typeInner);
-    imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.png');
+    imgPop.setAttribute('src', 'img/'+typeInner+'/s-'+cPopSlider+'-full.jpg');
   }
 }
 
@@ -945,7 +945,7 @@ function sliderFun(){
 function sliderPop(c){
   var src = _('.current').children[1].children[0].getAttribute('src'),
       srcSlash = src.indexOf('-'),
-      srcImg = src.slice(0,(srcSlash + 2)) + "-full.png",
+      srcImg = src.slice(0,(srcSlash + 2)) + "-full.jpg",
       wr = _("#popSliderDesk"),
       arrowGenerales = _('#arrows'),
       img = _('#popSliderImg');

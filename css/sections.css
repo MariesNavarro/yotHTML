@@ -93,7 +93,7 @@ nav#arrows>span>a:last-child{
 }
 #mainProducto>article.productoArticle{height: auto}
 #mainProducto>article.header>header{
-  width: 80%;
+  width: 99%;
   height: 100%;
   -webkit-transition: opacity 0.5s ease-out;
   -moz-transition: opacity 0.5s ease-out;
@@ -159,10 +159,10 @@ nav#arrows>span>a:last-child{
 #mainProducto>article>header{ position: relative }
 #redesIndividuales{
   position: absolute;
-  top: calc(80% - 15px);
-  left: calc(50% - 45px);
-  height: 30px;
-  width: 90px;
+  top: calc(80% - 25px);
+  left: calc(50% - 60px);
+  height: 50px;
+  width: 120px;
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
@@ -605,6 +605,7 @@ nav#arrows>span>a:last-child{
 
 /* desktop */
 @media screen and (min-width:800px){
+  #redesIndividuales{ top: calc(65% - 25px) !important }
   nav#bullets{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -624,11 +625,23 @@ nav#arrows>span>a:last-child{
     min-height: 500px;
   }
   #mainProducto>article{
+    height: 100% !important;
     width: 95%;
     flex-direction: row-reverse;
     -webkit-flex-direction:row-reverse;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
   }
-  #mainProducto>article>div{ height: 280px }
+  #mainProducto>article>div{
+    height: 280px }
   #mainProducto>article>div.producto>img{
     width: 380px;
     left: calc(50% - 190px);
@@ -792,7 +805,8 @@ nav#arrows>span>a:last-child{
 #arrowPopMobile>a:last-child{ right: 0 }
 /* desktop max */
 @media screen and (min-width:1500px){
-  #mainProducto > article > div { height: 600px }
+  #mainProducto > article > div {
+    height: 600px }
   #mainProducto > article > div.producto > img {
     width: 600px;
     left: calc(50% - 300px);
