@@ -974,6 +974,15 @@ function blockScroll(){
   }
 }
 
+function blockScrollTwo(){
+  var b = document.getElementsByTagName("BODY")[0];
+  if(!checkBowser){
+    b.style.overflowY = "hidden";
+  } else {
+    b.style.overflowY = "hidden";
+  }
+}
+
 function prodPop(c, t){
   var wr = _("#popProd");
   if(t != null){
@@ -995,5 +1004,20 @@ function prodPop(c, t){
       wr.classList.remove('showDisplayFlex');
       wr.classList.add('hideDisplay');
     },500);
+  }
+}
+
+function loadSlider(c){
+  var xhrList = [],
+      imgList = ["s-1-full.jpg","s-1.png","s-2-full.jpg","s-2.png","s-3-full.jpg","s-3.png","s-4-full.jpg","s-4.png","s-5-full.jpg","s-5.png"],
+      urlList = [];
+  for(var i =0; i<=imgList.length; i++){
+    urlList.push('img/'+c+'/'+imgList[i]);
+  }
+  for(var i = 0; i < urlList.length; i++){
+    xhrList[i] = new XMLHttpRequest();
+    xhrList[i].open('GET', urlList[i], true);
+    xhrList[i].responseType = "blob";
+    xhrList[i].send();
   }
 }

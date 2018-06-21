@@ -41,7 +41,7 @@ fluo.com.mx
   <meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" type="text/css" href="css/master.css" media="all">
 </head>
-<body style="overflow-x:hidden; overflow-y:auto; background:#490e0e;">
+<body style="overflow-x:hidden; overflow-y:auto; background:#000033;">
   <p id="s"></p>
   <div id="loading">
     <div id="salsaWrap">
@@ -65,7 +65,7 @@ fluo.com.mx
   </div>
   <!-- MENU -->
   <nav class="main">
-    <a href="index.html" onmouseover="hoverSound('#logoSound')">
+    <a href="index.html" onmouseover="hoverSound('#logoSound')" onclick="hoverSound('#logoSound')">
       <img onmouseover="changeIcon('over', 'menu/logotipo-', this)" onmouseout="changeIcon('out', 'menu/logotipo-', this)" src="img/menu/logotipo-out.svg" height="53">
     </a>
     <ul class="outerMobile">
@@ -91,6 +91,11 @@ fluo.com.mx
           <!-- <a href="#"> <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" title="Ir a Facebook" alt="Facebook" height="45"> </a>
           <a href="#"> <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" title="Ir a Instagram" alt="Instagram" height="45"> </a> -->
         </li>
+        <div>
+          <p>Derechos reservados Grupo Yot Mx© 2018</p>
+          <p>info@yot.com.mx</p>
+          <p>Coded by <a href="fluo.com.mx">Fluo MX</a></p>
+        </div>
       </span>
     </ul>
     <ul class="outerDesktop desktop">
@@ -276,11 +281,19 @@ fluo.com.mx
           </a>
         </li>
         <li id="lastMobile" style="background:#cc7832;">
+          <span>
+            <p>¿Se te antojaron?</p>
+            <p>Contáctanos</p>
+            <div>
+              <a role="button" class="phonePop" > <img onmouseover="changeIcon('over', 'menu/tel-', this)" onmouseout="changeIcon('out', 'menu/tel-', this)" src="img/menu/tel-out.svg" title="5567303009" alt="Teléfono Yot Mx" height="30"> </a>
+              <a href="mailto:info@yot.com.mx"> <img onmouseover="changeIcon('over', 'menu/mail-', this)" onmouseout="changeIcon('out', 'menu/mail-', this)" src="img/menu/mail-out.svg" title="info@yot.com.mx" alt="Correo Yot Mx" height="30"> </a>
+            </div>
+          </span>
         </li>
       </ul>
     </article>
   </section>
-  <footer class="main">
+  <footer id="nosotros" class="main">
     <p>Derechos reservados Grupo Yot Mx© 2017</p>
     <p>info@yot.com.mx</p>
     <p>Coded by <a href="fluo.com.mx">Fluo MX</a></p>

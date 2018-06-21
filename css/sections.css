@@ -190,7 +190,7 @@ nav#arrows>span>a:last-child{
   position: absolute;
   top: 0;
   width: 100vw;
-  height: calc(100vh + 180px);
+  height: 100vh;
 }
 #backgroundProducto>div#papas{
   width: 100%;
@@ -829,24 +829,24 @@ nav#arrows>span>a:last-child{
 }
 
 .animateProd{
-  -webkit-animation: 'aniProd' 0.5s linear infinite;
+  /* -webkit-animation: 'aniProd' 0.5s linear infinite;
   -moz-animation: 'aniProd' 0.5s linear infinite;
   -ms-animation: 'aniProd' 0.5s linear infinite;
-  -o-animation: 'aniProd' 0.5s linear infinite;
-  animation: 'aniProd' 0.5s linear infinite;
+  -o-animation: 'aniProd' 0.5s linear infinite; */
+  animation: 'aniProd' 1.5s ease-in-out infinite;
 }
 
 .animateBlob{
-  -webkit-animation: 'aniBlob' 0.5s linear infinite;
+  /* -webkit-animation: 'aniBlob' 0.5s linear infinite;
   -moz-animation: 'aniBlob' 0.5s linear infinite;
   -ms-animation: 'aniBlob' 0.5s linear infinite;
-  -o-animation: 'aniBlob' 0.5s linear infinite;
-  animation: 'aniBlob' 0.5s linear infinite;
+  -o-animation: 'aniBlob' 0.5s linear infinite; */
+  animation: 'aniBlob' 1.5s ease-in-out infinite;
 }
 
 @keyframes aniProd{
   0%{ margin-left: 0 }
-  33%{
+  25%{
     margin-top: -10px;
     margin-left: -10px;
     -webkit-transform: rotate(2deg);
@@ -855,7 +855,7 @@ nav#arrows>span>a:last-child{
     -o-transform: rotate(2deg);
     transform: rotate(2deg);
   }
-  66%{
+  50%{
     margin-top: 0;
     margin-left: 0;
     -webkit-transform: rotate(-2deg);
@@ -864,12 +864,13 @@ nav#arrows>span>a:last-child{
     -o-transform: rotate(-2deg);
     transform: rotate(-2deg);
   }
-  99%{ margin-left: -5px }
+  75%{ margin-left: -5px }
+  100%{ margin-left: 0 }
 }
 
 @keyframes aniBlob{
   0%{ margin-left: 0 }
-  33%{
+  25%{
     margin-top: 10px;
     margin-left: 10px;
     -webkit-transform: rotate(-2deg);
@@ -878,7 +879,7 @@ nav#arrows>span>a:last-child{
     -o-transform: rotate(-2deg);
     transform: rotate(-2deg);
   }
-  66%{
+  50%{
     margin-top: 0;
     margin-left: 0;
     -webkit-transform: rotate(2deg);
@@ -887,5 +888,6 @@ nav#arrows>span>a:last-child{
     -o-transform: rotate(2deg);
     transform: rotate(2deg);
   }
-  99%{ margin-left: 5px }
+  75%{ margin-left: 5px }
+  100%{ margin-left: 0 }
 }

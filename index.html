@@ -65,7 +65,7 @@ fluo.com.mx
   </div>
   <!-- MENU -->
   <nav class="main">
-    <a href="index.html" onmouseover="hoverSound('#logoSound')">
+    <a href="index.html" onmouseover="hoverSound('#logoSound')" onclick="hoverSound('#logoSound')">
       <img onmouseover="changeIcon('over', 'menu/logotipo-', this)" onmouseout="changeIcon('out', 'menu/logotipo-', this)" src="img/menu/logotipo-out.svg" height="53" title="Ir a Inicio">
     </a>
     <ul class="outerMobile">
@@ -91,6 +91,11 @@ fluo.com.mx
           <!-- <a href="#"> <img onmouseover="changeIcon('over', 'menu/fb-', this)" onmouseout="changeIcon('out', 'menu/fb-', this)" src="img/menu/fb-out.svg" title="Ir a Facebook" alt="Facebook" height="45"> </a>
           <a href="#"> <img onmouseover="changeIcon('over', 'menu/ig-', this)" onmouseout="changeIcon('out', 'menu/ig-', this)" src="img/menu/ig-out.svg" title="Ir a Instagram" alt="Instagram" height="45"> </a> -->
         </li>
+        <div>
+          <p>Derechos reservados Grupo Yot Mx© 2018</p>
+          <p>info@yot.com.mx</p>
+          <p>Coded by <a href="fluo.com.mx">Fluo MX</a></p>
+        </div>
       </span>
     </ul>
     <ul class="outerDesktop desktop">
@@ -124,6 +129,7 @@ fluo.com.mx
         <li class="backgroundImage" style="background-image:url('img/sot/logotipo-sot.svg')"></li>
         <li class="backgroundImage mockupMob" style="background-image:url('img/sot/mockup-sot-inicio-mobile.png')"></li>
         <li class="backgroundImage" style="background-image:url('img/sot/bannerTexto.svg')"></li>
+        <a href="section-sot.html"></a>
       </ul>
       <div>
         <!-- MOCKUP DESKTOP -->
@@ -138,6 +144,7 @@ fluo.com.mx
         <li class="backgroundImage" style="background-image:url('img/potet/logotipo-potet.svg')"></li>
         <li class="backgroundImage mockupMob" style="background-image:url('img/potet/mockup-potet-inicio.png')"></li>
         <li class="backgroundImage" style="background-image:url('img/potet/bannerTexto.svg')"></li>
+        <a href="section-potet.html"></a>
       </ul>
       <div>
         <!-- MOCKUP DESKTOP -->
@@ -152,6 +159,7 @@ fluo.com.mx
         <li class="backgroundImage" style="background-image:url('img/tlayolis/logotipo-tlayolis.svg')"></li>
         <li class="backgroundImage mockupMob" style="background-image:url('img/tlayolis/mockup-tlayolis-inicio-mobile.png')"></li>
         <li class="backgroundImage" style="background-image:url('img/tlayolis/bannerTexto.svg')"></li>
+        <a href="section-tlayolis.html"></a>
       </ul>
       <div>
         <!-- MOCKUP DESKTOP -->
@@ -193,6 +201,7 @@ fluo.com.mx
   <script type="text/javascript">
     window.onload = function(){
       blockScroll();
+      blockScrollTwo();
       xhReq(backgroundsHome);
       setTimeout(function(){
         xhReq(backgroundsProductos);
@@ -201,7 +210,7 @@ fluo.com.mx
       // evtArrowIndex();
       // detectswipe('mainIndex', swipeTransformIndex);
       // preventSwipe();
-      updateBackHeight();
+      // updateBackHeight();
     }
     window.onorientationchange = function(){
       if(window.orientation == 90 || window.orientation == -90){
