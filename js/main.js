@@ -195,6 +195,15 @@ function toggleAudio(t){
   }
 }
 
+
+function noSoundMobile(){
+  var s = __('.buttonAud');
+  for(var i = 0; i < s.length; i++){
+    s[i].setAttribute("onmouseover", " ");
+    s[i].setAttribute("onclick", " ");
+  }
+}
+
 function animateOnMobile(){
   var blob = __('.bulletBack'),
       mock = __('.mock');
@@ -222,15 +231,15 @@ function hoverProducto(t, c){
   switch (c) {
     case 'potet':
       var s = _('#hoverProductoPotet');
-      s.play();
+      if(!checkBowser){s.play()}
     break;
     case 'sot':
       var s = _('#hoverProductoSot');
-      s.play();
+      if(!checkBowser){s.play()}
     break;
     case 'tlayolis':
     var s = _('#hoverProductoTlayolis');
-    s.play();
+      if(!checkBowser){s.play()}
     break;
   }
 }
@@ -383,19 +392,19 @@ function sliderProducto(c){
   //audios-trans
   switch (c) {
     case 0:
-      setTimeout(function(){hoverSound('#entradaSound')},300);
+      if(!checkBowser){setTimeout(function(){hoverSound('#entradaSound')},300)}
     break;
     case 1:
-      setTimeout(function(){hoverSound('#producto1Sound')},300);
+      if(!checkBowser){setTimeout(function(){hoverSound('#producto1Sound')},300)}
     break;
     case 2:
-      setTimeout(function(){hoverSound('#producto2Sound')},300);
+      if(!checkBowser){setTimeout(function(){hoverSound('#producto2Sound')},300)}
     break;
     case 3:
-      setTimeout(function(){hoverSound('#producto3Sound')},300);
+      if(!checkBowser){setTimeout(function(){hoverSound('#producto3Sound')},300)}
     break;
     case 4:
-      setTimeout(function(){hoverSound('#sliderSound')},300);
+      if(!checkBowser){setTimeout(function(){hoverSound('#sliderSound')},300)}
     break;
   }
   //iconoZoom

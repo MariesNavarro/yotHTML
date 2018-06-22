@@ -42,6 +42,7 @@ fluo.com.mx
 	<link rel="stylesheet" type="text/css" href="css/master.css" media="all">
 </head>
 <body style="overflow-x:hidden; overflow-y:auto; background:#000033;">
+  <div id="top"></div>
   <p id="s"></p>
   <div id="loading">
     <div id="salsaWrap">
@@ -65,7 +66,7 @@ fluo.com.mx
   </div>
   <!-- MENU -->
   <nav class="main">
-    <a href="index.html" onmouseover="hoverSound('#logoSound')" onclick="hoverSound('#logoSound')">
+    <a href="index.html" class="buttonAud" onmouseover="hoverSound('#logoSound')" onclick="hoverSound('#logoSound')">
       <img onmouseover="changeIcon('over', 'menu/logotipo-', this)" onmouseout="changeIcon('out', 'menu/logotipo-', this)" src="img/menu/logotipo-out.svg" height="53">
     </a>
     <ul class="outerMobile">
@@ -99,10 +100,10 @@ fluo.com.mx
       </span>
     </ul>
     <ul class="outerDesktop desktop">
-      <li><a href="nosotros.html" onmouseover="hoverSound('#nosotrosSound')"> <img onmouseover="changeIcon('over', 'menu/nosotros-', this)" onmouseout="changeIcon('out', 'menu/nosotros-', this)" src="img/menu/nosotros-out.svg" title="Ir a Nosotros" alt="Nosotros" height="30"> </a></li>
-      <li><a href="section-sot.html" onmouseover="hoverSound('#sotSound')"> <img onmouseover="changeIcon('over', 'menu/sot-', this)" onmouseout="changeIcon('out', 'menu/sot-', this)" src="img/menu/sot-out.svg" title="Ir a Sot" alt="Sot" height="30"> </a></li>
-      <li><a href="section-potet.html" onmouseover="hoverSound('#potetSound')"> <img onmouseover="changeIcon('over', 'menu/potet-', this)" onmouseout="changeIcon('out', 'menu/potet-', this)" src="img/menu/potet-out.svg" title="Ir a Potet" alt="Potet" height="30"> </a></li>
-      <li><a href="section-tlayolis.html" onmouseover="hoverSound('#tlayolisSound')"> <img onmouseover="changeIcon('over', 'menu/tlayolis-', this)" onmouseout="changeIcon('out', 'menu/tlayolis-', this)" src="img/menu/tlayolis-out.svg" title="Ir a Tlayolis" alt="Tlayolis" height="30"> </a></li>
+      <li><a href="nosotros.html" class="buttonAud" onmouseover="hoverSound('#nosotrosSound')"> <img onmouseover="changeIcon('over', 'menu/nosotros-', this)" onmouseout="changeIcon('out', 'menu/nosotros-', this)" src="img/menu/nosotros-out.svg" title="Ir a Nosotros" alt="Nosotros" height="30"> </a></li>
+      <li><a href="section-sot.html" class="buttonAud" onmouseover="hoverSound('#sotSound')"> <img onmouseover="changeIcon('over', 'menu/sot-', this)" onmouseout="changeIcon('out', 'menu/sot-', this)" src="img/menu/sot-out.svg" title="Ir a Sot" alt="Sot" height="30"> </a></li>
+      <li><a href="section-potet.html" class="buttonAud" onmouseover="hoverSound('#potetSound')"> <img onmouseover="changeIcon('over', 'menu/potet-', this)" onmouseout="changeIcon('out', 'menu/potet-', this)" src="img/menu/potet-out.svg" title="Ir a Potet" alt="Potet" height="30"> </a></li>
+      <li><a href="section-tlayolis.html" class="buttonAud" onmouseover="hoverSound('#tlayolisSound')"> <img onmouseover="changeIcon('over', 'menu/tlayolis-', this)" onmouseout="changeIcon('out', 'menu/tlayolis-', this)" src="img/menu/tlayolis-out.svg" title="Ir a Tlayolis" alt="Tlayolis" height="30"> </a></li>
     </ul>
     <ul class="outerRedes desktop">
       <li><a role="button" class="phonePop" > <img onmouseover="changeIcon('over', 'menu/tel-', this)" onmouseout="changeIcon('out', 'menu/tel-', this)" src="img/menu/tel-out.svg" title="5567303009" alt="Teléfono Yot Mx" height="30"> </a></li>
@@ -292,15 +293,27 @@ fluo.com.mx
         </li>
       </ul>
     </article>
+    <div id="backtoTopMob">
+      <a data-scroll href="#top">
+        <img onmouseover="changeIcon('over', 'icons/backTop-', this)" onmouseout="changeIcon('out', 'icons/backTop-', this)" src="img/icons/backTop-out.svg" height="30">
+      </a>
+    </div>
   </section>
+
   <footer id="nosotros" class="main">
     <p>Derechos reservados Grupo Yot Mx© 2017</p>
     <p>info@yot.com.mx</p>
     <p>Coded by <a href="fluo.com.mx">Fluo MX</a></p>
+    <a data-scroll id="buttonBackTop"  href="#top">
+      <img onmouseover="changeIcon('over', 'icons/backTop-', this)" onmouseout="changeIcon('out', 'icons/backTop-', this)" src="img/icons/backTop-out.svg" height="30">
+    </a>
   </footer>
   <!-- PREVENT -->
   <div id="preventHeight" class="hideDisplay">
     <p>Por favor incrementa la altura de tu pantalla</p>
+  </div>
+  <div id="preventLandscape" class="hideDisplay">
+  	<p>Por favor rota tu pantalla</p>
   </div>
   <!-- AUDIOS -->
   <audio id="logoSound">
@@ -321,9 +334,11 @@ fluo.com.mx
   <script src="js/bowser.min.js" charset="utf-8"></script>
   <script src="js/loads.js" charset="utf-8"></script>
   <script src="js/anime.min.js" charset="utf-8"></script>
+  <script src="js/smooth-scroll.min.js" charset="utf-8"></script>
   <script src="js/main.js" charset="utf-8"></script>
   <script type="text/javascript">
     window.onload = function(){
+      smoothScroll.init();
       xhReq(nosotrosImg);
       setPhone();
       setTimeout(function(){
@@ -331,6 +346,11 @@ fluo.com.mx
       },500);
     }
     window.onorientationchange = function(){
+      if(window.orientation == 90 || window.orientation == -90){
+        preventLandscape('l');
+      } else {
+        preventLandscape('p');
+      }
     }
     window.onresize = function (){
       var s = document.getElementById("s").innerHTML = "Width: " + window.innerWidth + "px | Height: " + window.innerHeight + "px";
@@ -339,6 +359,10 @@ fluo.com.mx
       } else {
         preventHeight('max');
       }
+    }
+    if(checkBowser){
+      //mobile
+      noSoundMobile();
     }
   </script>
 </body>

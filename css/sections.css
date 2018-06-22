@@ -770,10 +770,7 @@ nav#arrows>span>a:last-child{
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #fff;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: rgba(0,0,0,0.9);
   opacity: 0;
   -webkit-transition: opacity 0.5s ease-out;
   -moz-transition: opacity 0.5s ease-out;
