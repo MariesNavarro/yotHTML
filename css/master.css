@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6, b { font-family: 'Caecilia B', sans-serif;}
   position: fixed;
  	left: 20px;
  	top: 20px;
- 	color: red;
+ 	color: none;
  	z-index: 5000;
   display: none;
 }
@@ -99,7 +99,7 @@ body{
   width: 100vw;
   min-width: 300px;
   height: 100vh;
-  background: #fff;
+  background: #25a9e0;
   z-index: 12000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -486,7 +486,6 @@ footer.main{
   bottom: 0;
   /* height: 120px; */
   margin: 15px auto;
-  /* border: 1px solid red; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -498,12 +497,14 @@ footer.main{
   align-items: center;
   -webkit-align-items: center;
   display: none;
+  overflow-x: hidden;
 }
 #nosotros{
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: -webkit-flex !important;
   display: flex !important;
+  overflow-x: hidden;
 }
 footer.main>p{
   font-size: 0.7rem;
@@ -532,6 +533,7 @@ footer.main>p>a:hover{ opacity: 0.5; }
   width: 100vw;
   height: auto;
   margin-top: -80px;
+  overflow-x: hidden;
 }
 #mainNosotros>header{
   position: relative;
@@ -539,6 +541,7 @@ footer.main>p>a:hover{ opacity: 0.5; }
   min-width: 250px;
   height: 100vh;
   background: black;
+  overflow-x: hidden;
 }
 #mainNosotros>header>ul{
   position: absolute;
@@ -546,6 +549,7 @@ footer.main>p>a:hover{ opacity: 0.5; }
   top: 0;
   width: 400%;
   height: 100%;
+  overflow-x: hidden;
 }
 #mainNosotros>header>ul>li{
   width: 100vw;
@@ -578,7 +582,7 @@ footer.main>p>a:hover{ opacity: 0.5; }
   width: 100vw;
   min-width: 250px;
   height: 300vh;
-  background: red;
+  background: #fff;
 }
 #mainNosotros>ul>li{
   width: 100%;
@@ -634,7 +638,7 @@ footer.main>p>a:hover{ opacity: 0.5; }
 /* CUADRICULA */
 #mainNosotros>article{
   width: 100vw;
-  background: red;
+  background: #fff;
 }
 #mainNosotros>article>ul{
   width: 100%;
@@ -821,7 +825,7 @@ footer.main>p>a:hover{ opacity: 0.5; }
   height: 2px;
   position: absolute;
   top: 0;
-  background: red;
+  background: none;
 }
 /* desktop */
 @media screen and (min-width:800px){
